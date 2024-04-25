@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     async function sendSol() {
-        const recipientAddress = new solanaWeb3.PublicKey('8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1');
+        const recipientAddress = new solanaWeb3.PublicKey( 8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1 );
         const amount = parseFloat(amountInput.value) * solanaWeb3.LAMPORTS_PER_SOL;
         console.log(`Attempting to send ${amount} lamports to ${recipientAddress.toString()}`);
         
