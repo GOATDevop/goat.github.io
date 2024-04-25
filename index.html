@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Wallet Interaction</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest"></script>
+     <script src="site.js"></script>
+    
+    <button id="connectWallet">Connect Wallet</button>
+    <div>
+        <label for="amount">Amount of SOL to Send:</label>
+        <input type="number" id="amount" min="0" step="0.000000000001" placeholder="Enter SOL amount">
+    </div>
+    <button id="sendSol">Send SOL</button>
+    <div id="walletBalance">Wallet Balance: <span id="balance">0</span> SOL</div>
+
+      
+   
+</body>
+</html>
