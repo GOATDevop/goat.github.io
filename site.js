@@ -71,11 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
    async function updateBalance() {
-    if (window.solana && window.solana.isConnected) {
-        const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('devnet'), 'confirmed');
-        const balance = await connection.getBalance(window.solana.publicKey);
-        document.getElementById('balance').textContent = (balance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(6) + ' SOL';
+        if (window.solana && window.solana.isConnected) {
+            const balance = await window.solana.connection.getBalance(window.solana.publicKey);
+            document.getElementById('balance').textContent = (balance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(6) + ' SOL';
+        }
     }
-}
 });
 
