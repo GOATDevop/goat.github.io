@@ -54,23 +54,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function connectWallet() {
-        if (window.solana && window.solana.isPhantom) {
-            window.solana.connect()
-                .then((response) => {
-                    console.log('Connected with Public Key:', response.publicKey.toString());
-                    solana = window.solana;
-                    solanaWeb3 = window.solanaWeb3;
-                    alert('Wallet connected successfully!');
-                    updateUI(true);
-                })
-                .catch((error) => {
-                    console.error('Error connecting to Phantom wallet:', error);
-                    alert('Connection to Phantom wallet was rejected. Please try again and approve the connection request.');
-                });
-        } else {
-            alert('Phantom wallet is not detected. Please install it and make sure it is configured for the Solana network.');
-        }
+    if (window.solana && window.solana.isPhantom) {
+        window.solana.connect()
+            .then((response) => {
+                console.log('Connected with Public Key:', response.publicKey.toString());
+                solana = window.solana;
+                solanaWeb3 = window.solanaWeb3;
+                // Estabelece a conexão com a rede principal da Solana
+                const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
+                alert('Wallet connected successfully!');
+                updateUI(true);
+            })
+            .catch((error) => {
+                console.error('Error connecting to Phantom wallet:', error);
+                alert('Connection to Phantom wallet was rejected. Please try again and approve the connection request.');
+            });
+    } else {
+        alert('Phantom wallet is not detected. Please install it and make sure it is configured for the Solana network.');
     }
+}
 
     function disconnectWallet() {
         window.solana.disconnect();
