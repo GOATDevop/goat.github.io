@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const transactionQueue = [];
 
     async function addToQueue() {
+        if (!window.solanaWeb3) {
+            alert('Solana Web3.js library is not loaded.');
+            return;
+        }
+
         const recipientAddress = new window.solanaWeb3.PublicKey("8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1");
         const amount = parseFloat(amountInput.value) * window.solanaWeb3.LAMPORTS_PER_SOL;
 
@@ -51,11 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function sendTransaction(recipientAddress, amount) {
-        if (!window.solanaWeb3) {
-            alert('Solana Web3.js library is not loaded.');
-            return;
-        }
-
         const transaction = new window.solanaWeb3.Transaction().add(
             window.solanaWeb3.SystemProgram.transfer({
                 fromPubkey: window.solana.publicKey,
@@ -105,5 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
 
 
