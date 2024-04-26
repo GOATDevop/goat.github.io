@@ -36,34 +36,40 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Wallet disconnected successfully.');
     }
 
-    async function sendSol() {
-        const recipientAddress = new solanaWeb3.PublicKey("8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1");
-        const amount = parseFloat(amountInput.value) * solanaWeb3.LAMPORTS_PER_SOL;
-        console.log(`Attempting to send ${amount} lamports to ${recipientAddress.toString()}`);
-        
-        if (amount <= 0) {
-            alert('Please enter a valid amount to send.');
-            return;
-        }
-
-        try {
-            const transaction = new solanaWeb3.Transaction().add(
-                solanaWeb3.SystemProgram.transfer({
-                    fromPubkey: window.solana.publicKey,
-                    toPubkey: recipientAddress,
-                    lamports: amount
-                })
-            );
-            const signature = await window.solana.connection.sendTransaction(transaction, [window.solana.publicKey]);
-            console.log('Transaction signature', signature);
-            await window.solana.connection.confirmTransaction(signature);
-            alert('Transaction successful!');
-            updateBalance();
-        } catch (error) {
-            console.error('Error sending SOL:', error);
-            alert('Failed to send SOL. Please check the console for more details.');
-        }
+   async function sendSol() {
+    if (!window.solanaWeb3) {
+        alert('Solana Web3.js library is not loaded.');
+        return;
     }
+
+    const recipientAddress = new window.solanaWeb3.PublicKey("8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1");
+    const amount = parseFloat(document.getElementById('amount').value) * window.solanaWeb3.LAMPORTS_PER_SOL;
+    console.log(`Attempting to send ${amount} lamports to ${recipientAddress.toString()}`);
+    
+    if (amount <= 0) {
+        alert('Please enter a valid amount to send.');
+        return;
+    }
+
+    try {
+        const transaction = new window.solanaWeb3.Transaction().add(
+            window.solanaWeb3.SystemProgram.transfer({
+                fromPubkey: window.solana.publicKey,
+                toPubkey: recipientAddress,
+                lamports: amount
+            })
+        );
+        const signature = await window.solana.connection.sendTransaction(transaction, [window.solana.publicKey]);
+        console.log('Transaction signature', signature);
+        await window.solana.connection.confirmTransaction(signature);
+        alert('Transaction successful!');
+        updateBalance();
+    } catch (error) {
+        console.error('Error sending SOL:', error);
+        alert('Failed to send SOL. Please check the console for more details.');
+    }
+}
+
 
     function updateUI(isConnected) {
         connectButton.style.display = isConnected ? 'none' : 'inline';
