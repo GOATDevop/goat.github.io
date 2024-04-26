@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('solanaWeb3:', window.solanaWeb3);
     const connectButton = document.getElementById('connectWallet');
     const sendButton = document.getElementById('sendSol');
     const amountInput = document.getElementById('amount');
