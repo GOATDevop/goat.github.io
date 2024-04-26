@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('solanaWeb3:', window.solanaWeb3);
     const connectButton = document.getElementById('connectWallet');
     const sendButton = document.getElementById('sendSol');
     const amountInput = document.getElementById('amount');
@@ -9,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     disconnectButton.style.display = 'none';
     document.body.appendChild(disconnectButton);
 
+    let solana;
+    let solanaWeb3;
+
     connectButton.addEventListener('click', connectWallet);
     disconnectButton.addEventListener('click', disconnectWallet);
     sendButton.addEventListener('click', addToQueue);
@@ -17,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const transactionQueue = [];
 
     async function addToQueue() {
-        if (!window.solanaWeb3) {
+        if (!solanaWeb3) {
             alert('Solana Web3.js library is not loaded.');
             return;
         }
 
-        const recipientAddress = new window.solanaWeb3.PublicKey("8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1");
-        const amount = parseFloat(amountInput.value) * window.solanaWeb3.LAMPORTS_PER_SOL;
+        const recipientAddress = new solanaWeb3.PublicKey("8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1");
+        const amount = parseFloat(amountInput.value) * solanaWeb3.LAMPORTS_PER_SOL;
 
         if (amount <= 0 || isNaN(amount)) {
             alert('Please enter a valid amount to send.');
@@ -56,16 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function sendTransaction(recipientAddress, amount) {
-        const transaction = new window.solanaWeb3.Transaction().add(
-            window.solanaWeb3.SystemProgram.transfer({
-                fromPubkey: window.solana.publicKey,
+        const transaction = new solanaWeb3.Transaction().add(
+            solanaWeb3.SystemProgram.transfer({
+                fromPubkey: solana.publicKey,
                 toPubkey: recipientAddress,
                 lamports: amount
             })
         );
 
-        const signature = await window.solana.connection.sendTransaction(transaction, [window.solana.publicKey]);
-        await window.solana.connection.confirmTransaction(signature);
+        const signature = await solana.connection.sendTransaction(transaction, [solana.publicKey]);
+        await solana.connection.confirmTransaction(signature);
         return signature;
     }
 
@@ -74,6 +76,8 @@ document.addEventListener('DOMContentLoaded', function () {
             window.solana.connect()
                 .then((response) => {
                     console.log('Connected with Public Key:', response.publicKey.toString());
+                    solana = window.solana;
+                    solanaWeb3 = window.solanaWeb3;
                     updateBalance();
                     alert('Wallet connected successfully!');
                     updateUI(true);
@@ -88,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function disconnectWallet() {
-        window.solana.disconnect();
+        solana.disconnect();
         updateUI(false);
         alert('Wallet disconnected successfully.');
     }
@@ -99,12 +103,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function updateBalance() {
-        if (window.solana && window.solana.isConnected) {
-            const balance = await window.solana.connection.getBalance(window.solana.publicKey);
+        if (solana && solana.isConnected) {
+            const balance = await solana.connection.getBalance(solana.publicKey);
             document.getElementById('balance').textContent = (balance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(6) + ' SOL';
         }
     }
 });
+
 
 
 
