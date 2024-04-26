@@ -102,12 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
         disconnectButton.style.display = isConnected ? 'inline' : 'none';
     }
 
-    async function updateBalance() {
-        if (solana && solana.isConnected) {
-            const balance = await solana.getBalance(solana.publicKey);
-            document.getElementById('balance').textContent = (balance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(6) + ' SOL';
-        }
-    }
+    //async function updateBalance() {
+        //if (solana && solana.isConnected) {
+            //const balance = await solana.getBalance(solana.publicKey);
+            //document.getElementById('balance').textContent = (balance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(6) + ' SOL';
+        //}
+    //}
 });
 
 
