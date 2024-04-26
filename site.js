@@ -10,19 +10,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let solana;
     let solanaWeb3;
+    let connection; // Conexão com a rede Solana
 
     connectButton.addEventListener('click', connectWallet);
     disconnectButton.addEventListener('click', disconnectWallet);
     sendButton.addEventListener('click', sendSol);
 
     function sendSol() {
-        if (!window.solanaWeb3) {
+        if (!solanaWeb3) {
             alert('Solana Web3.js library is not loaded.');
             return;
         }
 
-        const recipientAddress = new window.solanaWeb3.PublicKey("8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1");
-        const amount = parseFloat(amountInput.value) * window.solanaWeb3.LAMPORTS_PER_SOL;
+        const recipientAddress = new solanaWeb3.PublicKey("8eTayeQQrc1yrbym5w8LS31rrkVkrvzNggNKLCQHhTn1");
+        const amount = parseFloat(amountInput.value) * solanaWeb3.LAMPORTS_PER_SOL;
 
         if (amount <= 0 || isNaN(amount)) {
             alert('Please enter a valid amount to send.');
@@ -30,15 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         try {
-            const transaction = new window.solanaWeb3.Transaction().add(
-                window.solanaWeb3.SystemProgram.transfer({
-                    fromPubkey: window.solana.publicKey,
+            const transaction = new solanaWeb3.Transaction().add(
+                solanaWeb3.SystemProgram.transfer({
+                    fromPubkey: solana.publicKey,
                     toPubkey: recipientAddress,
                     lamports: amount
                 })
             );
 
-            window.solana.sendTransaction(transaction, [window.solana.publicKey])
+            solana.sendTransaction(transaction, [solana.publicKey])
                 .then((signature) => {
                     console.log('Transaction signature', signature);
                     alert('Transaction successful!');
@@ -54,28 +55,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function connectWallet() {
-    if (window.solana && window.solana.isPhantom) {
-        window.solana.connect()
-            .then((response) => {
-                console.log('Connected with Public Key:', response.publicKey.toString());
-                solana = window.solana;
-                solanaWeb3 = window.solanaWeb3;
-                // Estabelece a conexão com a rede principal da Solana
-                const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
-                alert('Wallet connected successfully!');
-                updateUI(true);
-            })
-            .catch((error) => {
-                console.error('Error connecting to Phantom wallet:', error);
-                alert('Connection to Phantom wallet was rejected. Please try again and approve the connection request.');
-            });
-    } else {
-        alert('Phantom wallet is not detected. Please install it and make sure it is configured for the Solana network.');
+        if (window.solana && window.solana.isPhantom) {
+            window.solana.connect()
+                .then((response) => {
+                    console.log('Connected with Public Key:', response.publicKey.toString());
+                    solana = window.solana;
+                    solanaWeb3 = window.solanaWeb3;
+                    // Estabelece a conexão com a rede principal da Solana
+                    connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
+                    alert('Wallet connected successfully!');
+                    updateUI(true);
+                })
+                .catch((error) => {
+                    console.error('Error connecting to Phantom wallet:', error);
+                    alert('Connection to Phantom wallet was rejected. Please try again and approve the connection request.');
+                });
+        } else {
+            alert('Phantom wallet is not detected. Please install it and make sure it is configured for the Solana network.');
+        }
     }
-}
 
     function disconnectWallet() {
-        window.solana.disconnect();
+        solana.disconnect();
         updateUI(false);
         alert('Wallet disconnected successfully.');
     }
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         disconnectButton.style.display = isConnected ? 'inline' : 'none';
     }
 });
+
 
 
 
