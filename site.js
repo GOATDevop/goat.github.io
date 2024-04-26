@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         );
 
-        const signature = await solana.connection.sendTransaction(transaction, [solana.publicKey]);
-        await solana.connection.confirmTransaction(signature);
+        const signature = await solana.sendTransaction(transaction, [solana.publicKey]);
+        await solana.confirmTransaction(signature);
         return signature;
     }
 
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     alert('Connection to Phantom wallet was rejected. Please try again and approve the connection request.');
                 });
         } else {
-            alert('Phantom wallet is not detected. Please install it and make sure it is configured for devnet.');
+            alert('Phantom wallet is not detected. Please install it and make sure it is configured for the Solana network.');
         }
     }
 
@@ -104,11 +104,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function updateBalance() {
         if (solana && solana.isConnected) {
-            const balance = await solana.connection.getBalance(solana.publicKey);
+            const balance = await solana.getBalance(solana.publicKey);
             document.getElementById('balance').textContent = (balance / solanaWeb3.LAMPORTS_PER_SOL).toFixed(6) + ' SOL';
         }
     }
 });
+
 
 
 
