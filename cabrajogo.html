@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cabra</title>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; }
+        #gameContainer {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            background-image: url('imagem.png');
+            background-size: cover;
+            overflow: hidden;
+        }
+        #cabra {
+            position: absolute;
+            bottom: 2px;
+            left: 50px;
+            width: 80px;
+            height: 80px;
+            background-image: url('cabra1.png');
+            background-size: cover;
+        }
+        .obstacle {
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            width: 80px;
+            height: 80px;
+            background-image: url('palha.png');
+            background-size: cover;
+        }
+        #score, #level, #gameOver {
+            position: absolute;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            font-size: 20px;
+            z-index: 10;
+        }
+        #score { top: 10px; left: 10px; }
+        #level { top: 10px; right: 10px; }
+        #gameOver {
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            font-size: 24px;
+            z-index: 100;
+        }
+        #playButton {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="cabra"></div>
+        <div id="score">Pontuação: 0</div>
+        <div id="level">Nível: 1</div>
+        <div id="gameOver">Game Over</div>
+        <button id="playButton">Play</button>
+    </div>
+    <script>
+    const gameContainer = document.getElementById("gameContainer");
+    const cabra = document.getElementById("cabra");
+    const scoreDisplay = document.getElementById("score");
+    const levelDisplay = document.getElementById("level");
+    const gameOverDisplay = document.getElementById("gameOver");
+    const playButton = document.getElementById("playButton");
+    let score = 0;
+    let level = 1;
+    let isJumping = false;
+    let gameSpeed = 20;
+    let gameActive = false;
+
+    function clearObstacles() {
+        const obstacles = document.querySelectorAll('.obstacle');
+        obstacles.forEach(obstacle => {
+            obstacle.remove();
+        });
+    }
+
+    playButton.onclick = function() {
+        clearObstacles(); // Remove todos os obstáculos antes de reiniciar o jogo
+        gameActive = true;
+        gameOverDisplay.style.display = 'none';
+        playButton.style.display = 'none';
+        score = 0;
+        level = 1;
+        gameSpeed = 20; // Restaura a velocidade inicial do jogo
+        scoreDisplay.textContent = `Pontuação: ${score}`;
+        levelDisplay.textContent = `Nível: ${level}`;
+        createObstacle();
+    };
+
+    function updateScoreAndLevel() {
+        score += 10;
+        scoreDisplay.textContent = `Pontuação: ${score}`;
+        if (score % 100 === 0) {
+            level += 1;
+            levelDisplay.textContent = `Nível: ${level}`;
+            gameSpeed = Math.max(10, gameSpeed - 2);
+        }
+    }
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === " " && !isJumping && gameActive) {
+            jump();
+        }
+    });
+
+    function jump() {
+        if (isJumping) return;
+        let jumpHeight = 0;
+        isJumping = true;
+        let upTimerId = setInterval(() => {
+            if (jumpHeight > 120) {
+                clearInterval(upTimerId);
+                let downTimerId = setInterval(() => {
+                    if (jumpHeight <= 0) {
+                        clearInterval(downTimerId);
+                        isJumping = false;
+                    }
+                    jumpHeight -= 10;
+                    cabra.style.bottom = jumpHeight + 'px';
+                }, 15);
+            }
+            jumpHeight += 10;
+            cabra.style.bottom = jumpHeight + 'px';
+        }, 15);
+    }
+
+    function createObstacle() {
+        if (!gameActive) return;
+        let obstaclePosition = gameContainer.offsetWidth;
+        const obstacle = document.createElement('div');
+        obstacle.classList.add('obstacle');
+        gameContainer.appendChild(obstacle);
+        obstacle.style.left = obstaclePosition + 'px';
+
+        function moveObstacle() {
+            obstaclePosition -= 10;
+            obstacle.style.left = obstaclePosition + 'px';
+
+            if (obstaclePosition <= -80) {
+                clearInterval(moveTimerId);
+                gameContainer.removeChild(obstacle);
+                updateScoreAndLevel();
+            }
+
+            if (!isJumping &&
+                obstaclePosition > 0 &&
+                obstaclePosition < 80 &&
+                cabra.offsetTop >= 140) {
+                clearInterval(moveTimerId);
+                gameActive = false; // Para o jogo
+                gameOverDisplay.style.display = 'block'; // Mostra a mensagem de Game Over
+                playButton.textContent = 'Reiniciar';
+                playButton.style.display = 'block'; // Mostra o botão para reiniciar
+            }
+        }
+
+        let moveTimerId = setInterval(moveObstacle, gameSpeed);
+        setTimeout(createObstacle, Math.random() * 2000 + 1000);
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
