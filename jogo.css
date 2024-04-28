@@ -1,6 +1,7 @@
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #333;
     color: #fff;
@@ -19,4 +20,10 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#walletStatus {
+    color: #0F0;
+    margin-left: 20px;
+}
+
 
