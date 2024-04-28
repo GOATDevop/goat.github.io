@@ -1,4 +1,5 @@
 const walletButton = document.getElementById('walletButton');
+const walletStatus = document.getElementById('walletStatus');
 let walletConnected = false;
 
 walletButton.addEventListener('click', () => {
@@ -13,24 +14,27 @@ async function connectWallet() {
     try {
         const provider = window.solana;
         if (provider) {
-            const response = await window.solana.connect();
+            await provider.connect();
             walletConnected = true;
-            walletButton.textContent = 'Desconectar Carteira';
-            console.log('Wallet address:', response.publicKey.toString());
+            walletButton.textContent = 'Disconnect Wallet';
+            walletStatus.textContent = 'Wallet connected.';
+            console.log('Wallet address:', provider.publicKey.toString());
         } else {
-            alert('Por favor, instale uma carteira Solana (como Phantom) e recarregue a página.');
+            alert('Please install a Solana wallet (like Phantom) and reload the page.');
         }
     } catch (error) {
         console.error(error);
-        alert('Falha ao conectar a carteira.');
+        alert('Failed to connect the wallet.');
     }
 }
 
 function disconnectWallet() {
     window.solana.disconnect();
     walletConnected = false;
-    walletButton.textContent = 'Conectar Carteira';
+    walletButton.textContent = 'Connect Wallet';
+    walletStatus.textContent = 'Wallet disconnected.';
 }
+
 
 
 
