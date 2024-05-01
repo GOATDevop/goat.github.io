@@ -18,13 +18,13 @@ header {
 
 .header-content {
     position: relative;  /* Define a posição relativa ao header */
-    padding: 70px 0;
+    padding: 20px 0;
 }
 
 .logo {
     position: absolute;  /* Posiciona o logo absolutamente dentro do header-content */
     left: 60%;           /* Ajusta essa porcentagem para mover mais à esquerda ou à direita */
-    max-width: 130px;
+    max-width: 100px;
 }
 
 
