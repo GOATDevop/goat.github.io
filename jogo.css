@@ -17,7 +17,14 @@ header {
 }
 
 .header-content {
-    padding: 150px 0px; /* Aumenta o espaçamento acima e abaixo do logo */
+    position: relative;  /* Define a posição relativa ao header */
+    padding: 40px 0;
+}
+
+.logo {
+    position: absolute;  /* Posiciona o logo absolutamente dentro do header-content */
+    left: 20%;           /* Ajusta essa porcentagem para mover mais à esquerda ou à direita */
+    max-width: 200px;
 }
 
 .header-content img {
@@ -30,7 +37,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 0 20px; /* Padding lateral */
-    margin-top: 60px;
+    margin-top: 55px;
     box-sizing: border-box;
 }
 
@@ -43,11 +50,11 @@ header {
 .navbar a, #connectWallet {
     text-decoration: none;
     color: #8ac1ff;
-    background-color: transparent;
+    background: rgba(65, 64, 64, 0.2); /* Adiciona transparência para ver a imagem de fundo */
     font-family: 'Bangers';
     padding: 14px 20px; /* Aumenta o padding para maior tamanho dos botões */
     margin: 20px;
-    border-radius: 1px;
+    border-radius: 0.5px;
     cursor: pointer;
     font-size: 30px; /* Aumenta a fonte dos botões */
     transition: background-color 0.3s;
