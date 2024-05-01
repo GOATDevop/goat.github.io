@@ -20,16 +20,16 @@ header {
 .header-content {
     position: relative;
     width: 100%;
-    padding-top: 60px; /* Espaço acima do logo */
+    padding-top: 80px; /* Espaço acima do logo */
 }
 
 .logo {
     position: absolute;
-    left: 40;
+    left: 60;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 150px; /* Reduz o tamanho do logo */
-    margin-left: 60px; /* Margem à esquerda do logo */
+    max-width: 170px; /* Reduz o tamanho do logo */
+    margin-left: 90px; /* Margem à esquerda do logo */
 }
 
 .navbar {
@@ -38,7 +38,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 0 20px; /* Padding lateral */
-    margin-top: 60px;
+    margin-top: 100px;
     box-sizing: border-box;
 }
 
