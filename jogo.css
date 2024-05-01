@@ -12,21 +12,25 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 15px; /* Espaço extra no final do cabeçalho */
+    padding-bottom: 10px; /* Espaço extra no final do cabeçalho */
     height: 670px; /* Aumenta a altura do cabeçalho */
+    position: relative;
 }
 
 .header-content {
-    position: relative;  /* Define a posição relativa ao header */
-    padding: 60px 60px;
+    position: relative;
+    width: 100%;
+    padding-top: 20px; /* Espaço acima do logo */
 }
 
 .logo {
-    position: absolute;  /* Posiciona o logo absolutamente dentro do header-content */
-    left: 60%;           /* Ajusta essa porcentagem para mover mais à esquerda ou à direita */
-    max-width: 100px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 150px; /* Reduz o tamanho do logo */
+    margin-left: 10px; /* Margem à esquerda do logo */
 }
-
 
 .navbar {
     display: flex;
@@ -44,22 +48,34 @@ header {
     flex-grow: 1;
 }
 
-.navbar a, #connectWallet {
+.navbar a {
     text-decoration: none;
     color: #ffffff;
-    background: rgba(65, 64, 64, 0.2); /* Adiciona transparência para ver a imagem de fundo */
+    background-color: rgba(65, 64, 64, 0.2); /* Adiciona transparência para ver a imagem de fundo */
     font-family: 'Bangers';
     padding: 14px 20px; /* Aumenta o padding para maior tamanho dos botões */
     margin: 20px;
     border-radius: 0.5px;
+    font-size: 30px; /* Aumenta o tamanho da fonte dos botões */
+    transition: background-color 0.3s;
+}
+.navbar a:hover {
+    background-color: #bb920c; /* Cor de fundo ao passar o mouse */
+}
+
+#connectWallet {
+    color: #ffffff;
+    background-color: rgba(65, 64, 64, 0.2); /* Adiciona transparência para ver a imagem de fundo */
+    padding: 12px 18px;
+    border-radius: 0.5px;
     cursor: pointer;
-    font-size: 30px; /* Aumenta a fonte dos botões */
     transition: background-color 0.3s;
 }
 
-.navbar a:hover, #connectWallet:hover {
-    background-color:  #bb920c;
+#connectWallet:hover {
+    background-color: #bb920c;
 }
+
 
 footer {
     text-align: center;
