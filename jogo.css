@@ -20,16 +20,16 @@ header {
 .header-content {
     position: relative;
     width: 100%;
-    padding-top: 20px; /* Espaço acima do logo */
+    padding-top: 60px; /* Espaço acima do logo */
 }
 
 .logo {
     position: absolute;
-    left: 0;
+    left: 40;
     top: 50%;
     transform: translateY(-50%);
     max-width: 150px; /* Reduz o tamanho do logo */
-    margin-left: 10px; /* Margem à esquerda do logo */
+    margin-left: 60px; /* Margem à esquerda do logo */
 }
 
 .navbar {
@@ -78,10 +78,12 @@ header {
 
 
 footer {
+    margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
     text-align: center;
     padding: 20px 0;
     background-color: #333;
     color: white;
+    width: 100%;
 }
 
 
