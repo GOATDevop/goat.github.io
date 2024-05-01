@@ -1,19 +1,29 @@
-document.getElementById('connect-wallet').addEventListener('click', async function() {
-    try {
-        const solana = window.solana;
+document.addEventListener('DOMContentLoaded', function() {
+    const connectButton = document.getElementById('connectWallet');
 
-        if (solana && solana.isPhantom) {
-            console.log("Phantom wallet found!");
-            const response = await solana.connect({ onlyIfTrusted: true });
-            console.log('Connected with public key:', response.publicKey.toString());
-        } else {
-            alert("Phantom wallet not found. Please install it.");
+    if ('solana' in window) {
+        const provider = window.solana;
+        if (provider.isPhantom) {
+            console.log('Phantom wallet found!');
+            
+            connectButton.addEventListener('click', async () => {
+                try {
+                    const response = await window.solana.connect();
+                    console.log('Connected with Public Key:', response.publicKey.toString());
+                    alert('Wallet connected!');
+                } catch (err) {
+                    console.error(err);
+                    alert('Connection failed!');
+                }
+            });
         }
-    } catch (error) {
-        console.error("Failed to connect", error);
-        alert("An error occurred while connecting to the wallet.");
+    } else {
+        console.log('Solana object not found! Get a Phantom Wallet.');
+        connectButton.textContent = 'No wallet found';
+        connectButton.disabled = true;
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const logo = document.getElementById('draggableLogo');
