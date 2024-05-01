@@ -24,7 +24,7 @@ header {
 .logo {
     position: absolute;  /* Posiciona o logo absolutamente dentro do header-content */
     left: 60%;           /* Ajusta essa porcentagem para mover mais à esquerda ou à direita */
-    max-width: 200px;
+    max-width: 130px;
 }
 
 
