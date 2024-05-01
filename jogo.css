@@ -24,5 +24,13 @@ nav button {
     cursor: pointer;
 }
 
-
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
