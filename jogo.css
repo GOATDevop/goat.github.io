@@ -20,16 +20,15 @@ header {
 .header-content {
     position: relative;
     width: 100%;
-    padding-top: 80px; /* Espaço acima do logo */
+    padding-top: 50px; /* Ajuste conforme necessário para posicionar o logo corretamente */
 }
 
 .logo {
     position: absolute;
-    left: 60;
-    top: 30%;
-    transform: translateY(-20%);
-    max-width: 170px; /* Reduz o tamanho do logo */
-    margin-left: 100px; /* Margem à esquerda do logo */
+    left: 10%; /* Ajuste para posicionar o logo um pouco à esquerda */
+    top: 10%; /* Ajuste para posicionar o logo por cima da barra de navegação */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    max-width: 200px; /* Aumenta o tamanho do logo */
 }
 
 .navbar {
@@ -38,7 +37,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 0 20px; /* Padding lateral */
-    margin-top: 100px;
+    margin-top: 200px; /* Aumenta a margem superior para empurrar a barra de navegação para baixo */
     box-sizing: border-box;
 }
 
@@ -51,17 +50,19 @@ header {
 .navbar a {
     text-decoration: none;
     color: #ffffff;
-    background-color: rgba(65, 64, 64, 0.2); /* Adiciona transparência para ver a imagem de fundo */
+    background-color: rgba(65, 64, 64, 0.2); /* Transparência para ver a imagem de fundo */
     font-family: 'Bangers';
     padding: 14px 20px; /* Aumenta o padding para maior tamanho dos botões */
-    margin: 20px;
+    margin: 5px; /* Ajusta a margem para evitar que os botões fiquem muito separados */
     border-radius: 0.5px;
-    font-size: 30px; /* Aumenta o tamanho da fonte dos botões */
+    font-size: 30px; /* Tamanho da fonte dos botões */
     transition: background-color 0.3s;
 }
+
 .navbar a:hover {
     background-color: #bb920c; /* Cor de fundo ao passar o mouse */
 }
+
 
 #connectWallet {
     color: #ffffff;
