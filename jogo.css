@@ -13,15 +13,15 @@ header {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px; /* Espaço extra no final do cabeçalho */
-    height: 750px; /* Aumenta a altura do cabeçalho */
+    height: 700px; /* Aumenta a altura do cabeçalho */
 }
 
 .header-content {
-    padding: 85px 0; /* Aumenta o espaçamento acima e abaixo do logo */
+    padding: 100px 0px; /* Aumenta o espaçamento acima e abaixo do logo */
 }
 
 .header-content img {
-    max-width: 100px; /* Ajuste o tamanho do seu logo se necessário */
+    max-width: 115px; /* Ajuste o tamanho do seu logo se necessário */
 }
 
 .navbar {
@@ -30,6 +30,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 0 20px; /* Padding lateral */
+    margin-top: 50px;
     box-sizing: border-box;
 }
 
@@ -48,7 +49,7 @@ header {
     margin: 20px;
     border-radius: 1px;
     cursor: pointer;
-    font-size: 20px; /* Aumenta a fonte dos botões */
+    font-size: 25px; /* Aumenta a fonte dos botões */
     transition: background-color 0.3s;
 }
 
