@@ -15,6 +15,36 @@ document.getElementById('connect-wallet').addEventListener('click', async functi
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.getElementById('draggableLogo');
+
+    logo.addEventListener('mousedown', function(event) {
+        event.preventDefault();
+
+        let shiftX = event.clientX - logo.getBoundingClientRect().left;
+        let shiftY = event.clientY - logo.getBoundingClientRect().top;
+
+        function moveAt(pageX, pageY) {
+            logo.style.left = pageX - shiftX + 'px';
+            logo.style.top = pageY - shiftY + 'px';
+        }
+
+        function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+
+        logo.addEventListener('mouseup', function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            logo.removeEventListener('mouseup', this);
+        });
+    });
+
+    logo.addEventListener('dragstart', function() {
+        return false; // Impede a ação de arrastar nativa do navegador
+    });
+});
 
 
 
