@@ -8,7 +8,7 @@ body, html {
 
 header {
     background-image: url('goats.png');
-    background-size: cover;
+   background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +48,7 @@ header {
 
 .navbar a {
     text-decoration: none;
-    color: #ffffff;
+    color: #FE8029;
     font-family: 'Bangers';
     padding: 16px 24px; /* Aumenta o padding para maior tamanho dos botões */
     margin: 20px; /* Ajusta a margem para evitar que os botões fiquem muito separados */
@@ -60,14 +60,14 @@ header {
 }
 
 .navbar a:hover {
-    background-color: #bb920c; /* Cor de fundo ao passar o mouse */
+    background-color: #4CCD0F; /* Cor de fundo ao passar o mouse */
 }
 
 
 #connectWallet {
     font-family: 'Bangers';
     font-size: 30px;
-    color: #ffffff;
+    color: #FE8029;
     background-color: transparent;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
     padding: 12px 18px;
@@ -77,7 +77,7 @@ header {
 }
 
 #connectWallet:hover {
-    background-color: #bb920c;
+    background-color: #4CCD0F;
 }
 
 
