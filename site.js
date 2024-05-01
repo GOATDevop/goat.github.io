@@ -1,6 +1,4 @@
-const connectWalletButton = document.getElementById('connectWallet');
-
-connectWalletButton.addEventListener('click', async () => {
+document.getElementById('connectWallet').addEventListener('click', async function() {
     try {
         const provider = window.solana;
         if (!provider) {
@@ -20,41 +18,49 @@ connectWalletButton.addEventListener('click', async () => {
     }
 });
 
-async function getBalance(publicKey) {
-    const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed');
-    const balance = await connection.getBalance(new solanaWeb3.PublicKey(publicKey));
-    console.log('Saldo da conta:', balance);
-    return balance;
-}
-
-async function sendTransaction(from, to, amount) {
-    const transaction = new solanaWeb3.Transaction().add(
-        solanaWeb3.SystemProgram.transfer({
-            fromPubkey: new solanaWeb3.PublicKey(from),
-            toPubkey: new solanaWeb3.PublicKey(to),
-            lamports: amount
-        })
+async function getTokenBalance(walletAddress, mintAddress) {
+    const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
+    let tokenAccounts = await connection.getParsedTokenAccountsByOwner(
+        new solanaWeb3.PublicKey(walletAddress),
+        { mint: new solanaWeb3.PublicKey(mintAddress) }
     );
 
-    const { blockhash } = await connection.getRecentBlockhash();
-    transaction.recentBlockhash = blockhash;
-    // Assumir que o usuário irá assinar a transação com sua carteira
-    const signed = await window.solana.signTransaction(transaction);
-    const signature = await connection.sendRawTransaction(signed.serialize());
-    await connection.confirmTransaction(signature);
-    console.log('Transação enviada com sucesso, Signature:', signature);
+    if (tokenAccounts.value.length > 0) {
+        let balance = tokenAccounts.value[0].account.data.parsed.info.tokenAmount.uiAmount;
+        console.log(`Saldo do token é: ${balance}`);
+        return balance;
+    } else {
+        console.log("Nenhuma conta de token encontrada para este endereço.");
+        return 0;
+    }
 }
 
-function showLoading(message) {
-    const loadingDiv = document.getElementById('loading');
-    loadingDiv.textContent = message;
-    loadingDiv.classList.add('show');
+async function sendTokenTransaction(fromWallet, toPublicKey, amount, mintAddress) {
+    const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed');
+    const fromTokenAccount = await findAssociatedTokenAddress(fromWallet.publicKey, new solanaWeb3.PublicKey(mintAddress));
+    const toTokenAccount = await findAssociatedTokenAddress(new solanaWeb3.PublicKey(toPublicKey), new solanaWeb3.PublicKey(mintAddress));
+
+    const transaction = new solanaWeb3.Transaction().add(
+        splToken.Token.createTransferInstruction(
+            splToken.TOKEN_PROGRAM_ID,
+            fromTokenAccount,
+            toTokenAccount,
+            fromWallet.publicKey,
+            [],
+            amount * LAMPORTS_PER_SOL // Ajustar de acordo com a decimalidade do token
+        )
+    );
+
+    const signature = await solanaWeb3.sendAndConfirmTransaction(
+        connection,
+        transaction,
+        [fromWallet],
+        { commitment: 'confirmed' }
+    );
+
+    console.log(`Transação de token enviada com sucesso, Signature: ${signature}`);
 }
 
-function hideLoading() {
-    const loadingDiv = document.getElementById('loading');
-    loadingDiv.classList.remove('show');
-}
 
 
 
