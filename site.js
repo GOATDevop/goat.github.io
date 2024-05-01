@@ -45,6 +45,16 @@ async function sendTransaction(from, to, amount) {
     console.log('Transação enviada com sucesso, Signature:', signature);
 }
 
+function showLoading(message) {
+    const loadingDiv = document.getElementById('loading');
+    loadingDiv.textContent = message;
+    loadingDiv.classList.add('show');
+}
+
+function hideLoading() {
+    const loadingDiv = document.getElementById('loading');
+    loadingDiv.classList.remove('show');
+}
 
 
 
