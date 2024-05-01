@@ -3,42 +3,65 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Bangers', cursive; /* Aplica a fonte Bangers */
+    font-family: 'Bangers', cursive;
 }
 
 header {
     background-image: url('goats.png');
-    height: 350px; /* Ajustado para acomodar a barra de navegação abaixo do logo */
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-bottom: 20px; /* Adiciona espaço no final do cabeçalho */
+}
+
+.header-content {
+    padding: 20px 0; /* Espaçamento acima e abaixo do logo */
 }
 
 .header-content img {
-    max-width: 90px; /* Ajuste o tamanho do seu logo */
+    max-width: 200px; /* Ajuste o tamanho do seu logo */
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
-    width: 100%; /* Ocupa toda a largura sob o logo */
-    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; /* Adiciona padding nas laterais */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
-.navbar a, #connectWallet {
+.navbar .menu-items {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Faz os itens de menu ocuparem todo o espaço disponível exceto o botão */
+}
+
+.navbar a {
     text-decoration: none;
     color: white;
     background-color: #444;
     padding: 10px 15px;
-    margin: 5px; /* Espaçamento entre os botões */
+    margin: 5px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.navbar a:hover, #connectWallet:hover {
+.navbar a:hover {
     background-color: #555;
+}
+
+#connectWallet {
+    padding: 10px 15px;
+    background-color: #666; /* Diferencia o botão de conectar */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#connectWallet:hover {
+    background-color: #777;
 }
 
 footer {
@@ -46,10 +69,6 @@ footer {
     padding: 20px 0;
     background-color: #333;
     color: white;
-}
-
-#connectWallet {
-    cursor: pointer;
 }
 
 
