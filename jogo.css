@@ -1,29 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #f4f4f4;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007BFF;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #0056b3;
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-#walletStatus {
-    color: #0F0;
-    margin-left: 20px;
-}
 
 
