@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const response = await window.solana.connect({ onlyIfTrusted: false });
                 console.log('Connected with Public Key:', response.publicKey.toString());
 
-                const connection = new Connection(clusterApiUrl('mainnet-beta'), 'confirmed');
-                const balance = await connection.getBalance(new PublicKey(response.publicKey));
+                const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed');
+                const balance = await connection.getBalance(new solanaWeb3.PublicKey(response.publicKey));
                 console.log('Wallet balance:', balance);
 
                 alert(`Wallet connected! Your balance is ${balance} lamports.`);
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         connectButton.disabled = true;
     }
 });
+
 
 
 
