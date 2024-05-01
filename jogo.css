@@ -13,15 +13,15 @@ header {
     flex-direction: column;
     align-items: center;
     padding-bottom: 20px; /* Espaço extra no final do cabeçalho */
-    height: 600px; /* Aumenta a altura do cabeçalho */
+    height: 750px; /* Aumenta a altura do cabeçalho */
 }
 
 .header-content {
-    padding: 80px 0; /* Aumenta o espaçamento acima e abaixo do logo */
+    padding: 85px 0; /* Aumenta o espaçamento acima e abaixo do logo */
 }
 
 .header-content img {
-    max-width: 95px; /* Ajuste o tamanho do seu logo se necessário */
+    max-width: 100px; /* Ajuste o tamanho do seu logo se necessário */
 }
 
 .navbar {
@@ -41,11 +41,13 @@ header {
 
 .navbar a, #connectWallet {
     text-decoration: none;
-    color: gray;
+    color: black;
     background-color: transparent;
-    padding: 12px 18px; /* Aumenta o padding para maior tamanho dos botões */
-    margin: 10px;
-    border-radius: 5px;
+    font-family: 'Bangers';
+    padding: 14px 20px; /* Aumenta o padding para maior tamanho dos botões */
+    margin: 20px;
+    border-radius: 1px;
+    cursor: pointer;
     font-size: 20px; /* Aumenta a fonte dos botões */
     transition: background-color 0.3s;
 }
