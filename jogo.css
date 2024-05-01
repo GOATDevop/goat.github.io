@@ -7,7 +7,7 @@ body, html {
 }
 
 header {
-    background-image: url('header-background.jpg');
+    background-image: url('goats.png');
     height: 350px; /* Ajustado para acomodar a barra de navegação abaixo do logo */
     background-size: cover;
     display: flex;
@@ -17,7 +17,7 @@ header {
 }
 
 .header-content img {
-    max-width: 200px; /* Ajuste o tamanho do seu logo */
+    max-width: 90px; /* Ajuste o tamanho do seu logo */
 }
 
 .navbar {
