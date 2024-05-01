@@ -6,7 +6,7 @@ body, html {
 }
 
 header {
-    background-image: url('header-background.jpg');
+    background-image: url('goats.png');
     height: 300px;
     background-size: cover;
     display: flex;
