@@ -18,7 +18,7 @@ header {
 
 .header-content {
     position: relative;  /* Define a posição relativa ao header */
-    padding: 20px 0;
+    padding: 60px 60px;
 }
 
 .logo {
