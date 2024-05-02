@@ -29,44 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-        let scene, camera, renderer, textureLoader, material, plane;
-
-        function init() {
-            scene = new THREE.Scene();
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            renderer = new THREE.WebGLRenderer();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            document.body.appendChild(renderer.domElement);
-
-            textureLoader = new THREE.TextureLoader();
-            material = new THREE.MeshBasicMaterial({
-                map: textureLoader.load('logo.png'), // Substitua 'seu_logo.png' pelo caminho do seu logo
-                side: THREE.DoubleSide
-            });
-
-            plane = new THREE.Mesh(new THREE.PlaneGeometry(5, 3), material);
-            scene.add(plane);
-
-            camera.position.z = 10;
-
-            animate();
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            plane.rotation.y += 0.01; // Ajuste esse valor para mudar a velocidade de rotação
-            renderer.render(scene, camera);
-        }
-
-        window.addEventListener('resize', onWindowResize, false);
-
-        function onWindowResize(){
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        }
-
-        init();
+        
 
 
 
