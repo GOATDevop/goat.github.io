@@ -28,18 +28,17 @@ header {
     left: 25%; /* Ajuste para posicionar o logo um pouco à esquerda */
     top: 30%; /* Ajuste para posicionar o logo por cima da barra de navegação */
     max-width: 300px; /* Aumenta o tamanho do logo */
-    animation: spin 2s linear infinite; /* Define a animação para girar continuamente */
+     animation: horizontalFlip 3s linear infinite; /* Define a animação para girar horizontalmente */
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
+@keyframes horizontalFlip {
+    0%, 100% {
+        transform: scaleX(1); /* Começa e termina com o logo normal */
     }
-    to {
-        transform: rotate(360deg);
+    50% {
+        transform: scaleX(-1); /* Inverte o logo horizontalmente no meio da animação */
     }
 }
-
 
 .navbar {
     display: flex;
