@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-<script>
+
         let scene, camera, renderer, textureLoader, material, plane;
 
         function init() {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         init();
-    </script>
+
 
 
 
