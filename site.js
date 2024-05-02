@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });*/
 
-// Importar @solana/web3.js usando Skypack
+// Importações usando Skypack CDN
 import { Connection, PublicKey, clusterApiUrl } from 'https://cdn.skypack.dev/@solana/web3.js';
 
 document.addEventListener('DOMContentLoaded', function() {
