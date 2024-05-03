@@ -15,12 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         try {
-            // Solicita a conexão à carteira Phantom
             const response = await window.solana.connect({ onlyIfTrusted: true });
             console.log('Connected to Phantom Wallet:', response.publicKey.toString());
             button.textContent = 'Disconnect from Phantom';
+            return true; // Indicar sucesso na conexão
         } catch (error) {
             console.error('Failed to connect:', error);
+            return false; // Indicar falha na conexão
         }
     }
 
@@ -29,21 +30,23 @@ document.addEventListener('DOMContentLoaded', function () {
         await window.solana.disconnect();
         button.textContent = 'Connect to Phantom';
         console.log('Disconnected from Phantom Wallet');
+        return false; // Indicar que a carteira está desconectada
     }
 
-    let walletConnected = false;
-
     // Listener para o botão
-    button.addEventListener('click', () => {
-        if (!walletConnected) {
-            connectWallet();
-            walletConnected = true;
+    button.addEventListener('click', async () => {
+        if (button.textContent.includes('Connect')) {
+            if (await connectWallet()) {
+                button.textContent = 'Disconnect from Phantom';
+            }
         } else {
-            disconnectWallet();
-            walletConnected = false;
+            if (await disconnectWallet()) {
+                button.textContent = 'Connect to Phantom';
+            }
         }
     });
 });
+
 
 
 
