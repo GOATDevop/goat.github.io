@@ -92,14 +92,18 @@ header {
 }
 
 #infoDisplay {
-    text-align: right;
-    margin: 20px auto; /* Centraliza e dá um espaço acima e abaixo */
-    position: absolute; /* Posicionamento absoluto dentro do cabeçalho */
-    width: 100%; /* Ocupa a largura total do cabeçalho */
-    top: 300px; /* Ajuste conforme necessário para posicionar acima do botão */
-    z-index: 10; /* Garante que fique acima de outros elementos */
-    color: #FE8029; /* Cor do texto para combinar com os links */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Sombra no texto para consistência */
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para um efeito moderno */
+    color: #FE8029;
+    border-radius: 8px;
+    position: absolute; /* Posicionamento absoluto para colocar precisamente */
+    top: 320px; /* Ajuste conforme necessário para alinhar verticalmente */
+    right: 20px; /* Ajuste conforme necessário para alinhar horizontalmente */
+    display: none; /* Inicialmente oculto */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra para um efeito 3D */
+    z-index: 10; /* Garante que fique sobre outros elementos */
+    font-size: 16px; /* Ajuste conforme necessário */
 }
 
 footer {
