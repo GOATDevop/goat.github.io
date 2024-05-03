@@ -1,5 +1,5 @@
 // Aguarda o carregamento completo do DOM
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function () {
     // Verifica se o objeto Solana está disponível
     if (typeof solana !== 'undefined') {
         const button = document.getElementById('connectBtn');
@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.log('Objeto Solana não encontrado. Certifique-se de que @solana/web3.js está carregado corretamente.');
     }
-});
+};
+
 
 
 
