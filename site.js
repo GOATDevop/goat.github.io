@@ -38,6 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+async function updateBalance(publicKey) {
+    const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed');
+    const balance = await connection.getBalance(new solanaWeb3.PublicKey(publicKey));
+    const solBalance = balance / solanaWeb3.LAMPORTS_PER_SOL; // Convertendo lamports para SOL
+    const balanceElement = document.getElementById('walletBalance');
+    balanceElement.textContent = `Balance: ${solBalance.toFixed(2)} SOL`;
+}
+    
     // Função para desconectar da carteira Phantom
     async function disconnectWallet() {
         await window.solana.disconnect();
@@ -52,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateUI(isConnected, address = null) {
     const statusElement = document.getElementById('status');
     const addressElement = document.getElementById('walletAddress');
+    const balanceElement = document.getElementById('walletBalance');    
     const infoDisplay = document.getElementById('infoDisplay');
 
     if (isConnected) {
@@ -60,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         infoDisplay.style.display = 'block'; // Mostra o infoDisplay quando conectado
     } else {
         infoDisplay.style.display = 'none'; // Oculta quando não conectado
+        balanceElement.textContent = 'Balance: 0 SOL'; // Reseta o saldo
     }
 }
 
