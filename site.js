@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const button = document.getElementById('connectBtn');
-    updateUIFromStorage(); // Atualiza a UI com base nos dados salvos no localStorage
+    // Inicializa a interface com base nos dados do localStorage
+    updateUIFromStorage();
 
     function updateUIFromStorage() {
         const connected = localStorage.getItem('isConnected') === 'true';
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return window.solana && window.solana.isPhantom;
     }
 
+    // Função para conectar à carteira Phantom
     async function connectWallet() {
         if (!isPhantomInstalled()) {
             console.error('Phantom wallet is not installed.');
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Função para desconectar da carteira Phantom
     async function disconnectWallet() {
         await window.solana.disconnect();
         console.log('Disconnected from Phantom Wallet');
@@ -45,9 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
         updateUI(false);
     }
 
+    // Atualiza o status da carteira e o endereço na página
     function updateUI(isConnected, address = null) {
         const statusElement = document.getElementById('status');
         const addressElement = document.getElementById('walletAddress');
+
         if (isConnected) {
             statusElement.textContent = 'Status: Connected';
             addressElement.textContent = 'Address: ' + address;
@@ -57,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Listener para o botão
     button.addEventListener('click', async () => {
         if (button.textContent === 'Connect Wallet') {
             await connectWallet();
@@ -65,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 
 
