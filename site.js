@@ -1,26 +1,47 @@
-const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed');
+document.addEventListener('DOMContentLoaded', function () {
+    const statusText = document.getElementById('status');
+    const connectButton = document.getElementById('connectButton');
+    let walletConnected = false;
+    let wallet;
 
-// Função para conectar a carteira
-async function connectWallet() {
-    try {
-        const provider = window.solana;
-        if (provider) {
-            if (!provider.isConnected) {
-                await provider.connect();
+    async function connectWallet() {
+        if (window.solana && window.solana.isPhantom) {
+            try {
+                wallet = await window.solana.connect();
+                walletConnected = true;
+                connectButton.textContent = 'Disconnect Wallet';
+                statusText.textContent = 'Wallet connected: ' + wallet.publicKey.toString();
+            } catch (error) {
+                console.error('Failed to connect:', error);
+                statusText.textContent = 'Failed to connect wallet.';
             }
-            console.log('Carteira conectada com o endereço:', provider.publicKey.toString());
-            document.getElementById('status').innerText = 'Carteira conectada';
         } else {
-            console.log('Por favor, instale uma carteira compatível com Solana.');
-            document.getElementById('status').innerText = 'Por favor, instale uma carteira compatível com Solana.';
+            statusText.textContent = 'Please install Phantom wallet.';
         }
-    } catch (error) {
-        console.error('Falha ao conectar a carteira:', error);
-        document.getElementById('status').innerText = 'Falha ao conectar a carteira';
     }
-}
 
-document.getElementById('connectButton').addEventListener('click', connectWallet);
+    async function disconnectWallet() {
+        if (walletConnected && window.solana && window.solana.disconnect) {
+            try {
+                await window.solana.disconnect();
+                walletConnected = false;
+                connectButton.textContent = 'Connect Wallet';
+                statusText.textContent = 'Wallet disconnected';
+            } catch (error) {
+                console.error('Failed to disconnect:', error);
+                statusText.textContent = 'Failed to disconnect wallet.';
+            }
+        }
+    }
+
+    connectButton.addEventListener('click', function () {
+        if (walletConnected) {
+            disconnectWallet();
+        } else {
+            connectWallet();
+        }
+    });
+});
 
 
 
