@@ -1,4 +1,4 @@
-import { Connection, PublicKey, clusterApiUrl } from 'https://cdn.skypack.dev/@solana/web3.js';
+import { Connection, PublicKey, clusterApiUrl } from 'https://jspm.dev/@solana/web3.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     const connectButton = document.getElementById('connectWallet');
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         connectButton.disabled = true;
     }
 });
+
 
         
 
