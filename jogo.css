@@ -91,6 +91,16 @@ header {
     background-color: #4CCD0F;
 }
 
+#infoDisplay {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #connectBtn {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
 
 footer {
     margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
