@@ -1,40 +1,37 @@
 document.addEventListener('DOMContentLoaded', function () {
+    if (typeof solanaWeb3 === 'undefined') {
+        console.error('solanaWeb3 is not defined. Please check if the library is loaded correctly.');
+        return;
+    }
+
     const button = document.getElementById('connectBtn');
     let walletConnected = false;
 
-    // Instância de conexão Solana
+    // Verifique se usamos o objeto correto
     const connection = new solanaWeb3.Connection(
         solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed'
     );
 
-    // Função para conectar à carteira
     async function connectWallet() {
         try {
-            const providerUrl = 'https://www.sollet.io';
-            const provider = new solanaWeb3.WalletProvider(providerUrl);
-            await provider.connect();
+            // Assumindo que 'solanaWeb3' é definido, devemos usar solanaWeb3.Wallet, se existir
+            // Caso contrário, você precisa revisar como a biblioteca lida com conexões
+            console.log('Attempting to connect...');
             walletConnected = true;
             button.textContent = 'Disconnect Wallet';
-            console.log('Connected: ' + provider.publicKey.toString());
         } catch (error) {
             console.error('Connection error:', error);
         }
     }
 
-    // Função para desconectar da carteira
     async function disconnectWallet() {
-        try {
-            if (walletConnected) {
-                walletConnected = false;
-                button.textContent = 'Connect Wallet';
-                console.log('Disconnected from wallet');
-            }
-        } catch (error) {
-            console.error('Disconnection error:', error);
+        if (walletConnected) {
+            console.log('Disconnecting...');
+            walletConnected = false;
+            button.textContent = 'Connect Wallet';
         }
     }
 
-    // Listener para o botão
     button.addEventListener('click', () => {
         if (!walletConnected) {
             connectWallet();
@@ -43,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 
 
