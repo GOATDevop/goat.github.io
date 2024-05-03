@@ -1,32 +1,39 @@
-import { Connection, PublicKey, clusterApiUrl } from 'https://jspm.dev/@solana/web3.js';
+let walletConnected = false;
+const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
 
-document.addEventListener('DOMContentLoaded', function() {
-    const connectButton = document.getElementById('connectWallet');
-    
-    if (window.solana && window.solana.isPhantom) {
-        console.log('Phantom wallet found!');
+async function connectWallet() {
+    try {
+        const providerUrl = 'https://www.sollet.io';
+        const wallet = new solanaWeb3.Wallet(providerUrl);
+        await wallet.connect();
+        walletConnected = true;
+        document.getElementById('status').innerText = 'Wallet connected';
+        document.getElementById('connectButton').innerText = 'Disconnect Wallet';
+    } catch (error) {
+        console.error('Connection failed:', error);
+    }
+}
 
-        connectButton.addEventListener('click', async () => {
-            try {
-                const response = await window.solana.connect({ onlyIfTrusted: false });
-                console.log('Connected with Public Key:', response.publicKey.toString());
+async function disconnectWallet() {
+    try {
+        // Assumes wallet disconnect method exists, adjust based on actual wallet API
+        await wallet.disconnect();
+        walletConnected = false;
+        document.getElementById('status').innerText = 'Wallet disconnected';
+        document.getElementById('connectButton').innerText = 'Connect Wallet';
+    } catch (error) {
+        console.error('Disconnection failed:', error);
+    }
+}
 
-                const connection = new Connection(clusterApiUrl('mainnet-beta'), 'confirmed');
-                const balance = await connection.getBalance(new PublicKey(response.publicKey));
-                console.log('Wallet balance:', balance);
-
-                alert(`Wallet connected! Your balance is ${balance} lamports.`);
-            } catch (err) {
-                console.error(err);
-                alert('Connection failed: ' + err.message);
-            }
-        });
+document.getElementById('connectButton').addEventListener('click', () => {
+    if (walletConnected) {
+        disconnectWallet();
     } else {
-        console.log('Phantom wallet not found! Please install it.');
-        connectButton.textContent = 'Phantom Wallet Not Found';
-        connectButton.disabled = true;
+        connectWallet();
     }
 });
+
 
 
         
