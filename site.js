@@ -1,10 +1,10 @@
 let walletConnected = false;
-const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
+const connection = new web3.Connection(web3.clusterApiUrl('mainnet-beta'));
 
 async function connectWallet() {
     try {
         const providerUrl = 'https://www.sollet.io';
-        const wallet = new solanaWeb3.Wallet(providerUrl);
+        const wallet = new web3.Wallet(providerUrl);
         await wallet.connect();
         walletConnected = true;
         document.getElementById('status').innerText = 'Wallet connected';
@@ -33,6 +33,7 @@ document.getElementById('connectButton').addEventListener('click', () => {
         connectWallet();
     }
 });
+
 
 
 
