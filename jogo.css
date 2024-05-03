@@ -106,6 +106,42 @@ header {
     font-size: 20px; /* Ajuste conforme necessário */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contact h2 {
+    margin-bottom: 20px; /* Ajuste o valor conforme necessário para mais ou menos espaço */
+    font-size: 30px; /* Ajusta o tamanho da fonte do título */
+}
+
+#contact .social-links {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente, se necessário */
+    gap: 20px;                /* Espaçamento entre os ícones */
+}
+
+#contact .social-links a {
+    display: block;  /* Garante que o link se comporte como bloco para melhor controle */
+}
+
+#contact .social-links img {
+    width: 95px;    /* Define um tamanho consistente para os ícones */
+    height: auto;   /* Mantém a proporção dos ícones */
+}
+
 footer {
     margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
     text-align: center;
