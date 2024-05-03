@@ -1,38 +1,27 @@
-let walletConnected = false;
-const connection = new web3.Connection(web3.clusterApiUrl('mainnet-beta'));
+const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed');
 
+// Função para conectar a carteira
 async function connectWallet() {
     try {
-        const providerUrl = 'https://www.sollet.io';
-        const wallet = new web3.Wallet(providerUrl);
-        await wallet.connect();
-        walletConnected = true;
-        document.getElementById('status').innerText = 'Wallet connected';
-        document.getElementById('connectButton').innerText = 'Disconnect Wallet';
+        const provider = window.solana;
+        if (provider) {
+            if (!provider.isConnected) {
+                await provider.connect();
+            }
+            console.log('Carteira conectada com o endereço:', provider.publicKey.toString());
+            document.getElementById('status').innerText = 'Carteira conectada';
+        } else {
+            console.log('Por favor, instale uma carteira compatível com Solana.');
+            document.getElementById('status').innerText = 'Por favor, instale uma carteira compatível com Solana.';
+        }
     } catch (error) {
-        console.error('Connection failed:', error);
+        console.error('Falha ao conectar a carteira:', error);
+        document.getElementById('status').innerText = 'Falha ao conectar a carteira';
     }
 }
 
-async function disconnectWallet() {
-    try {
-        // Assumes wallet disconnect method exists, adjust based on actual wallet API
-        await wallet.disconnect();
-        walletConnected = false;
-        document.getElementById('status').innerText = 'Wallet disconnected';
-        document.getElementById('connectButton').innerText = 'Connect Wallet';
-    } catch (error) {
-        console.error('Disconnection failed:', error);
-    }
-}
+document.getElementById('connectButton').addEventListener('click', connectWallet);
 
-document.getElementById('connectButton').addEventListener('click', () => {
-    if (walletConnected) {
-        disconnectWallet();
-    } else {
-        connectWallet();
-    }
-});
 
 
 
