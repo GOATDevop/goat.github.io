@@ -1,52 +1,49 @@
-// Aguarda o carregamento completo do DOM
-window.onload = function () {
-    // Verifica se o objeto Solana está disponível
-    if (typeof solana !== 'undefined') {
-        const button = document.getElementById('connectBtn');
-        let connected = false;
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('connectBtn');
+    let walletConnected = false;
 
-        // Conecta à carteira
-        async function connectWallet() {
-            try {
-                const provider = solana;
-                if (provider) {
-                    await provider.connect();
-                    connected = true;
-                    button.textContent = 'Disconnect Wallet';
-                    console.log('Connected to wallet!');
-                }
-            } catch (error) {
-                console.error('Connection error:', error);
-            }
+    // Instância de conexão Solana
+    const connection = new solanaWeb3.Connection(
+        solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed'
+    );
+
+    // Função para conectar à carteira
+    async function connectWallet() {
+        try {
+            const providerUrl = 'https://www.sollet.io';
+            const provider = new solanaWeb3.WalletProvider(providerUrl);
+            await provider.connect();
+            walletConnected = true;
+            button.textContent = 'Disconnect Wallet';
+            console.log('Connected: ' + provider.publicKey.toString());
+        } catch (error) {
+            console.error('Connection error:', error);
         }
-
-        // Desconecta da carteira
-        async function disconnectWallet() {
-            try {
-                const provider = solana;
-                if (provider && connected) {
-                    await provider.disconnect();
-                    connected = false;
-                    button.textContent = 'Connect Wallet';
-                    console.log('Disconnected from wallet!');
-                }
-            } catch (error) {
-                console.error('Disconnection error:', error);
-            }
-        }
-
-        // Adiciona o listener ao botão
-        button.addEventListener('click', () => {
-            if (!connected) {
-                connectWallet();
-            } else {
-                disconnectWallet();
-            }
-        });
-    } else {
-        console.log('Objeto Solana não encontrado. Certifique-se de que @solana/web3.js está carregado corretamente.');
     }
-};
+
+    // Função para desconectar da carteira
+    async function disconnectWallet() {
+        try {
+            if (walletConnected) {
+                walletConnected = false;
+                button.textContent = 'Connect Wallet';
+                console.log('Disconnected from wallet');
+            }
+        } catch (error) {
+            console.error('Disconnection error:', error);
+        }
+    }
+
+    // Listener para o botão
+    button.addEventListener('click', () => {
+        if (!walletConnected) {
+            connectWallet();
+        } else {
+            disconnectWallet();
+        }
+    });
+});
+
 
 
 
