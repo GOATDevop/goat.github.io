@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const connected = localStorage.getItem('isConnected') === 'true';
         const address = localStorage.getItem('walletAddress');
         updateUI(connected, address);
-        button.textContent = connected ? 'Disconnect from Phantom' : 'Connect Wallet';
+        button.textContent = connected ? 'Disconnect from Phantom': 'Connect Wallet';
     }
 
     function isPhantomInstalled() {
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('isConnected', 'true');
             localStorage.setItem('walletAddress', response.publicKey.toString());
             updateUI(true, response.publicKey.toString());
-            await updateBalance(response.publicKey); // Nova função para atualizar o saldo
         } catch (error) {
             if (error.message.includes("User rejected the request")) {
                 alert("Connection request was rejected. Please allow the connection in your Phantom wallet.");
@@ -38,14 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-
-async function updateBalance(publicKey) {
-    const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'), 'confirmed');
-    const balance = await connection.getBalance(new solanaWeb3.PublicKey(publicKey));
-    const solBalance = balance / solanaWeb3.LAMPORTS_PER_SOL; // Convertendo lamports para SOL
-    const balanceElement = document.getElementById('walletBalance');
-    balanceElement.textContent = `Balance: ${solBalance.toFixed(2)} SOL`;
-}
     
     // Função para desconectar da carteira Phantom
     async function disconnectWallet() {
@@ -60,8 +51,7 @@ async function updateBalance(publicKey) {
     // Atualiza o status da carteira e o endereço na página
     function updateUI(isConnected, address = null) {
     const statusElement = document.getElementById('status');
-    const addressElement = document.getElementById('walletAddress');
-    const balanceElement = document.getElementById('walletBalance');    
+    const addressElement = document.getElementById('walletAddress');    
     const infoDisplay = document.getElementById('infoDisplay');
 
     if (isConnected) {
@@ -70,7 +60,6 @@ async function updateBalance(publicKey) {
         infoDisplay.style.display = 'block'; // Mostra o infoDisplay quando conectado
     } else {
         infoDisplay.style.display = 'none'; // Oculta quando não conectado
-        balanceElement.textContent = 'Balance: 0 SOL'; // Reseta o saldo
     }
 }
 
