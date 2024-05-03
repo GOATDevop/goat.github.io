@@ -94,7 +94,7 @@ header {
 #infoDisplay {
     text-align: center;
     padding: 10px 20px;
-    background-color: rgba(21, 21, 21, 0.8); /* Fundo semi-transparente para um efeito moderno */
+    background-color: rgba(202, 253, 222, 0.5); /* Fundo semi-transparente para um efeito moderno */
     color: #FE8029;
     border-radius: 8px;
     position: absolute; /* Posicionamento absoluto para colocar precisamente */
