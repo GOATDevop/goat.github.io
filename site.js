@@ -1,9 +1,9 @@
-// Checks if the Solana object is available
+// Verifica se o objeto Solana está disponível
 if (typeof solana !== 'undefined') {
     const button = document.getElementById('connectBtn');
     let connected = false;
 
-    // Connect to the wallet
+    // Conecta à carteira
     async function connectWallet() {
         try {
             const provider = solana;
@@ -18,7 +18,7 @@ if (typeof solana !== 'undefined') {
         }
     }
 
-    // Disconnect from the wallet
+    // Desconecta da carteira
     async function disconnectWallet() {
         try {
             const provider = solana;
@@ -33,7 +33,7 @@ if (typeof solana !== 'undefined') {
         }
     }
 
-    // Event listener for button click
+    // Adiciona o listener ao botão
     button.addEventListener('click', () => {
         if (!connected) {
             connectWallet();
@@ -42,8 +42,9 @@ if (typeof solana !== 'undefined') {
         }
     });
 } else {
-    console.log('Solana object not found. Make sure @solana/web3.js is loaded properly.');
+    console.log('Objeto Solana não encontrado. Certifique-se de que @solana/web3.js está carregado corretamente.');
 }
+
 
 
 
