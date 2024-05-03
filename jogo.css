@@ -92,24 +92,27 @@ header {
 }
 
 #infoDisplay {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    #connectBtn {
-        display: block;
-        width: 200px;
-        margin: 0 auto;
-    }
-
-footer {
-    margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-    width: 100%;
+    margin: 20px auto; /* Centraliza e dá um espaço acima e abaixo */
+    position: absolute; /* Posicionamento absoluto dentro do cabeçalho */
+    width: 100%; /* Ocupa a largura total do cabeçalho */
+    top: 300px; /* Ajuste conforme necessário para posicionar acima do botão */
+    z-index: 10; /* Garante que fique acima de outros elementos */
+    color: #FE8029; /* Cor do texto para combinar com os links */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Sombra no texto para consistência */
 }
+
+.navbar {
+    padding-top: 60px; /* Adiciona espaço acima da barra de navegação para acomodar infoDisplay */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative; /* Posiciona a barra de navegação relativamente */
+}
+
 
 
 
