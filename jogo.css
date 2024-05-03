@@ -119,11 +119,10 @@ header {
 
 
 
-
-
-#contact h2 {
-    margin-bottom: 20px; /* Ajuste o valor conforme necessário para mais ou menos espaço */
-    font-size: 30px; /* Ajusta o tamanho da fonte do título */
+.contact h2 {
+    margin-bottom: 40px; /* Espaço abaixo do título */
+    padding-left: 20px;
+    font-size: 44px; /* Ajusta o tamanho da fonte do título */
 }
 
 #contact .social-links {
@@ -137,11 +136,10 @@ header {
     display: block;  /* Garante que o link se comporte como bloco para melhor controle */
 }
 
-#contact .social-links img {
-    width: 95px;    /* Define um tamanho consistente para os ícones */
-    height: auto;   /* Mantém a proporção dos ícones */
+.img.social {
+    max-width: 100px;
+    height: auto;
 }
-
 footer {
     margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
     text-align: center;
