@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('isConnected', 'true');
             localStorage.setItem('walletAddress', response.publicKey.toString());
             updateUI(true, response.publicKey.toString());
+            await updateBalance(response.publicKey); // Nova função para atualizar o saldo
         } catch (error) {
             if (error.message.includes("User rejected the request")) {
                 alert("Connection request was rejected. Please allow the connection in your Phantom wallet.");
