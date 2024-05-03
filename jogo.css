@@ -75,7 +75,7 @@ header {
 }
 
 
-#connectWallet {
+#connectBtn {
     font-family: 'Bangers';
     font-size: 30px;
     color: #FE8029;
@@ -87,7 +87,7 @@ header {
     transition: background-color 0.3s;
 }
 
-#connectWallet:hover {
+#connectBtn:hover {
     background-color: #4CCD0F;
 }
 
