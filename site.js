@@ -1,6 +1,3 @@
-
-
-// Importações usando Skypack CDN
 import { Connection, PublicKey, clusterApiUrl } from 'https://cdn.skypack.dev/@solana/web3.js';
 
 document.addEventListener('DOMContentLoaded', function() {
