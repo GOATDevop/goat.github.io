@@ -94,7 +94,7 @@ header {
 #infoDisplay {
     text-align: center;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para um efeito moderno */
+    background-color: rgba(21, 21, 21, 0.8); /* Fundo semi-transparente para um efeito moderno */
     color: #FE8029;
     border-radius: 8px;
     position: absolute; /* Posicionamento absoluto para colocar precisamente */
@@ -103,7 +103,7 @@ header {
     display: none; /* Inicialmente oculto */
     box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra para um efeito 3D */
     z-index: 10; /* Garante que fique sobre outros elementos */
-    font-size: 16px; /* Ajuste conforme necessário */
+    font-size: 20px; /* Ajuste conforme necessário */
 }
 
 footer {
