@@ -1,51 +1,50 @@
 document.addEventListener('DOMContentLoaded', function () {
     const button = document.getElementById('connectBtn');
-    let walletConnected = false;
 
-    // Criar uma instância de conexão ao cluster Solana
-    const connection = new sol.Web3.Connection(
-        sol.Web3.clusterApiUrl('devnet'), // Conectar ao devnet para testes
-        'confirmed'
-    );
+    // Função para detectar se a carteira Phantom está instalada
+    function isPhantomInstalled() {
+        return window.solana && window.solana.isPhantom;
+    }
 
+    // Função para conectar à carteira Phantom
     async function connectWallet() {
+        if (!isPhantomInstalled()) {
+            console.error('Phantom wallet is not installed.');
+            alert('Please install Phantom wallet.');
+            return;
+        }
+
         try {
-            const provider = window.solana; // Usando o provider injetado pelo wallet como Phantom
-            if (provider) {
-                await provider.connect();
-                walletConnected = true;
-                button.textContent = 'Disconnect Wallet';
-                console.log('Connected to wallet with public key:', provider.publicKey.toString());
-            } else {
-                console.error('Wallet provider is not available.');
-            }
+            // Solicita a conexão à carteira Phantom
+            const response = await window.solana.connect({ onlyIfTrusted: true });
+            console.log('Connected to Phantom Wallet:', response.publicKey.toString());
+            button.textContent = 'Disconnect from Phantom';
         } catch (error) {
             console.error('Failed to connect:', error);
         }
     }
 
+    // Função para desconectar da carteira Phantom
     async function disconnectWallet() {
-        try {
-            const provider = window.solana;
-            if (provider && walletConnected) {
-                await provider.disconnect();
-                walletConnected = false;
-                button.textContent = 'Connect Wallet';
-                console.log('Disconnected from wallet.');
-            }
-        } catch (error) {
-            console.error('Failed to disconnect:', error);
-        }
+        await window.solana.disconnect();
+        button.textContent = 'Connect to Phantom';
+        console.log('Disconnected from Phantom Wallet');
     }
 
+    let walletConnected = false;
+
+    // Listener para o botão
     button.addEventListener('click', () => {
         if (!walletConnected) {
             connectWallet();
+            walletConnected = true;
         } else {
             disconnectWallet();
+            walletConnected = false;
         }
     });
 });
+
 
 
 
