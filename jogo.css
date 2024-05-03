@@ -103,7 +103,8 @@ header {
     display: none; /* Inicialmente oculto */
     box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra para um efeito 3D */
     z-index: 10; /* Garante que fique sobre outros elementos */
-    font-size: 20px; /* Ajuste conforme necessário */
+    font-size: 18px; /* Ajuste conforme necessário */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
 
