@@ -1,22 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Verificando se o objeto solana está disponível
-    if (typeof solana === 'undefined') {
-        console.error('Solana is not defined. Please check if the library is loaded correctly.');
+    if (typeof solanaWeb3 === 'undefined') {
+        console.error('solanaWeb3 is not defined. Please check if the library is loaded correctly.');
         return;
     }
 
     const button = document.getElementById('connectBtn');
     let walletConnected = false;
 
-    // Criando uma instância de conexão Solana usando o objeto global correto
-    const connection = new solana.Connection(
-        solana.clusterApiUrl('mainnet-beta'), 'confirmed'
+    // Usar Web3.ClusterApiUrl para a conexão, corrigindo a chamada
+    const connection = new solanaWeb3.Connection(
+        solanaWeb3.ClusterApiUrl('mainnet-beta'), 'confirmed'
     );
 
     async function connectWallet() {
         try {
-            // Exemplo: tentativa de obtenção da chave pública para conectar
-            // Isto é apenas um exemplo e pode precisar de adaptação com métodos reais
+            // Detalhes da função connectWallet devem ser revisados com base na documentação da biblioteca
             console.log('Attempting to connect...');
             walletConnected = true;
             button.textContent = 'Disconnect Wallet';
@@ -43,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 
 
