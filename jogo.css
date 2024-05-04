@@ -118,6 +118,35 @@ header::after {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
+#about .container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    padding: 20px;
+    max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1 1 50%; /* Ocupa metade da largura do container */
+    max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.about-text {
+    flex: 1 1 50%; /* Ocupa a outra metade da largura do container */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
+    font-family: 'Bangers', cursive; /* Usa a mesma fonte do restante do site */
+}
+
+.about-text h2 {
+    color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
+    margin-top: 0;
+}
+
+.about-text p {
+    color: #333; /* Cor de texto mais escura para melhor leitura */
+}
 
 
 
