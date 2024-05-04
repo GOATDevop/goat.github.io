@@ -16,17 +16,8 @@ header {
     padding-bottom: 10px; /* Espaço extra no final do cabeçalho */
     height: 670px; /* Aumenta a altura do cabeçalho */
     position: relative; 
-   box-shadow: 0 8px 10px -10px black; /* Sombra para efeito de elevação */
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+    perspective: 500px;
+    transform: rotateX(10deg);
 }
 
 .header-content {
