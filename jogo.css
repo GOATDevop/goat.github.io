@@ -16,7 +16,6 @@ header {
     padding-bottom: 10px; /* Espaço extra no final do cabeçalho */
     height: 670px; /* Aumenta a altura do cabeçalho */
     position: relative;
-    margin-bottom: 30px;
 }
 
 .header-content {
@@ -116,7 +115,7 @@ header {
     padding: 30px;
     max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
     margin: 0 auto;
-    margin-top: 90px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
+    margin-top: 120px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
 
 
 }
@@ -126,7 +125,7 @@ header {
     margin-right: 40px; /* Adiciona espaço à direita da imagem */
     max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(-95px); /* Move a imagem mais para a esquerda */
+    transform: translateX(-110px); /* Move a imagem mais para a esquerda */
 }
 
 .about-text {
