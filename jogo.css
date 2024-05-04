@@ -23,6 +23,7 @@ header {
     position: relative;
     width: 100%;
     padding-top: 60px; /* Ajuste conforme necessário para posicionar o logo corretamente */
+    background-attachment: fixed; /* Mantém o fundo fixo durante a rolagem */
 }
 
 .logo {
@@ -32,6 +33,7 @@ header {
     max-width: 300px; /* Aumenta o tamanho do logo */
     animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
+    background-attachment: fixed; /* Mantém o fundo fixo durante a rolagem */
   }
 
   @keyframes rotate {
@@ -50,7 +52,8 @@ header {
     width: 100%;
     padding: 0 20px; /* Padding lateral */
     margin-top: 350px; /* Aumenta a margem superior para empurrar a barra de navegação para baixo */
-    box-sizing: border-box;   
+    box-sizing: border-box;
+    background-attachment: fixed; /* Mantém o fundo fixo durante a rolagem */
 }
 
 .navbar .menu-items {
@@ -69,7 +72,7 @@ header {
     font-size: 30px; /* Tamanho da fonte dos botões */
     transition: background-color 0.3s;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-
+    background-attachment: fixed; /* Mantém o fundo fixo durante a rolagem */
 }
 
 .navbar a:hover {
