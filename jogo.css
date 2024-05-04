@@ -15,7 +15,8 @@ header {
     align-items: center;
     padding-bottom: 10px; /* Espaço extra no final do cabeçalho */
     height: 670px; /* Aumenta a altura do cabeçalho */
-    position: relative; 
+    position: relative;
+    margin-bottom: 30px;
 }
 
 .header-content {
@@ -121,11 +122,11 @@ header {
 }
 
 .about-image {
-    flex: 1 1 60%; /* Ocupa metade da largura do container */
+    flex: 1 1 50%; /* Ocupa metade da largura do container */
     margin-right: 40px; /* Adiciona espaço à direita da imagem */
     max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(-80px); /* Move a imagem mais para a esquerda */
+    transform: translateX(-95px); /* Move a imagem mais para a esquerda */
 }
 
 .about-text {
@@ -138,11 +139,12 @@ header {
 .about-text h2 {
     color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
     margin-top: 0;
-    font-size: 60px; /* Ajusta o tamanho da fonte do título */
+    font-size: 85px; /* Ajusta o tamanho da fonte do título */
 }
 
 .about-text p {
     color: #333; /* Cor de texto mais escura para melhor leitura */
+    font-size: 25px;
 }
 
 
