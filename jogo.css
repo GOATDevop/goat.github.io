@@ -150,27 +150,7 @@ header::after {
     color: #333; /* Cor de texto mais escura para melhor leitura */
 }
 
-#goat-animation {
-    width: 100%; /* Garante que a div ocupe a largura total da janela */
-    overflow: hidden; /* Impede que a imagem da cabra ultrapasse os limites visuais da div */
-    position: relative; /* Necessário para o posicionamento absoluto da imagem */
-    height: 150px; /* Altura suficiente para a imagem da cabra saltar */
-}
 
-.jumping-goat {
-    position: absolute;
-    width: 100px; /* Ajuste conforme o tamanho da sua imagem */
-    animation: jumpGoat 5s linear infinite; /* Define a duração e o tipo da animação */
-}
-
-@keyframes jumpGoat {
-    from {
-        left: -100px; /* Inicia fora da tela à esquerda */
-    }
-    to {
-        left: 100%; /* Move-se até a extremidade direita da tela */
-    }
-}
 
 
 
