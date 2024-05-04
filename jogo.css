@@ -143,6 +143,7 @@ header::after {
 .about-text h2 {
     color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
     margin-top: 0;
+    font-size: 44px; /* Ajusta o tamanho da fonte do título */
 }
 
 .about-text p {
