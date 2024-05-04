@@ -16,6 +16,7 @@ header {
     padding-bottom: 10px; /* Espaço extra no final do cabeçalho */
     height: 670px; /* Aumenta a altura do cabeçalho */
     position: relative;
+    background-attachment: fixed; /* Mantém o fundo fixo durante a rolagem */
 }
 
 .header-content {
