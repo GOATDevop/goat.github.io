@@ -17,7 +17,7 @@ header {
     height: 670px; /* Aumenta a altura do cabeçalho */
     position: relative; 
     perspective: 500px;
-    transform: rotateX(10deg);
+    transform: rotateX(30deg);
 }
 
 .header-content {
@@ -114,33 +114,33 @@ header {
     display: flex;
     align-items: center; /* Alinha verticalmente */
     justify-content: center; /* Alinha horizontalmente */
-    padding: 20px;
+    padding: 30px;
     max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
     margin: 0 auto;
-    margin-top: 70px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
+    margin-top: 90px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
 
 
 }
 
 .about-image {
     flex: 1 1 50%; /* Ocupa metade da largura do container */
-    margin-right: 40px; /* Adiciona espaço à direita da imagem */
+    margin-right: 60px; /* Adiciona espaço à direita da imagem */
     max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(-20px); /* Move a imagem mais para a esquerda */
+    transform: translateX(-40px); /* Move a imagem mais para a esquerda */
 }
 
 .about-text {
     flex: 1 1 50%; /* Ocupa a outra metade da largura do container */
-    margin-left: 25px; /* Adiciona espaço à esquerda do texto */
+    margin-left: 40px; /* Adiciona espaço à esquerda do texto */
     padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
-    transform: translateX(20px); /* Move o texto um pouco para a direita */
+    transform: translateX(30px); /* Move o texto um pouco para a direita */
 }
 
 .about-text h2 {
     color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
     margin-top: 0;
-    font-size: 48px; /* Ajusta o tamanho da fonte do título */
+    font-size: 50px; /* Ajusta o tamanho da fonte do título */
 }
 
 .about-text p {
