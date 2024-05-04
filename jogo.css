@@ -117,24 +117,24 @@ header {
     padding: 20px;
     max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
     margin: 0 auto;
-    margin-top: 50px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
+    margin-top: 70px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
 
 
 }
 
 .about-image {
     flex: 1 1 50%; /* Ocupa metade da largura do container */
-    margin-right: 20px; /* Adiciona espaço à direita da imagem */
+    margin-right: 40px; /* Adiciona espaço à direita da imagem */
     max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(-10px); /* Move a imagem mais para a esquerda */
+    transform: translateX(-20px); /* Move a imagem mais para a esquerda */
 }
 
 .about-text {
     flex: 1 1 50%; /* Ocupa a outra metade da largura do container */
-    margin-left: 20px; /* Adiciona espaço à esquerda do texto */
+    margin-left: 25px; /* Adiciona espaço à esquerda do texto */
     padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
-    transform: translateX(10px); /* Move o texto um pouco para a direita */
+    transform: translateX(20px); /* Move o texto um pouco para a direita */
 }
 
 .about-text h2 {
