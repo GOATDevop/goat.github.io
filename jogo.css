@@ -136,24 +136,24 @@ header {
 .about-text h2 {
     color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
     margin-top: 0;
-    font-size: 85px; /* Ajusta o tamanho da fonte do título */
+    font-size: 80px; /* Ajusta o tamanho da fonte do título */
 }
 
 .about-text p {
     color: #333; /* Cor de texto mais escura para melhor leitura */
     font-size: 25px;
+    line-height: 1.6; /* Espaçamento entre linhas */
 }
 
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
     font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
-    background-color: #fff; /* Fundo branco ou ajuste conforme a estética do seu site */
     margin-top: 50px; /* Espaçamento da seção anterior */
 }
 
 #whyGoat h2 {
     text-align: center; /* Centraliza o título */
-    font-size: 48px; /* Tamanho grande para o título */
+    font-size: 80px; /* Tamanho grande para o título */
     margin-bottom: 30px; /* Espaçamento entre o título e a descrição */
     color: #FE8029; /* Cor do título, ajuste conforme necessário */
 }
@@ -163,6 +163,7 @@ header {
     line-height: 1.6; /* Espaçamento entre linhas */
     margin: 0 20px; /* Margens laterais para não tocar as bordas */
     color: #333; /* Cor do texto, ajustável */
+    font-size: 25px;
 }
 
 
