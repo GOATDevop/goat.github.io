@@ -114,16 +114,16 @@ header {
     padding: 30px;
     max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
     margin: 0 auto;
-    margin-top: 150px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
+    margin-top: 250px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
 
 }
 
 .about-image {
     flex: 1 1 50%; /* Ocupa metade da largura do container */
-    margin-right: 40px; /* Adiciona espaço à direita da imagem */
+    margin-right: 50px; /* Adiciona espaço à direita da imagem */
     max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(-110px); /* Move a imagem mais para a esquerda */
+    transform: translateX(-130px); /* Move a imagem mais para a esquerda */
 }
 
 .about-text {
@@ -148,7 +148,7 @@ header {
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
     font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
-    margin-top: 50px; /* Espaçamento da seção anterior */
+    margin-top: 100px; /* Espaçamento da seção anterior */
 }
 
 #whyGoat h2 {
@@ -162,14 +162,15 @@ header {
     text-align: justify; /* Justificação do texto para melhor leitura */
     line-height: 1.6; /* Espaçamento entre linhas */
     margin: 0 20px; /* Margens laterais para não tocar as bordas */
-    color: #333; /* Cor do texto, ajustável */
+    color: white; /* Cor do texto, ajustável */
     font-size: 25px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
 #gallery h2 {
     text-align: center;
     margin-bottom: 35px; /* Espaçamento adequado abaixo do título */
-    margin-top:90px;
+    margin-top:120px;
     font-size: 80px; /* Tamanho da fonte para o título */
     font-family: 'Bangers', cursive; /* Mantendo a consistência da fonte */
     color: #FE8029; /* Cor laranja usada no site */
