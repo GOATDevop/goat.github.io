@@ -162,7 +162,7 @@ header {
     text-align: justify; /* Justificação do texto para melhor leitura */
     line-height: 1.6; /* Espaçamento entre linhas */
     margin: 0 20px; /* Margens laterais para não tocar as bordas */
-    color: #333; /* Cor do texto, ajustável */
+    color: #000000; /* Cor do texto, ajustável */
     font-size: 25px;
     text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; /* Adiciona um rebordo preto ao texto */
 }
