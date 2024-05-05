@@ -64,7 +64,7 @@ header {
     color: #FE8029;
     font-family: 'Bangers';
     padding: 16px 24px; /* Aumenta o padding para maior tamanho dos botões */
-    margin: 20px; /* Ajusta a margem para evitar que os botões fiquem muito separados */
+    margin: 10px; /* Ajusta a margem para evitar que os botões fiquem muito separados */
     border-radius: 0.2px;
     font-size: 30px; /* Tamanho da fonte dos botões */
     transition: background-color 0.3s;
