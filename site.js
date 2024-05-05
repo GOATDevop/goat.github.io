@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const mediaFiles = ['C:Users/crist/OneDrive/Ambiente de Trabalho/Site/Imagens/goat.gif', 'C:Users/crist/OneDrive/Ambiente de Trabalho/Site/Imagens/goatmeme.png','C:Users/crist/OneDrive/Ambiente de Trabalho/Site/Imagens/goat1.gif'];
+    const mediaFiles = ['goat.gif', 'giphy(1).gif','goat1.gif'];
     const carouselContainer = document.querySelector('.carousel-images');
     let currentIndex = 0;
 
