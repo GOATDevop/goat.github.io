@@ -110,19 +110,19 @@ header {
 
 .intro-section {
     text-align: center; /* Centraliza o conteúdo */
-    margin: 50px 0; /* Adiciona espaço acima e abaixo da seção */
+    margin: 70px 50px; /* Adiciona espaço acima e abaixo da seção */
     padding: 20px; /* Espaço interno para não tocar as bordas */
 }
 
 .intro-section h1 {
-    font-size: 48px; /* Tamanho grande para o título */
+    font-size: 95px; /* Tamanho grande para o título */
     font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
     color: #FE8029; /* Usando a cor principal do site */
     margin-bottom: 10px; /* Espaço entre o título e o subtítulo */
 }
 
 .intro-section .subtitle {
-    font-size: 24px; /* Tamanho menor para o subtítulo */
+    font-size: 35px; /* Tamanho menor para o subtítulo */
     font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
     color: #333; /* Cor mais suave para o subtítulo */
 }
