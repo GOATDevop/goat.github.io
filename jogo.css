@@ -170,7 +170,7 @@ header {
     text-align: center;
     margin-bottom: 35px; /* Espaçamento adequado abaixo do título */
     margin-top:50px;
-    font-size: 44px; /* Tamanho da fonte para o título */
+    font-size: 80px; /* Tamanho da fonte para o título */
     font-family: 'Bangers', cursive; /* Mantendo a consistência da fonte */
     color: #FE8029; /* Cor laranja usada no site */
 }
@@ -181,7 +181,6 @@ header {
     height: 650px; /* Altura ajustada para acomodar conteúdo variado */
     margin: auto; /* Centraliza o carrossel na página */
     overflow: hidden; /* Oculta qualquer conteúdo que exceda o tamanho do carrossel */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para efeito de profundidade */
 }
 
 .carousel-images {
