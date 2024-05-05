@@ -5,6 +5,7 @@ body, html {
     height: 100%;
     font-family: 'Bangers', cursive;
     background-color: #b4b4b4;
+    scroll-behavior: smooth;
 }
 
 header {
