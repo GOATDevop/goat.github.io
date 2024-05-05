@@ -119,7 +119,14 @@ header {
     font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
     color: #FE8029; /* Usando a cor principal do site */
     margin-bottom: 5px; /* Espaço entre o título e o subtítulo */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    text-shadow: 
+        1px 1px 0 #000,   /* sombra múltipla para efeito 3D */
+        2px 2px 0 #000,
+        3px 3px 0 #000,
+        4px 4px 0 #000,
+        5px 5px 0 #000;
+    transform: translateZ(0); /* Habilita a aceleração de hardware para suavizar as sombras */
 }
 
 .intro-section .subtitle {
