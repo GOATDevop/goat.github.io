@@ -166,7 +166,38 @@ header {
     font-size: 25px;
 }
 
+#gallery h2 {
+    text-align: center;
+    margin-bottom: 35px; /* Adiciona uma margem ao fundo do título da galeria */
+    font-size: 44px; /* Ajusta o tamanho da fonte do título */
+}
 
+.carousel {
+position: relative;
+width: 40%; /* ou qualquer tamanho desejado */
+margin: auto;
+overflow: hidden;
+}
+
+.carousel {
+position: relative;
+width: 40%; /* ou o tamanho que preferir */
+height: 650px; /* Defina a altura baseado na maior imagem/vídeo esperado */
+margin: auto;
+overflow: hidden; /* Isso garante que nada fora desta área seja mostrado */
+}
+
+
+.carousel-images {
+display: flex;
+transition: transform 0.5s ease;
+}
+
+.carousel-images img, .carousel-images video {
+width: 100%; /* Garante que o conteúdo preencha a largura do carrossel */
+height: 100%; /* Faz com que a altura seja ajustada à do container */
+object-fit: cover; /* Mantém a proporção sem distorcer o conteúdo */
+}
 
 
 
