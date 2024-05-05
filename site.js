@@ -71,6 +71,29 @@ document.addEventListener('DOMContentLoaded', function () {
             await disconnectWallet();
         }
     });
+
+    const mediaFiles = ['C:Users/crist/OneDrive/Ambiente de Trabalho/Site/Imagens/goat.gif', 'C:Users/crist/OneDrive/Ambiente de Trabalho/Site/Imagens/goatmeme.png','C:Users/crist/OneDrive/Ambiente de Trabalho/Site/Imagens/goat1.gif'];
+    const carouselContainer = document.querySelector('.carousel-images');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        carouselContainer.innerHTML = ''; // Limpa o conteúdo anterior
+        const fileElement = document.createElement(mediaFiles[currentIndex].endsWith('.mp4') ? 'video' : 'img');
+        fileElement.src = mediaFiles[currentIndex];
+        if (fileElement.nodeName === 'VIDEO') {
+            fileElement.autoplay = true;
+            fileElement.loop = true;
+        }
+        carouselContainer.appendChild(fileElement);
+    }
+
+    updateCarousel(); // Carrega o primeiro item
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % mediaFiles.length; // Incrementa ou volta ao início
+        updateCarousel();
+    }, 5000); // Altera a imagem/vídeo a cada 5 segundos
+    
 });
 
 
