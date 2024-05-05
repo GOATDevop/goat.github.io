@@ -178,7 +178,7 @@ header {
 .carousel {
     position: relative;
     width: 40%; /* Tamanho adequado para o carrossel no layout do site */
-    height: 650px; /* Altura ajustada para acomodar conteúdo variado */
+    height: 720px; /* Altura ajustada para acomodar conteúdo variado */
     margin: auto; /* Centraliza o carrossel na página */
     overflow: hidden; /* Oculta qualquer conteúdo que exceda o tamanho do carrossel */
 }
