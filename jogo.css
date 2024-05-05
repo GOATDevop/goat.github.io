@@ -115,10 +115,10 @@ header {
 }
 
 .intro-section h1 {
-    font-size: 130px; /* Tamanho grande para o título */
+    font-size: 180px; /* Tamanho grande para o título */
     font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
     color: #FE8029; /* Usando a cor principal do site */
-    margin-bottom: 10px; /* Espaço entre o título e o subtítulo */
+    margin-bottom: 5px; /* Espaço entre o título e o subtítulo */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
