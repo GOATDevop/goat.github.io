@@ -94,11 +94,13 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
-    const startTime = new Date("MAY 07, 2024 00:15:00").getTime(); // Defina a data de início aqui
-    const endTime = new Date("MAY 08, 2024 15:00:00").getTime(); // Defina a data de término aqui
+    const startTime = new Date("may 07, 2024 00:44:00").getTime();
+    const endTime = new Date("Dec 30, 2024 15:00:00").getTime();
     const timerElement = document.getElementById('timer');
-    const liveElement = document.getElementById('presaleLive');
+    const presaleLiveElement = document.getElementById('presaleLive');
     const linkElement = document.getElementById('presaleLink');
+    const remainingTimeElement = document.getElementById('remainingTime');
+    const startsInMessageElement = document.getElementById('startsInMessage'); // Referência ao novo elemento de mensagem
 
     const interval = setInterval(function() {
         const now = new Date().getTime();
@@ -109,17 +111,13 @@ document.addEventListener('DOMContentLoaded', function () {
             timerElement.textContent = formatTime(distance);
         } else {
             // Após o início da presale
-            distance = endTime - now;
-            if (distance > 0) {
-                timerElement.textContent = formatTime(distance);
-                liveElement.style.display = "block";
-                linkElement.style.display = "block";
-            } else {
-                clearInterval(interval);
-                timerElement.textContent = "Presale has ended.";
-                liveElement.textContent = "The presale is now offline.";
-                linkElement.style.display = "none";
-            }
+            clearInterval(interval);
+            timerElement.textContent = " ";
+            startsInMessageElement.style.display = "none"; // Esconde a mensagem de "starts in"
+            presaleLiveElement.style.display = "block";
+            linkElement.style.display = "block";
+            remainingTimeElement.style.display = "block";
+            remainingTimeElement.textContent = "Ends in: " + formatTime(endTime - now);
         }
     }, 1000);
 });
