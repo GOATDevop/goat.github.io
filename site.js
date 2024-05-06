@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
     const startTime = new Date("may 07, 2024 00:44:00").getTime();
-    const endTime = new Date("Dec 30, 2024 15:00:00").getTime();
+    const endTime = new Date("may 30, 2024 15:00:00").getTime();
     const timerElement = document.getElementById('timer');
     const presaleLiveElement = document.getElementById('presaleLive');
     const linkElement = document.getElementById('presaleLink');
