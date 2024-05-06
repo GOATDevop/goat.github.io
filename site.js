@@ -93,6 +93,29 @@ document.addEventListener('DOMContentLoaded', function () {
         currentIndex = (currentIndex + 1) % mediaFiles.length; // Incrementa ou volta ao início
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
+
+   const endTime = new Date("Dec 25, 2023 15:00:00").getTime(); // Defina a data final aqui
+    const timerElement = document.getElementById('timer');
+    const liveElement = document.getElementById('presaleLive');
+    const linkElement = document.getElementById('presaleLink');
+
+    const interval = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        timerElement.textContent = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(interval);
+            timerElement.textContent = "Presale has started!";
+            liveElement.style.display = "block";
+            linkElement.style.display = "block";
+        }
+    }, 1000);
     
 });
 
