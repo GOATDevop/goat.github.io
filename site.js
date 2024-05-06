@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
-  const startTime = new Date("MAY 06, 2024 23:30:00").getTime(); // Data de início da presale
+  const startTime = new Date("MAY 06, 2024 23:40:00").getTime(); // Data de início da presale
     const endTime = new Date("MAY 09, 2024 00:10:00").getTime(); // Data de término da presale
     const timerElement = document.getElementById('timer');
     const liveElement = document.getElementById('presaleLive');
