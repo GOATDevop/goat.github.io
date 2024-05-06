@@ -229,28 +229,33 @@ header {
 
 .presale-section {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Altera o layout para empilhamento vertical */
+    align-items: flex-start; /* Alinha os itens ao início da div */
     padding: 20px;
     font-family: 'Bangers', cursive;
     color: #333;
-    background-color: #fff;
     margin-top: 30px;
 }
 
 .presale-title {
-    font-size: 36px;
+    font-size: 80px; /* Aumento do tamanho da fonte */
     color: #FE8029;
+    margin-left: 90px; /* Inicia com margem à esquerda, ajustável conforme desejo */
 }
 
-.presale-timer, .presale-live, #presaleLink {
-    font-size: 24px;
-    text-align: right;
+.presale-timer, .presale-live, #presaleLink, #remainingTime {
+    font-size: 45px;
+    text-align: center; /* Centraliza o texto dos timers e links */
+    width: 100%; /* Garante que ocupe toda a largura da seção */
+    margin-top: 10px; /* Espaço entre os elementos */
 }
 
-.presale-live, #presaleLink {
-    margin-top: 10px;
+#presaleLink {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #FE8029; /* Cor do link */
+    font-weight: bold; /* Torna o texto do link mais grosso */
 }
+
 
 
 
