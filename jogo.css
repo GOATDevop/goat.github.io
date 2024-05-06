@@ -227,6 +227,30 @@ header {
     object-fit: cover; /* Mantém a proporção sem distorcer o conteúdo */
 }
 
+.presale-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Bangers', cursive;
+    color: #333;
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+.presale-title {
+    font-size: 36px;
+    color: #FE8029;
+}
+
+.presale-timer, .presale-live, #presaleLink {
+    font-size: 24px;
+    text-align: right;
+}
+
+.presale-live, #presaleLink {
+    margin-top: 10px;
+}
 
 
 
