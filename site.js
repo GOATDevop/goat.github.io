@@ -94,37 +94,28 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
-  const startTime = new Date("MAY 06, 2024 23:40:00").getTime(); // Data de início da presale
-    const endTime = new Date("MAY 09, 2024 00:10:00").getTime(); // Data de término da presale
+  const startTime = new Date("Dec 25, 2023 15:00:00").getTime(); // Set the start date here
     const timerElement = document.getElementById('timer');
+    const presaleStartsInElement = document.getElementById('presaleStartsIn');
     const liveElement = document.getElementById('presaleLive');
     const linkElement = document.getElementById('presaleLink');
-    const remainingTimeElement = document.getElementById('remainingTime');
 
     const interval = setInterval(function() {
         const now = new Date().getTime();
-        let distance = startTime - now;
+        const distance = startTime - now;
 
         if (distance > 0) {
-            // Antes da presale começar
-            timerElement.textContent = formatTime(distance) + " until presale starts.";
+            // Before the presale starts
+            timerElement.textContent = formatTime(distance);
         } else {
-            // Após o início da presale
-            distance = endTime - now;
-            timerElement.textContent = "Presale has started!";
+            // After the presale has started
+            clearInterval(interval);
+            presaleStartsInElement.style.display = "none"; // Hide the "starts in" subtitle
+            timerElement.textContent = " ";
             liveElement.style.display = "block";
             linkElement.style.display = "block";
-            remainingTimeElement.style.display = "block";
-
-            if (distance > 0) {
-                remainingTimeElement.textContent = formatTime(distance) + " left in presale.";
-            } else {
-                clearInterval(interval);
-                remainingTimeElement.textContent = "Presale has ended.";
-            }
         }
     }, 1000);
-    
 });
 
 function formatTime(distance) {
