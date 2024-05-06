@@ -94,27 +94,32 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
-    const startTime = new Date("MAY 07, 2024 00:00:00").getTime(); // Set the start date here
-    const endTime = new Date("MAY 09, 2024 23:00:00").getTime(); // Data de término da presale
+    const startTime = new Date("MAY 07, 2024 00:15:00").getTime(); // Defina a data de início aqui
+    const endTime = new Date("MAY 08, 2024 15:00:00").getTime(); // Defina a data de término aqui
     const timerElement = document.getElementById('timer');
-    const presaleStartsInElement = document.getElementById('presaleStartsIn');
     const liveElement = document.getElementById('presaleLive');
     const linkElement = document.getElementById('presaleLink');
 
     const interval = setInterval(function() {
         const now = new Date().getTime();
-        const distance = startTime - now;
+        let distance = startTime - now;
 
         if (distance > 0) {
-            // Before the presale starts
+            // Antes do início da presale
             timerElement.textContent = formatTime(distance);
         } else {
-            // After the presale has started
-            clearInterval(interval);
-            presaleStartsInElement.style.display = "none"; // Hide the "starts in" subtitle
-            timerElement.textContent = " ";
-            liveElement.style.display = "block";
-            linkElement.style.display = "block";
+            // Após o início da presale
+            distance = endTime - now;
+            if (distance > 0) {
+                timerElement.textContent = formatTime(distance);
+                liveElement.style.display = "block";
+                linkElement.style.display = "block";
+            } else {
+                clearInterval(interval);
+                timerElement.textContent = "Presale has ended.";
+                liveElement.textContent = "The presale is now offline.";
+                linkElement.style.display = "none";
+            }
         }
     }, 1000);
 });
