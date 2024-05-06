@@ -28,7 +28,7 @@ header {
 
 .logo {
     position: absolute;
-    left: 25%; /* Ajuste para posicionar o logo um pouco à esquerda */
+    left: 40%; /* Ajuste para posicionar o logo um pouco à esquerda */
     top: 30%; /* Ajuste para posicionar o logo por cima da barra de navegação */
     max-width: 300px; /* Aumenta o tamanho do logo */
     animation: rotate 10s infinite linear;
