@@ -94,32 +94,46 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
-   const endTime = new Date("Dec 25, 2023 15:00:00").getTime(); // Defina a data final aqui
+  const startTime = new Date("Dec 25, 2023 15:00:00").getTime(); // Data de início da presale
+    const endTime = new Date("Dec 30, 2023 15:00:00").getTime(); // Data de término da presale
     const timerElement = document.getElementById('timer');
     const liveElement = document.getElementById('presaleLive');
     const linkElement = document.getElementById('presaleLink');
+    const remainingTimeElement = document.getElementById('remainingTime');
 
     const interval = setInterval(function() {
         const now = new Date().getTime();
-        const distance = endTime - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        timerElement.textContent = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        let distance = startTime - now;
 
-        if (distance < 0) {
-            clearInterval(interval);
+        if (distance > 0) {
+            // Antes da presale começar
+            timerElement.textContent = formatTime(distance) + " until presale starts.";
+        } else {
+            // Após o início da presale
+            distance = endTime - now;
             timerElement.textContent = "Presale has started!";
             liveElement.style.display = "block";
             linkElement.style.display = "block";
+            remainingTimeElement.style.display = "block";
+
+            if (distance > 0) {
+                remainingTimeElement.textContent = formatTime(distance) + " left in presale.";
+            } else {
+                clearInterval(interval);
+                remainingTimeElement.textContent = "Presale has ended.";
+            }
         }
     }, 1000);
     
 });
 
-
+function formatTime(distance) {
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    return days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+}
 
 
 
