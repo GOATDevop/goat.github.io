@@ -234,8 +234,7 @@ header {
     align-items: center; /* Centraliza horizontalmente os itens */
     justify-content: center; /* Centraliza verticalmente os itens */
     padding: 20px;
-    background-color: #fff; /* Se necessário, ajuste para corresponder ao design do site */
-    margin-top: 60px; /* Ajuste conforme necessário */
+    margin-top: 80px; /* Ajuste conforme necessário */
     width: 100%; /* Ocupa a largura total para garantir centralização */
 }
 
@@ -245,8 +244,9 @@ header {
     font-size: 80px; /* Tamanho do texto */
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5); /* Sombra de texto para consistência com o estilo do site */
     color: #FE8029; /* Cor do texto */
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
     font-family: 'Bangers', cursive; /* Consistência da fonte com o site */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
 .presale-content {
@@ -255,8 +255,8 @@ header {
 }
 
 .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
-    margin-top: 10px; /* Espaçamento entre os elementos */
-    font-size: 24px; /* Tamanho de fonte para visibilidade */
+    margin-top: 5px; /* Espaçamento entre os elementos */
+    font-size: 28px; /* Tamanho de fonte para visibilidade */
     font-family: 'Bangers', sans-serif; /* Fonte mais legível para detalhes */
     color: #333; /* Cor do texto mais escuro para melhor leitura */
 }
@@ -265,6 +265,8 @@ header {
     text-decoration: none; /* Remove o sublinhado */
     color: #007BFF; /* Cor azul para links, ajustável conforme o estilo do site */
     font-weight: bold; /* Texto em negrito para destaque */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+}
 }
 
 #remainingTime {
