@@ -229,32 +229,33 @@ header {
 
 .presale-section {
     display: flex;
-    flex-direction: column; /* Altera o layout para empilhamento vertical */
-    align-items: flex-start; /* Alinha os itens ao início da div */
+    justify-content: center;
     padding: 20px;
-    font-family: 'Bangers', cursive;
-    color: #333;
+    background-color: #fff;
     margin-top: 30px;
 }
 
+.presale-content {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .presale-title {
-    font-size: 80px; /* Aumento do tamanho da fonte */
+    align-self: flex-start; /* Alinha o título um pouco à esquerda dentro do contêiner */
+    margin-left: 10%; /* Ajuste conforme necessário para mover o título para a esquerda */
+    font-size: 48px;
     color: #FE8029;
-    margin-left: 90px; /* Inicia com margem à esquerda, ajustável conforme desejo */
 }
 
+/* Estilos adicionais para elementos internos conforme necessário */
 .presale-timer, .presale-live, #presaleLink, #remainingTime {
-    font-size: 45px;
-    text-align: center; /* Centraliza o texto dos timers e links */
-    width: 100%; /* Garante que ocupe toda a largura da seção */
-    margin-top: 10px; /* Espaço entre os elementos */
+    width: 100%; /* Garante que ocupem toda a largura do contêiner .presale-content */
+    text-align: center; /* Centraliza o texto destes elementos */
+    margin-top: 10px;
 }
 
-#presaleLink {
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: #FE8029; /* Cor do link */
-    font-weight: bold; /* Torna o texto do link mais grosso */
-}
 
 
 
