@@ -94,13 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
-    const startTime = new Date("may 07, 2024 00:44:00").getTime();
-    const endTime = new Date("may 30, 2024 15:00:00").getTime();
+    document.addEventListener('DOMContentLoaded', function() {
+    const startTime = new Date("may 07, 2024 18:30:00").getTime();
+    const endTime = new Date("april 30, 2024 15:00:00").getTime();
     const timerElement = document.getElementById('timer');
     const presaleLiveElement = document.getElementById('presaleLive');
     const linkElement = document.getElementById('presaleLink');
     const remainingTimeElement = document.getElementById('remainingTime');
-    const startsInMessageElement = document.getElementById('startsInMessage'); // Referência ao novo elemento de mensagem
+    const startsInMessageElement = document.getElementById('startsInMessage');
 
     const interval = setInterval(function() {
         const now = new Date().getTime();
@@ -111,13 +112,21 @@ document.addEventListener('DOMContentLoaded', function () {
             timerElement.textContent = formatTime(distance);
         } else {
             // Após o início da presale
-            clearInterval(interval);
-            timerElement.textContent = " ";
-            startsInMessageElement.style.display = "none"; // Esconde a mensagem de "starts in"
-            presaleLiveElement.style.display = "block";
-            linkElement.style.display = "block";
-            remainingTimeElement.style.display = "block";
-            remainingTimeElement.textContent = "Ends in: " + formatTime(endTime - now);
+            distance = endTime - now;
+            if (distance > 0) {
+                startsInMessageElement.style.display = "none"; // Esconde a mensagem de "starts in"
+                timerElement.textContent = "Presale has started!";
+                presaleLiveElement.style.display = "block";
+                linkElement.style.display = "block";
+                remainingTimeElement.style.display = "block";
+                remainingTimeElement.textContent = "Ends in: " + formatTime(distance);
+            } else {
+                clearInterval(interval);
+                timerElement.textContent = ""; // Limpa o timer inicial
+                presaleLiveElement.textContent = "The presale is now offline.";
+                linkElement.style.display = "none";
+                remainingTimeElement.textContent = "Presale has ended.";
+            }
         }
     }, 1000);
 });
@@ -129,6 +138,7 @@ function formatTime(distance) {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     return days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 }
+
 
 
 
