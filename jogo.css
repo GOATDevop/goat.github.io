@@ -228,33 +228,49 @@ header {
     object-fit: cover; /* Mantém a proporção sem distorcer o conteúdo */
 }
 
-.presale-section {
+.presale {
     display: flex;
-    flex-direction: column;  /* Empilha os elementos verticalmente */
-    align-items: center;     /* Centraliza horizontalmente os itens */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    justify-content: center; /* Centraliza verticalmente os itens */
     padding: 20px;
-    background-color: #fff;
-    margin-top: 60px;
+    background-color: #fff; /* Se necessário, ajuste para corresponder ao design do site */
+    margin-top: 60px; /* Ajuste conforme necessário */
+    width: 100%; /* Ocupa a largura total para garantir centralização */
 }
 
-.presale-title, .presale-content {
-    width: 80%; /* Define uma largura para o conteúdo */
-    text-align: center; /* Centraliza o texto dentro dos contêineres */
+.presale-title {
+    width: 100%; /* Ocupa a largura total para garantir centralização */
+    text-align: center; /* Centraliza o texto do título */
+    font-size: 80px; /* Tamanho do texto */
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5); /* Sombra de texto para consistência com o estilo do site */
+    color: #FE8029; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-family: 'Bangers', cursive; /* Consistência da fonte com o site */
 }
 
-h2, .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
-    width: 100%; /* Garante que os elementos ocupem toda a largura de seus contêineres */
-    margin-top: 20px; /* Espaço entre os elementos */
+.presale-content {
+    width: 100%; /* Ocupa a largura total para garantir centralização */
+    text-align: center; /* Centraliza o texto do conteúdo */
 }
 
-.presale-title h2 {
-    font-size: 80px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+.presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
+    margin-top: 10px; /* Espaçamento entre os elementos */
+    font-size: 24px; /* Tamanho de fonte para visibilidade */
+    font-family: 'Bangers', sans-serif; /* Fonte mais legível para detalhes */
+    color: #333; /* Cor do texto mais escuro para melhor leitura */
 }
 
-.presale-live, #presaleLink, #remainingTime, #startsInMessage {
-    margin-top: 10px;
+#presaleLink {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #007BFF; /* Cor azul para links, ajustável conforme o estilo do site */
+    font-weight: bold; /* Texto em negrito para destaque */
 }
+
+#remainingTime {
+    font-style: Bangers; /* Estilo itálico para o timer de término */
+}
+
 
 
 
