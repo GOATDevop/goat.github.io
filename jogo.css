@@ -275,6 +275,51 @@ header {
     font-style: Bangers; /* Estilo itálico para o timer de término */
 }
 
+/* Estiliza a seção 'How to Buy' geral */
+#howtobuy {
+    text-align: center; /* Centraliza o texto e o conteúdo na seção */
+    padding: 20px; /* Adiciona espaço ao redor do conteúdo interno */
+    margin-top: 20px; /* Distância da seção anterior */
+    background-color: #f8f8f8; /* Cor de fundo leve para a seção */
+}
+
+/* Estiliza o título da seção */
+#howtobuy h2 {
+    color: #FE8029; /* Cor laranja vibrante para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-family: 'Bangers', cursive; /* Usa a fonte 'Bangers' para o título */
+}
+
+/* Estiliza o contêiner que engloba os passos de compra */
+.how-to-buy-container {
+    display: flex; /* Usa flexbox para alinhar horizontalmente os passos */
+    flex-direction: column; /* Coloca os elementos em uma coluna */
+    align-items: center; /* Centraliza os elementos no eixo horizontal */
+}
+
+/* Estiliza cada passo da compra */
+.buy-step {
+    width: 80%; /* Define a largura máxima para cada passo */
+    margin-bottom: 30px; /* Espaço entre cada passo */
+    background-color: #fff; /* Cor de fundo para cada passo */
+    padding: 15px; /* Espaço interno em torno do conteúdo de cada passo */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve para destaque */
+    text-align: left; /* Alinha o texto à esquerda dentro do passo */
+}
+
+/* Estiliza os parágrafos dentro de cada passo */
+.buy-step p {
+    font-size: 18px; /* Tamanho do texto */
+    color: #333; /* Cor do texto escuro para legibilidade */
+    margin-bottom: 10px; /* Espaço entre o parágrafo e a imagem */
+}
+
+/* Estiliza as imagens dentro de cada passo */
+.buy-step img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem ajustando a altura automaticamente */
+    border-radius: 4px; /* Borda arredondada para a imagem */
+}
 
 
 
