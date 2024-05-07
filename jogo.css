@@ -231,7 +231,7 @@ header {
 .presale-section {
     display: flex;
     align-items: start;
-    justify-content: start;
+    justify-content: space-between; /* Alterado de 'start' para 'space-between' */
     padding: 20px;
     margin-top: 60px;
 }
@@ -247,7 +247,7 @@ header {
     flex-basis: 70%; /* Toma 70% do espaço */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Alinhamento dos itens à esquerda dentro do conteúdo */
 }
 
 h2, .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
@@ -259,6 +259,7 @@ h2, .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessag
 .presale-live, #presaleLink, #remainingTime, #startsInMessage {
     margin-top: 50px;
 }
+
 
 
 
