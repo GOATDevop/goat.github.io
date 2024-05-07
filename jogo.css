@@ -229,32 +229,35 @@ header {
 
 .presale-section {
     display: flex;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     padding: 20px;
     background-color: #fff;
     margin-top: 30px;
 }
 
+.presale-title {
+    flex-basis: 30%; /* Toma 30% do espaço */
+    padding-right: 20px; /* Espaço entre o título e o conteúdo */
+}
+
 .presale-content {
-    width: 80%; /* Ajuste a largura conforme necessário */
+    flex-basis: 70%; /* Toma 70% do espaço */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.presale-title {
-    align-self: flex-start; /* Alinha o título um pouco à esquerda dentro do contêiner */
-    margin-left: 10%; /* Ajuste conforme necessário para mover o título para a esquerda */
-    font-size: 48px;
+h2, .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
+    text-align: center;
+    font-family: 'Bangers', cursive;
     color: #FE8029;
 }
 
-/* Estilos adicionais para elementos internos conforme necessário */
-.presale-timer, .presale-live, #presaleLink, #remainingTime {
-    width: 100%; /* Garante que ocupem toda a largura do contêiner .presale-content */
-    text-align: center; /* Centraliza o texto destes elementos */
+.presale-live, #presaleLink, #remainingTime, #startsInMessage {
     margin-top: 10px;
 }
+
 
 
 
