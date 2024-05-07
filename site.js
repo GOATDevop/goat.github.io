@@ -107,8 +107,10 @@ document.addEventListener('DOMContentLoaded', function () {
         let distance = startTime - now;
 
         if (distance > 0) {
+            // Before presale starts
             timerElement.textContent = formatTime(distance);
         } else {
+            // After presale starts
             distance = endTime - now;
             if (distance > 0) {
                 startsInMessageElement.style.display = "none";
@@ -119,10 +121,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 remainingTimeElement.textContent = "Ends in: " + formatTime(distance);
             } else {
                 clearInterval(interval);
-                timerElement.textContent = "Presale has ended.";
+                timerElement.style.display = "none"; // Clear the initial timer display
                 presaleLiveElement.textContent = "The presale is now offline.";
                 linkElement.style.display = "none";
                 remainingTimeElement.textContent = "Presale has ended.";
+                remainingTimeElement.style.display = "none"; // Ensure no overlap after the end
             }
         }
     }, 1000);
