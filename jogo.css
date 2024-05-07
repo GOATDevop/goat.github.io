@@ -206,6 +206,7 @@ header {
     font-size: 80px; /* Tamanho da fonte para o título */
     font-family: 'Bangers', cursive; /* Mantendo a consistência da fonte */
     color: #FE8029; /* Cor laranja usada no site */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
 .carousel {
@@ -232,13 +233,14 @@ header {
     align-items: start;
     justify-content: start;
     padding: 20px;
-    background-color: #fff;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .presale-title {
     flex-basis: 30%; /* Toma 30% do espaço */
     padding-right: 20px; /* Espaço entre o título e o conteúdo */
+    font-size: 80px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
 .presale-content {
@@ -255,7 +257,7 @@ h2, .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessag
 }
 
 .presale-live, #presaleLink, #remainingTime, #startsInMessage {
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 
