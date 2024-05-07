@@ -257,8 +257,9 @@ header {
 .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
     margin-top: 5px; /* Espaçamento entre os elementos */
     font-size: 40px; /* Tamanho de fonte para visibilidade */
-    font-family: 'Arial', sans-serif; /* Fonte mais legível para detalhes */
+    font-family: 'Arial', bangers; /* Fonte mais legível para detalhes */
     color: #333; /* Cor do texto mais escuro para melhor leitura */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #presaleLink {
