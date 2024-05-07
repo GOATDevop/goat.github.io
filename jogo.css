@@ -244,7 +244,7 @@ header {
     font-size: 80px; /* Tamanho do texto */
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5); /* Sombra de texto para consistência com o estilo do site */
     color: #FE8029; /* Cor do texto */
-    margin-bottom: 10px; /* Espaço abaixo do título */
+    margin-bottom: 5px; /* Espaço abaixo do título */
     font-family: 'Bangers', cursive; /* Consistência da fonte com o site */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
