@@ -94,9 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 5000); // Altera a imagem/vídeo a cada 5 segundos
 
-    document.addEventListener('DOMContentLoaded', function() {
-    const startTime = new Date("may 07, 2024 18:30:00").getTime();
-    const endTime = new Date("april 30, 2024 15:00:00").getTime();
+    const startTime = new Date("may 07, 2024 18:50:00").getTime();
+    const endTime = new Date("jun 3, 2024 15:00:00").getTime();
     const timerElement = document.getElementById('timer');
     const presaleLiveElement = document.getElementById('presaleLive');
     const linkElement = document.getElementById('presaleLink');
@@ -108,21 +107,19 @@ document.addEventListener('DOMContentLoaded', function () {
         let distance = startTime - now;
 
         if (distance > 0) {
-            // Antes do início da presale
             timerElement.textContent = formatTime(distance);
         } else {
-            // Após o início da presale
             distance = endTime - now;
             if (distance > 0) {
-                startsInMessageElement.style.display = "none"; // Esconde a mensagem de "starts in"
-                timerElement.textContent = "Presale has started!";
+                startsInMessageElement.style.display = "none";
+                timerElement.textContent = formatTime(distance);
                 presaleLiveElement.style.display = "block";
                 linkElement.style.display = "block";
                 remainingTimeElement.style.display = "block";
                 remainingTimeElement.textContent = "Ends in: " + formatTime(distance);
             } else {
                 clearInterval(interval);
-                timerElement.textContent = ""; // Limpa o timer inicial
+                timerElement.textContent = "Presale has ended.";
                 presaleLiveElement.textContent = "The presale is now offline.";
                 linkElement.style.display = "none";
                 remainingTimeElement.textContent = "Presale has ended.";
