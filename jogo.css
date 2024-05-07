@@ -267,7 +267,7 @@ header {
     color: #007BFF; /* Cor azul para links, ajustável conforme o estilo do site */
     font-weight: bold; /* Texto em negrito para destaque */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
