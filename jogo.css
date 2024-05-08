@@ -275,52 +275,48 @@ header {
     font-style: Bangers; /* Estilo itálico para o timer de término */
 }
 
-/* Estiliza a seção 'How to Buy' geral */
-#howtobuy {
-    text-align: center; /* Centraliza o texto e o conteúdo na seção */
-    padding: 20px; /* Adiciona espaço ao redor do conteúdo interno */
-    margin-top: 60px; /* Distância da seção anterior */
+/* Estilo básico para garantir que o texto esteja alinhado centralmente na página */
+.center {
+    text-align: center;
+    width: 100%; /* Ajuste a largura conforme necessário */
 }
 
-/* Estiliza o título da seção */
-#howtobuy h2 {
-    color: #FE8029; /* Cor laranja vibrante para o título */
-    margin-bottom: 20px; /* Espaço abaixo do título */
-    font-family: 'Bangers', cursive; /* Usa a fonte 'Bangers' para o título */
-    font-size: 80px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-/* Estiliza o contêiner que engloba os passos de compra */
+/* Estilos para o container geral */
 .how-to-buy-container {
-    display: flex; /* Usa flexbox para alinhar horizontalmente os passos */
-    flex-direction: column; /* Coloca os elementos em uma coluna */
-    align-items: center; /* Centraliza os elementos no eixo horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-top: 20px;
 }
 
-/* Estiliza cada passo da compra */
+/* Estilos para cada passo dentro do container */
 .buy-step {
-    width: 80%; /* Define a largura máxima para cada passo */
-    margin-bottom: 30px; /* Espaço entre cada passo */
-    background-color: #fff; /* Cor de fundo para cada passo */
-    padding: 15px; /* Espaço interno em torno do conteúdo de cada passo */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve para destaque */
-    text-align: left; /* Alinha o texto à esquerda dentro do passo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o texto e a imagem no centro */
+    margin-bottom: 20px; /* Espaço entre cada passo */
 }
 
-/* Estiliza os parágrafos dentro de cada passo */
 .buy-step p {
-    font-size: 18px; /* Tamanho do texto */
-    color: #333; /* Cor do texto escuro para legibilidade */
-    margin-bottom: 10px; /* Espaço entre o parágrafo e a imagem */
+    margin-bottom: 10px; /* Espaço entre o texto e a imagem */
+    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #333; /* Cor do texto */
+    font-family: 'Arial', sans-serif; /* Estilo da fonte */
 }
 
-/* Estiliza as imagens dentro de cada passo */
 .buy-step img {
-    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem ajustando a altura automaticamente */
-    border-radius: 4px; /* Borda arredondada para a imagem */
+    width: 200px; /* Ajuste a largura da imagem conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
 }
+
+/* Estilos para o título da seção */
+#howtobuy h2 {
+    font-size: 24px; /* Tamanho do título */
+    color: #FE8029; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-family: 'Bangers', cursive; /* Fonte do título para manter consistência */
+}
+
 
 
 
