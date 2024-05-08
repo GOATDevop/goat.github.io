@@ -283,21 +283,21 @@ header {
     gap: 10px;
     margin-top: 90px;
     font-family: 'Bangers', cursive;
-    color: #FE8029; /* Cor do texto */
+    color-text: #FE8029; /* Cor do texto */
+    text-align: center; /* Centraliza o texto do título */
 }
 
 .buy-step p {
     width: calc(33.333% - 20px);
     text-align: center;
     font-family: 'Bangers', cursive;
-    color: #0000; /* Cor do texto */
 }
 
-.buy-step h2 {
+.buy-step h3 {
     margin-top: 25px;
     font-size: 22px; /* Tamanho da fonte do subtítulo */
     font-family: 'Bangers', cursive;
-    color: #FE8029; /* Cor do texto */
+    color: #0000; /* Cor do texto */
 }
 
 .buy-step img {
