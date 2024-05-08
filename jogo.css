@@ -279,8 +279,7 @@ header {
 #howtobuy {
     text-align: center; /* Centraliza o texto e o conteúdo na seção */
     padding: 20px; /* Adiciona espaço ao redor do conteúdo interno */
-    margin-top: 20px; /* Distância da seção anterior */
-    background-color: #f8f8f8; /* Cor de fundo leve para a seção */
+    margin-top: 60px; /* Distância da seção anterior */
 }
 
 /* Estiliza o título da seção */
@@ -288,6 +287,8 @@ header {
     color: #FE8029; /* Cor laranja vibrante para o título */
     margin-bottom: 20px; /* Espaço abaixo do título */
     font-family: 'Bangers', cursive; /* Usa a fonte 'Bangers' para o título */
+    font-size: 80px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
 /* Estiliza o contêiner que engloba os passos de compra */
