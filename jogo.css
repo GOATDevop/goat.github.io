@@ -280,6 +280,10 @@ header {
     padding: 20px; /* Padding para a seção */
     font-family: 'Arial', sans-serif; /* Fonte consistente com o site */
     margin-top: 60px;
+    width: 100%; /* Garante que a seção ocupe a largura total */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todos os elementos verticalmente */
 }
 
 .how-to-buy-section h2 {
@@ -289,12 +293,13 @@ header {
     margin-bottom: 30px; /* Espaço abaixo do título */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
-}
 
 .steps-container {
     display: flex; /* Disposição em flex para alinhamento horizontal */
-    justify-content: space-around; /* Espaçamento entre cada etapa */
+    flex-wrap: wrap; /* Permite que os elementos se ajustem à largura disponível */
+    justify-content: center; /* Centraliza horizontalmente no caso de menos elementos */
     align-items: center; /* Alinhamento vertical dos itens */
+    width: 100%; /* Garante que o container ocupe a largura total */
 }
 
 .step {
@@ -302,6 +307,8 @@ header {
     flex-direction: column; /* Organiza os elementos em coluna */
     align-items: center; /* Centraliza os itens */
     width: 30%; /* Largura para cada etapa */
+    min-width: 250px; /* Define uma largura mínima para cada etapa */
+    margin: 20px; /* Espaço entre os passos */
 }
 
 .step h3 {
@@ -315,6 +322,7 @@ header {
     height: auto; /* Altura automática para manter proporção */
     max-width: 200px; /* Máximo de largura da imagem para manter a estética */
 }
+
 
 
 
