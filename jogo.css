@@ -275,36 +275,44 @@ header {
     font-style: Bangers; /* Estilo itálico para o timer de término */
 }
 
-/* Estilo básico para garantir que o texto esteja alinhado centralmente na página */
-.how-to-buy-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 90px;
-    font-family: 'Bangers', cursive;
-    color-text: #FE8029; /* Cor do texto */
+.how-to-buy-section {
     text-align: center; /* Centraliza o texto do título */
+    padding: 20px; /* Padding para a seção */
+    background-color: #fff; /* Cor de fundo para a seção */
+    font-family: 'Arial', sans-serif; /* Fonte consistente com o site */
 }
 
-.buy-step p {
-    width: calc(33.333% - 20px);
-    text-align: center;
-    font-family: 'Bangers', cursive;
+.how-to-buy-section h2 {
+    color: #FE8029; /* Cor vibrante para o título */
+    font-family: 'Bangers', cursive; /* Fonte característica para títulos */
+    margin-bottom: 30px; /* Espaço abaixo do título */
 }
 
-.buy-step h3 {
-    margin-top: 25px;
-    font-size: 22px; /* Tamanho da fonte do subtítulo */
-    font-family: 'Bangers', cursive;
-    color: #0000; /* Cor do texto */
+.steps-container {
+    display: flex; /* Disposição em flex para alinhamento horizontal */
+    justify-content: space-around; /* Espaçamento entre cada etapa */
+    align-items: center; /* Alinhamento vertical dos itens */
 }
 
-.buy-step img {
-    max-width: 85%;
-    height: auto;
-    margin-top: 15px;
+.step {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens */
+    width: 30%; /* Largura para cada etapa */
 }
+
+.step h3 {
+    margin-bottom: 10px; /* Espaço entre o subtítulo e a imagem */
+    font-size: 18px; /* Tamanho da fonte para os subtítulos */
+    color: #333; /* Cor do texto para melhor legibilidade */
+}
+
+.step img {
+    width: 100%; /* Largura total dentro de seu contêiner */
+    height: auto; /* Altura automática para manter proporção */
+    max-width: 200px; /* Máximo de largura da imagem para manter a estética */
+}
+
 
 
 
