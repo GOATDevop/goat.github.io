@@ -278,14 +278,17 @@ header {
 .how-to-buy-section {
     text-align: center; /* Centraliza o texto do título */
     padding: 20px; /* Padding para a seção */
-    background-color: #fff; /* Cor de fundo para a seção */
     font-family: 'Arial', sans-serif; /* Fonte consistente com o site */
+    margin-top: 60px;
 }
 
 .how-to-buy-section h2 {
+    font-size: 80px;
     color: #FE8029; /* Cor vibrante para o título */
     font-family: 'Bangers', cursive; /* Fonte característica para títulos */
     margin-bottom: 30px; /* Espaço abaixo do título */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+}
 }
 
 .steps-container {
@@ -303,7 +306,7 @@ header {
 
 .step h3 {
     margin-bottom: 10px; /* Espaço entre o subtítulo e a imagem */
-    font-size: 18px; /* Tamanho da fonte para os subtítulos */
+    font-size: 30px; /* Tamanho da fonte para os subtítulos */
     color: #333; /* Cor do texto para melhor legibilidade */
 }
 
