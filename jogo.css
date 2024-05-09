@@ -379,19 +379,15 @@ header {
     height: auto;
 }
 
-/* Aplica efeitos a todas as imagens no site */
-img { 
-    perspective: 1000px; /* Define a perspectiva para o contêiner */
-    width: 300px; /* Define a largura da imagem */
-    height: 200px; /* Define a altura da imagem */
-    transform-style: preserve-3d; /* Permite que filhos tenham posicionamento 3D */
-    transition: transform 0.5s ease-in-out; /* Suaviza a transformação */
+.image-float {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais profunda para efeito flutuante */
+    transition: all 0.3s ease-in-out; /* Suaviza todas as transições */
 }
 
-img:hover {
-    transform: rotateY(20deg); /* Rotaciona a imagem no eixo Y */
-    
+.image-float:hover {
+    transform: translateY(-10px); /* Move a imagem para cima ao passar o mouse */
 }
+
 
 
 
