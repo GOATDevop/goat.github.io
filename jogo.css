@@ -273,6 +273,7 @@ p {
 
 .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
     margin-bottom: 30px; /* Espaçamento entre os elementos */
+    text-align: center;
     font-size: 40px; /* Tamanho de fonte para visibilidade */
     font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
     color-text: #0000; /* Cor do texto mais escuro para melhor leitura */
@@ -280,6 +281,7 @@ p {
 }
 
 #presaleLink {
+    text-align: center;
     text-decoration: none; /* Remove o sublinhado */
     color: #007BFF; /* Cor azul para links, ajustável conforme o estilo do site */
     font-weight: bold; /* Texto em negrito para destaque */
@@ -308,6 +310,7 @@ p {
 }
 
 .how-to-buy-section h2 {
+    text-align: center;
     font-size: 80px;
     color: #FE8029; /* Cor vibrante para o título */
     font-family: 'Bangers', cursive; /* Fonte característica para títulos */
