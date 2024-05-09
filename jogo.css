@@ -241,7 +241,7 @@ p {
 .carousel-images img, .carousel-images video {
     align-items: center;
     width: 100%; /* Garante que o conteúdo preencha a largura do carrossel */
-    height: 100%; /* Faz com que a altura seja ajustada à do container */
+    height: 120%; /* Faz com que a altura seja ajustada à do container */
     object-fit: cover; /* Mantém a proporção sem distorcer o conteúdo */
 }
 
@@ -270,14 +270,14 @@ p {
 
 .presale-content {
     width: 100%; /* Ocupa a largura total para garantir centralização */
-    text-align: center; /* Centraliza o texto do conteúdo */
+    align-items: center;
     margin-top: 5px;
     margin-bttom:50px;
 }
 
 .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
     margin-bottom: 20px; /* Espaçamento entre os elementos */
-    text-align: center;
+    align-items: center;
     font-size: 40px; /* Tamanho de fonte para visibilidade */
     font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
     color-text: #0000; /* Cor do texto mais escuro para melhor leitura */
@@ -352,6 +352,43 @@ p {
     transform-style: preserve-3d;
 }
 
+/* Estilos básicos para garantir que o container da seção ocupe todo o espaço necessário */
+.roadmap {
+    display: flex; /* Utiliza flexbox para alinhar os elementos lado a lado */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 50px 0; /* Adiciona padding vertical para espaço interno */
+    max-width: 1200px; /* Define uma largura máxima para o container */
+    margin: auto; /* Centraliza o container na página */
+}
+
+/* Estilos para a divisão que contém o título e a descrição */
+.roadmap div {
+    flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
+    padding: 20px; /* Adiciona padding para espaçamento interno */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilos para o título */
+.roadmap h2 {
+    font-size: 36px; /* Define o tamanho da fonte para o título */
+    color: #333; /* Define a cor do texto */
+    margin-bottom: 20px; /* Espaço entre o título e a descrição */
+}
+
+/* Estilos para a descrição */
+.roadmap p {
+    font-size: 18px; /* Define o tamanho da fonte para a descrição */
+    color: #666; /* Define a cor do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* Estilos para a imagem */
+.roadmap-img {
+    flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
+    max-width: 50%; /* Limita a largura máxima da imagem para 50% do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
 
 
 
