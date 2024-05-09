@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -7,11 +11,6 @@ body, html {
     background-color: #BFFBD9;
     scroll-behavior: smooth;
 }
-
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
 
 header {
     background-image: url('goats.png');
@@ -352,7 +351,7 @@ p {
     transform-style: preserve-3d;
 }
 
-/* Estilos básicos para garantir que o container da seção ocupe todo o espaço necessário */
+/* Estilos básicos para a seção Roadmap */
 .roadmap {
     display: flex; /* Utiliza flexbox para alinhar os elementos lado a lado */
     align-items: center; /* Alinha verticalmente os itens ao centro */
@@ -362,7 +361,15 @@ p {
     margin: auto; /* Centraliza o container na página */
 }
 
-/* Estilos para a divisão que contém o título e a descrição */
+/* Estilos para a imagem à esquerda */
+.roadmap-img {
+    flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
+    max-width: 50%; /* Limita a largura máxima da imagem para 50% do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+/* Estilos para a divisão que contém o título e a descrição à direita */
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
@@ -383,12 +390,6 @@ p {
     line-height: 1.6; /* Espaçamento entre linhas */
 }
 
-/* Estilos para a imagem */
-.roadmap-img {
-    flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
-    max-width: 50%; /* Limita a largura máxima da imagem para 50% do container */
-    height: auto; /* Mantém a proporção da imagem */
-}
 
 
 
