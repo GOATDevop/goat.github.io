@@ -141,32 +141,42 @@ header {
     display: flex;
     align-items: center; /* Centraliza os itens verticalmente */
     justify-content: flex-start; /* Alinha os itens ao início */
-    max-width: 1200px; /* Largura máxima do container */
-    width: 100%; /* Garante que o container ocupe a largura disponível até o máximo */
-    margin: 0 auto; /* Centraliza o container horizontalmente */
-    padding: 20px; /* Espaçamento interno */
-    margin-top: 100px; /* Espaço acima da seção */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 #about .about-image {
-    flex: 0 1 300px; /* Não cresce, pode encolher, base de 300px */
-    margin-right: 20px; /* Espaço à direita da imagem para separar do texto */
+    flex: 0 0 300px; /* Largura fixa para a imagem */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
 }
 
 #about .about-image img {
-    width: 100%; /* Ajusta a imagem para preencher o espaço do seu contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
 }
 
 #about .about-text {
-    flex: 1 1 0%; /* Cresce para ocupar o espaço restante, base de 0% */
-    text-align: left; /* Alinha o texto à esquerda */
+    flex: 1; /* Ocupa o espaço restante */
+    text-align: left; /* Alinha o texto à esquerda dentro do contêiner */
+    padding-left: 40px; /* Aumenta o espaçamento à esquerda para mover o texto mais para a direita */
 }
 
-#about .about-text h2, #about .about-text p {
-    margin: 0;
-    padding: 0;
+#about .about-text h2 {
+    text-align: center; /* Centraliza o título no contêiner de texto */
+    font-size: 36px;
+    color: #FE8029;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
+
+#about .about-text p {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.6;
+}
+
 
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
