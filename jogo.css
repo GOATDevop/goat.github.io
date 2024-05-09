@@ -285,6 +285,10 @@ header {
     font-style: Bangers; /* Estilo itálico para o timer de término */
 }
 
+#howtobuy {
+    margin-top: 100px; /* Aumente este valor conforme necessário para criar mais espaço */
+}
+
 .how-to-buy-section {
     text-align: center; /* Centraliza o texto do título */
     padding: 20px; /* Padding para a seção */
