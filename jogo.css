@@ -378,6 +378,22 @@ header {
     max-width: 80px;
     height: auto;
 }
+
+/* Aplica efeitos a todas as imagens no site */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de transformação e sombra */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+}
+
+img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+}
+
+
+
+
+
 footer {
     margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
     text-align: center;
