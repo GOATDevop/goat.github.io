@@ -8,6 +8,11 @@ body, html {
     scroll-behavior: smooth;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
 header {
     background-image: url('goats.png');
     background-size: cover;
@@ -157,7 +162,7 @@ header {
 }
 
 .about-image img {
-    width: 100%;
+    /*width: 100%;*/
     max-width: 600px;
     height: auto;
 }
