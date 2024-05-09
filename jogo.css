@@ -180,7 +180,7 @@ header {
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
     font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
-    margin-top: 100px; /* Espaçamento da seção anterior */
+    margin-top: 130px; /* Espaçamento da seção anterior */
 }
 
 #whyGoat h2 {
@@ -201,9 +201,10 @@ header {
 }
 
 #whyGoat img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da seção */
+    max-width: 60%; /* Garante que a imagem não ultrapasse a largura da seção */
     height: auto; /* Mantém a proporção da imagem */
-    margin-top: 20px; /* Espaço acima da imagem para separação visual */
+    margin-top: 10px; /* Espaço acima da imagem para separação visual */
+    margin-bottom: 50px;
 }
 
 #gallery h2 {
