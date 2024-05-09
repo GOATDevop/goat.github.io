@@ -154,14 +154,14 @@ header {
 
 .about-image img {
     width: 100%; /* Torna a imagem responsiva dentro do contêiner */
-    max-width: 500px; /* Máximo de largura da imagem */
+    max-width: 250px; /* Máximo de largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
 }
 
 .about-text {
     flex: 2; /* Dá mais espaço ao texto do que à imagem */
     padding: 20px; /* Espaço ao redor do texto */
-    text-align: left; /* Alinhamento do texto à esquerda */
+    text-align: right; /* Alinhamento do texto à esquerda */
 }
 
 .about-text h2 {
