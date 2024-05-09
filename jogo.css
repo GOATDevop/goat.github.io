@@ -157,11 +157,19 @@ header {
 }
 
 .about-text {
-    text-align: justify; /* Justificação do texto para melhor leitura */
-    flex: 1 1 50%; /* Ocupa a outra metade da largura do container */
-    margin-left: 50px; /* Adiciona espaço à esquerda do texto */
-    padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
-    transform: translateX(50px); /* Move o texto um pouco para a direita */
+    text-align: justify; /* Mantém a justificação para uma leitura fluida */
+    flex: 1 1 70%; /* Aumenta a proporção da largura ocupada pelo texto */
+    margin-left: 20px; /* Reduz o espaço à esquerda para não empurrar o texto muito para a direita */
+    padding: 20px; /* Mantém o padding para um espaçamento confortável ao redor do texto */
+    transform: translateX(0); /* Remove o movimento adicional para a direita */
+}
+
+.about-text p {
+    text-align: justify; /* Mantém a justificação do texto */
+    color: #000; /* Cor de texto escura para melhor leitura */
+    font-size: 20px; /* Ajusta o tamanho da fonte para melhor legibilidade em mais texto horizontal */
+    line-height: 1.6; /* Espaçamento entre linhas adequado */
+    ttext-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
 .about-text h2 {
@@ -171,13 +179,6 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
-.about-text p {
-    text-align: justify; /* Justificação do texto para melhor leitura */
-    color: #000; /* Cor de texto mais escura para melhor leitura */
-    font-size: 25px;
-    line-height: 1.6; /* Espaçamento entre linhas */
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-}
 
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
