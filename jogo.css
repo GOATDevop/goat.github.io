@@ -140,7 +140,7 @@ header {
 #about.container {
     display: flex;
     align-items: center; /* Centraliza os itens verticalmente */
-    justify-content: flex-start; /* Alinha os itens ao início */
+    justify-content: flex-start; /* Alinha os itens ao início para manter a imagem à esquerda */
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -148,8 +148,8 @@ header {
 }
 
 #about .about-image {
-    flex: 0 0 600px; /* Largura fixa para a imagem */
-    margin-right: 70px; /* Espaço entre a imagem e o texto */
+    flex: 0 0 250px; /* Fixa a largura da imagem em 250px e impede o crescimento ou encolhimento */
+    margin-right: 40px; /* Espaço entre a imagem e o texto */
 }
 
 #about .about-image img {
@@ -158,24 +158,23 @@ header {
 }
 
 #about .about-text {
-    flex: 1; /* Ocupa o espaço restante */
-    text-align: left; /* Alinha o texto à esquerda dentro do contêiner */
-    padding-left: 70px; /* Aumenta o espaçamento à esquerda para mover o texto mais para a direita */
+    flex: 1 1 auto; /* Permite que o texto cresça e preencha o espaço restante */
+    text-align: left;
+    padding-left: 20px; /* Aumenta o espaçamento à esquerda para separar do contêiner da imagem */
 }
 
 #about .about-text h2 {
-    text-align: center; /* Centraliza o título no contêiner de texto */
-    font-size: 80px;
+    font-size: 42px; /* Aumenta o tamanho da fonte do título */
     color: #FE8029;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #about .about-text p {
-    font-size: 25px;
+    font-size: 22px; /* Aumenta o tamanho da fonte do parágrafo */
     color: #000;
-    line-height: 1.6;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhorar a leitura */
 }
+
 
 
 #whyGoat {
