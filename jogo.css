@@ -142,7 +142,7 @@ header {
     align-items: center; /* Alinha verticalmente */
     justify-content: center; /* Alinha horizontalmente */
     padding: 30px;
-    max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
+    max-width: 1000px; /* Ou qualquer outra largura máxima desejada */
     margin: 0 auto;
     margin-top: 90px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
 
@@ -152,7 +152,7 @@ header {
 .about-image {
     flex: 1 1 60%; /* Ocupa metade da largura do container */
     margin-right: 40px; /* Adiciona espaço à direita da imagem */
-    max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
+    max-width: 300px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
     transform: translateX(-80px); /* Move a imagem mais para a esquerda */
 }
