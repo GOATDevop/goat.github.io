@@ -179,11 +179,28 @@ header {
 
 #whyGoat {
     margin-top: 100px; /* Espaçamento da seção anterior */
-    font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
+    /*font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
     max-width: 800px; /* Limita a largura da seção para uma leitura confortável */
     margin: auto; /* Centraliza a seção na página */
     padding: 50px 20px; /* Adiciona espaço dentro da seção */
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;*/
+}
+
+#whyGoat h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 80px; /* Tamanho grande para o título */
+    margin-bottom: 30px; /* Espaçamento entre o título e a descrição */
+    color: #FE8029; /* Cor do título, ajuste conforme necessário */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+}
+
+#whyGoat p {
+    text-align: justify; /* Justificação do texto para melhor leitura */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin: 0 20px; /* Margens laterais para não tocar as bordas */
+    color: #000000; /* Cor do texto, ajustável */
+    font-size: 25px;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; /* Adiciona um rebordo branco ao texto */
 }
 
 #whyGoat img {
