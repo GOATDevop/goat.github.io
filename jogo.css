@@ -363,26 +363,26 @@ p {
     flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
     max-width: 50%; /* Limita a largura máxima da imagem para 50% do container */
     height: auto; /* Mantém a proporção da imagem */
-    margin-right: 20px; /* Adiciona espaço entre a imagem e o texto */
+    margin-right: 35px; /* Adiciona espaço entre a imagem e o texto */
 }
 
 /* Estilos para a divisão que contém o título e a descrição à direita */
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: right; /* Alinha o texto à esquerda */
 }
 
 /* Estilos para o título */
 .roadmap h2 {
-    font-size: 36px; /* Define o tamanho da fonte para o título */
+    font-size: 80px; /* Define o tamanho da fonte para o título */
     color: #333; /* Define a cor do texto */
     margin-bottom: 20px; /* Espaço entre o título e a descrição */
 }
 
 /* Estilos para a descrição */
 .roadmap p {
-    font-size: 18px; /* Define o tamanho da fonte para a descrição */
+    font-size: 25px; /* Define o tamanho da fonte para a descrição */
     color: #666; /* Define a cor do texto */
     line-height: 1.6; /* Espaçamento entre linhas */
 }
