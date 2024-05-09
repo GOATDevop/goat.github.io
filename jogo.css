@@ -248,8 +248,9 @@ p {
     display: flex;
     flex-direction: column; /* Empilha os elementos verticalmente */
     align-items: center; /* Centraliza horizontalmente os itens */
+    text-align: center;
     justify-content: center; /* Centraliza verticalmente os itens */
-    padding: 20px;
+    /*padding: 20px;*/
     margin-top: 90px; /* Ajuste conforme necessário */
     margin-bottom:150px;
     width: 100%; /* Ocupa a largura total para garantir centralização */
