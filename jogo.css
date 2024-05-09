@@ -137,49 +137,44 @@ header {
     text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff; /* Adiciona um rebordo preto ao texto */
 }
 
-#about .container {
+.about-section {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: center; /* Alinha horizontalmente */
-    padding: 30px;
-    max-width: 5000px; /* Ou qualquer outra largura máxima desejada */
-    margin: 0 auto;
-    margin-top: 90px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
 
-
+.about-content {
+    flex: 1;
+    padding-right: 20px;
 }
 
 .about-image {
-    flex: 1 1 60%; /* Ocupa metade da largura do container */
-    margin-right: 40px; /* Adiciona espaço à direita da imagem */
-    max-width: 300px; /* Ou a largura máxima que você deseja para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(-80px); /* Move a imagem mais para a esquerda */
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para efeito de profundidade */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza as transições de transformação e sombra */
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.about-image img:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1); /* Sombra mais intensa no hover */
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px; /* Optional for rounded corners */
 }
 
-.about-text {
-    flex: 1 1 50%; /* Ocupa a outra metade da largura do container */
-    margin-left: 50px; /* Adiciona espaço à esquerda do texto */
-    padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
-    transform: translateX(50px); /* Move o texto um pouco para a direita */
+h2 {
+    font-size: 36px;
+    color: #333;
 }
 
-.about-text h2 {
-    color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
-    margin-top: 0;
-    font-size: 60px; /* Ajusta o tamanho da fonte do título */
+p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
 }
 
-.about-text p {
-    color: #000; /* Cor de texto mais escura para melhor leitura */
-}
 
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
