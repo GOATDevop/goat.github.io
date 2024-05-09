@@ -141,7 +141,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px;
+    padding: 20px;
     max-width: auto;
     margin: auto;
 }
@@ -167,6 +167,7 @@ header {
 h2 {
     font-size: 80px;
     color: #000;
+    margin-left:50px;
 }
 
 p {
