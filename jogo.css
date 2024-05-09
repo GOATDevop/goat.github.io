@@ -234,7 +234,7 @@ header {
     align-items: center; /* Centraliza horizontalmente os itens */
     justify-content: center; /* Centraliza verticalmente os itens */
     padding: 20px;
-    margin-top: 80px; /* Ajuste conforme necessário */
+    margin-top: 90px; /* Ajuste conforme necessário */
     width: 100%; /* Ocupa a largura total para garantir centralização */
 }
 
@@ -279,7 +279,7 @@ header {
     text-align: center; /* Centraliza o texto do título */
     padding: 20px; /* Padding para a seção */
     font-family: 'Arial', sans-serif; /* Fonte consistente com o site */
-    margin-top: 60px;
+    margin-top: 90px;
     width: 100%; /* Garante que a seção ocupe a largura total */
     display: flex;
     flex-direction: column;
