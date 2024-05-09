@@ -162,21 +162,24 @@ header {
 }
 
 .about-image img {
-    /*width: 100%;*/
-    max-width: 600px;
+    max-width: 630px;
     height: auto;
 }
 
 h2 {
+    font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
     font-size: 80px;
-    color: #000;
-    margin-left:50px;
+    color: #FE8029;
+    margin-left:80px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 p {
+    font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
     font-size: 25px;
     color: #000;
     line-height: 1.6;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 
@@ -204,7 +207,7 @@ p {
 }
 
 #whyGoat img {
-    max-width: 50%; /* Garante que a imagem não ultrapasse a largura da seção */
+    max-width: 40%; /* Garante que a imagem não ultrapasse a largura da seção */
     height: auto; /* Mantém a proporção da imagem */
     margin-bottom: 50px;
     display: block; /* Torna a imagem um bloco para permitir margens automáticas */
