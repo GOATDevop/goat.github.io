@@ -139,19 +139,19 @@ header {
 
 #about .container {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
+    align-items: left right; /* Alinha verticalmente */
     justify-content: space-between; /* Distribui o espaço entre os itens uniformemente */
     padding: 30px;
-    max-width: 1200px; /* Largura máxima desejada */
+    max-width: 1200px auto; /* Largura máxima desejada */
     margin: 0 auto;
     margin-top: 250px; /* Ajuste esse valor conforme necessário */
 }
 
 .about-image {
-    flex: 1 1 40%; /* Reduz a proporção da largura ocupada pela imagem se necessário */
+    flex: 1 1 30%; /* Reduz a proporção da largura ocupada pela imagem se necessário */
     max-width: 630px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(0); /* Corrige o movimento se necessário */
+    transform: translateX(-130px); /* Corrige o movimento se necessário */
 }
 
 .about-text {
@@ -163,12 +163,13 @@ header {
 .about-text p {
     text-align: justify;
     color: #000;
-    font-size: 20px; 
+    font-size: 30px; 
     line-height: 1.6;
     text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; /* Corrigindo erro de digitação 'ttext-shadow' */
 }
 
 .about-text h2 {
+    text-align: right-center;
     color: #FE8029;
     font-size: 80px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
