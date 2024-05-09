@@ -55,7 +55,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 20px; /* Padding lateral */
+    padding: 0 15px; /* Padding lateral */
     margin-top: 350px; /* Aumenta a margem superior para empurrar a barra de navegação para baixo */
     box-sizing: border-box;
 }
@@ -71,7 +71,7 @@ header {
     color: #FE8029;
     font-family: 'Bangers';
     padding: 16px 24px; /* Aumenta o padding para maior tamanho dos botões */
-    margin: 7px; /* Ajusta a margem para evitar que os botões fiquem muito separados */
+    margin: 5px; /* Ajusta a margem para evitar que os botões fiquem muito separados */
     border-radius: 0.2px;
     font-size: 30px; /* Tamanho da fonte dos botões */
     transition: background-color 0.3s;
