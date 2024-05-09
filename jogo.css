@@ -289,7 +289,7 @@ header {
     text-align: center; /* Centraliza o texto do título */
     padding: 20px; /* Padding para a seção */
     font-family: 'Bangers', sans-serif; /* Fonte consistente com o site */
-    margin-top: 120px;
+    margin-top: 150px;
     width: 100%; /* Garante que a seção ocupe a largura total */
     display: flex;
     flex-direction: column;
