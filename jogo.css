@@ -185,9 +185,9 @@ p {
 
 
 #whyGoat {
-    padding: 50px 20px; /* Espaçamento ao redor da seção */
+    padding: 30px 30px; /* Espaçamento ao redor da seção */
     font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
-    margin-top: 130px; /* Espaçamento da seção anterior */
+    margin-top: 150px; /* Espaçamento da seção anterior */
 }
 
 #whyGoat h2 {
@@ -227,8 +227,8 @@ p {
 
 .carousel {
     position: relative;
-    width: 40%; /* Tamanho adequado para o carrossel no layout do site */
-    height: 720px; /* Altura ajustada para acomodar conteúdo variado */
+    width: 50%; /* Tamanho adequado para o carrossel no layout do site */
+    height: 730px; /* Altura ajustada para acomodar conteúdo variado */
     margin: auto; /* Centraliza o carrossel na página */
     overflow: hidden; /* Oculta qualquer conteúdo que exceda o tamanho do carrossel */
 }
@@ -239,6 +239,7 @@ p {
 }
 
 .carousel-images img, .carousel-images video {
+    align-items: center;
     width: 100%; /* Garante que o conteúdo preencha a largura do carrossel */
     height: 100%; /* Faz com que a altura seja ajustada à do container */
     object-fit: cover; /* Mantém a proporção sem distorcer o conteúdo */
