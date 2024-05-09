@@ -380,14 +380,17 @@ header {
 }
 
 /* Aplica efeitos a todas as imagens no site */
-img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de transformação e sombra */
-    /*box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+img { 
+    perspective: 1000px; /* Define a perspectiva para o contêiner */
+    width: 300px; /* Define a largura da imagem */
+    height: 200px; /* Define a altura da imagem */
+    transform-style: preserve-3d; /* Permite que filhos tenham posicionamento 3D */
+    transition: transform 0.5s ease-in-out; /* Suaviza a transformação */
 }
 
 img:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
-    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+    transform: rotateY(20deg); /* Rotaciona a imagem no eixo Y */
+    
 }
 
 
