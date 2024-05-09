@@ -142,13 +142,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    max-width: 1200px;
+    max-width: auto;
     margin: auto;
 }
 
 .about-content {
     flex: 1;
-    padding-right: 20px;
+    padding-right: 5px;
 }
 
 .about-image {
@@ -159,19 +159,19 @@ header {
 
 .about-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     border-radius: 10px; /* Optional for rounded corners */
 }
 
 h2 {
-    font-size: 36px;
-    color: #333;
+    font-size: 80px;
+    color: #000;
 }
 
 p {
-    font-size: 18px;
-    color: #666;
+    font-size: 25px;
+    color: #000;
     line-height: 1.6;
 }
 
