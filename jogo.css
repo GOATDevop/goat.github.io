@@ -157,6 +157,7 @@ header {
 }
 
 .about-text {
+    text-align: justify; /* Justificação do texto para melhor leitura */
     flex: 1 1 50%; /* Ocupa a outra metade da largura do container */
     margin-left: 50px; /* Adiciona espaço à esquerda do texto */
     padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
@@ -171,6 +172,7 @@ header {
 }
 
 .about-text p {
+    text-align: justify; /* Justificação do texto para melhor leitura */
     color: #000; /* Cor de texto mais escura para melhor leitura */
     font-size: 25px;
     line-height: 1.6; /* Espaçamento entre linhas */
