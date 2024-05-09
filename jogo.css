@@ -140,7 +140,7 @@ header {
 #about.container {
     display: flex;
     align-items: center; /* Centraliza verticalmente */
-    justify-content: flex-start; /* Alinha os elementos ao início da seção */
+    justify-content: flex-right; /* Alinha os elementos ao início da seção */
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 100px; /* Espaço acima da seção */
