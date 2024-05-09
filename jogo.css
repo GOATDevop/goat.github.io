@@ -139,40 +139,44 @@ header {
 
 #about .container {
     display: flex;
-    align-items: left right; /* Alinha verticalmente */
-    justify-content: space-between; /* Distribui o espaço entre os itens uniformemente */
+    flex-direction: column; /* Alinha os elementos verticalmente em coluna */
+    align-items: flex-end; /* Alinha os itens à direita */
     padding: 30px;
-    max-width: 1200px auto; /* Largura máxima desejada */
+    max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
     margin: 0 auto;
-    margin-top: 250px; /* Ajuste esse valor conforme necessário */
-}
-
-.about-image {
-    flex: 1 1 30%; /* Reduz a proporção da largura ocupada pela imagem se necessário */
-    max-width: 630px; /* Ou a largura máxima que você deseja para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    transform: translateX(-130px); /* Corrige o movimento se necessário */
+    margin-top: 250px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
 }
 
 .about-text {
     text-align: justify; /* Justificação do texto para melhor leitura */
-    flex: 1 1 50%; /* Proporção da largura ocupada pelo texto ajustada */
-    padding: 20px; /* Espaçamento ao redor do texto */
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
+}
+
+.about-text h2 {
+    width: 100%; /* Ocupa a largura total */
+    text-align: right; /* Alinha o texto à direita */
+    color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
+    font-size: 80px; /* Ajusta o tamanho da fonte do título */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    margin-top: 0;
+    margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
 .about-text p {
     text-align: justify;
     color: #000;
-    font-size: 30px; 
+    font-size: 20px;
     line-height: 1.6;
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; /* Corrigindo erro de digitação 'ttext-shadow' */
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
-.about-text h2 {
-    text-align: right-center;
-    color: #FE8029;
-    font-size: 80px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+.about-image {
+    flex: 1 1 30%; /* Reduz a proporção da largura ocupada pela imagem se necessário */
+    max-width: 630px; /* Ou a largura máxima que você deseja para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    transform: translateX(-100px); /* Corrige o movimento se necessário */
 }
 
 #whyGoat {
