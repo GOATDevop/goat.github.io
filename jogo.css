@@ -203,8 +203,9 @@ header {
 #whyGoat img {
     max-width: 60%; /* Garante que a imagem não ultrapasse a largura da seção */
     height: auto; /* Mantém a proporção da imagem */
-    margin-top: 10px; /* Espaço acima da imagem para separação visual */
     margin-bottom: 50px;
+    display: block; /* Torna a imagem um bloco para permitir margens automáticas */
+    margin: 20px auto; /* Aplica margem automática horizontal para centralizar, e 20px vertical */
 }
 
 #gallery h2 {
