@@ -149,9 +149,9 @@ header {
 }
 
 .about-image {
-    flex: 1 1 50%; /* Ocupa metade da largura do container */
+    flex: 1 1 65%; /* Ocupa metade da largura do container */
     margin-right: 50px; /* Adiciona espaço à direita da imagem */
-    max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
+    max-width: 630px; /* Ou a largura máxima que você deseja para a imagem */
     height: auto; /* Mantém a proporção da imagem */
     transform: translateX(-130px); /* Move a imagem mais para a esquerda */
 }
@@ -379,14 +379,15 @@ header {
     height: auto;
 }
 
-.image-float {
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais profunda para efeito flutuante */
-    transition: all 0.3s ease-in-out; /* Suaviza todas as transições */
+/* Aplica efeitos a todas as imagens no site */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de transformação e sombra */   
 }
 
-.image-float:hover {
-    transform: translateY(-10px); /* Move a imagem para cima ao passar o mouse */
+img:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
 }
+
 
 
 
