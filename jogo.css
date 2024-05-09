@@ -27,10 +27,11 @@ header {
 }
 
 .logo {
+    margin-top: 60px;
     position: absolute;
     left: 15%; /* Ajuste para posicionar o logo um pouco à esquerda */
     top: 30%; /* Ajuste para posicionar o logo por cima da barra de navegação */
-    max-width: 300px; /* Aumenta o tamanho do logo */
+    max-width: 350px; /* Aumenta o tamanho do logo */
     animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
   }
@@ -321,6 +322,8 @@ header {
     width: 100%; /* Largura total dentro de seu contêiner */
     height: auto; /* Altura automática para manter proporção */
     max-width: 200px; /* Máximo de largura da imagem para manter a estética */
+    animation: rotate 10s infinite linear;
+    transform-style: preserve-3d;
 }
 
 
