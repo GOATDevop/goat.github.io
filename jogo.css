@@ -139,47 +139,34 @@ header {
 
 #about.container {
     display: flex;
-    align-items: center; /* Centraliza verticalmente os itens dentro do container */
-    justify-content: flex-start; /* Alinha os itens ao início do container */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: flex-start; /* Alinha os itens ao início */
+    max-width: 1200px; /* Largura máxima do container */
+    width: 100%; /* Garante que o container ocupe a largura disponível até o máximo */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 100px; /* Espaço acima da seção */
 }
 
 #about .about-image {
-    flex: 0 1 30%; /* Configura a imagem para não crescer, mas encolher e ocupar até 30% do espaço */
-    max-width: 350px; /* Máximo de largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
+    flex: 0 1 300px; /* Não cresce, pode encolher, base de 300px */
     margin-right: 20px; /* Espaço à direita da imagem para separar do texto */
 }
 
 #about .about-image img {
-    width: 100%; /* Faz a imagem se ajustar à largura do contêiner '.about-image' */
+    width: 100%; /* Ajusta a imagem para preencher o espaço do seu contêiner */
     height: auto; /* Mantém a proporção da imagem */
 }
 
 #about .about-text {
-    flex: 1 1 70%; /* Configura o texto para ocupar o espaço restante, até 70% do container */
+    flex: 1 1 0%; /* Cresce para ocupar o espaço restante, base de 0% */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
 #about .about-text h2, #about .about-text p {
-    margin: 0; /* Remove margens adicionais */
-    padding: 0; /* Remove paddings adicionais */
+    margin: 0;
+    padding: 0;
 }
-
-#about .about-text h2 {
-    font-size: 36px;
-    color: #FE8029;
-    margin-bottom: 10px; /* Espaço abaixo do título */
-}
-
-#about .about-text p {
-    font-size: 18px;
-    color: #000;
-    line-height: 1.6;
-}
-
 
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
