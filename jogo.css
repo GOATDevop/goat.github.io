@@ -137,45 +137,42 @@ header {
     text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff; /* Adiciona um rebordo preto ao texto */
 }
 
-#about.container {
+#about .container {
     display: flex;
-    align-items: center; /* Centraliza os itens verticalmente */
-    justify-content: flex-start; /* Alinha os itens ao início para manter a imagem à esquerda */
-    max-width: 1200px;
-    width: 100%;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    padding: 30px;
+    max-width: 1200px; /* Ou qualquer outra largura máxima desejada */
     margin: 0 auto;
-    padding: 40px;
+    margin-top: 90px; /* Ajuste esse valor conforme necessário para mais ou menos espaço */
+
+
 }
 
-#about .about-image {
-    flex: 0 0 300px; /* Fixa a largura da imagem em 250px e impede o crescimento ou encolhimento */
-    margin-right: 90px; /* Espaço entre a imagem e o texto */
+.about-image {
+    flex: 1 1 60%; /* Ocupa metade da largura do container */
+    margin-right: 40px; /* Adiciona espaço à direita da imagem */
+    max-width: 600px; /* Ou a largura máxima que você deseja para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    transform: translateX(-80px); /* Move a imagem mais para a esquerda */
 }
 
-#about .about-image img {
-    width: 100%;
-    height: auto;
+.about-text {
+    flex: 1 1 50%; /* Ocupa a outra metade da largura do container */
+    margin-left: 50px; /* Adiciona espaço à esquerda do texto */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor do texto */
+    transform: translateX(50px); /* Move o texto um pouco para a direita */
 }
 
-#about .about-text {
-    flex: 1 1 auto; /* Permite que o texto cresça e preencha o espaço restante */
-    text-align: left;
-    padding-left: 90px; /* Aumenta o espaçamento à esquerda para separar do contêiner da imagem */
+.about-text h2 {
+    color: #FE8029; /* Usa a cor laranja usada em outros lugares no site */
+    margin-top: 0;
+    font-size: 60px; /* Ajusta o tamanho da fonte do título */
 }
 
-#about .about-text h2 {
-    font-size: 80px; /* Aumenta o tamanho da fonte do título */
-    color: #FE8029;
-    margin-bottom: 10px;
+.about-text p {
+    color: #000; /* Cor de texto mais escura para melhor leitura */
 }
-
-#about .about-text p {
-    font-size: 25px; /* Aumenta o tamanho da fonte do parágrafo */
-    color: #000;
-    line-height: 1.6; /* Aumenta o espaçamento entre linhas para melhorar a leitura */
-}
-
-
 
 #whyGoat {
     padding: 50px 20px; /* Espaçamento ao redor da seção */
