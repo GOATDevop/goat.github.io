@@ -171,7 +171,7 @@ h2 {
     font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
     font-size: 80px;
     color: #FE8029;
-    margin-left:120px;
+    margin-left:150px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -251,13 +251,14 @@ p {
     align-items: center; /* Centraliza horizontalmente os itens */
     text-align: center;
     justify-content: center; /* Centraliza verticalmente os itens */
-    /*padding: 20px;*/
+    padding: 20px;
     margin-top: 90px; /* Ajuste conforme necessário */
     margin-bottom:150px;
     width: 100%; /* Ocupa a largura total para garantir centralização */
 }
 
 .presale-title {
+    margin-top: 90px;
     width: 100%; /* Ocupa a largura total para garantir centralização */
     text-align: center; /* Centraliza o texto do título */
     font-size: 80px; /* Tamanho do texto */
@@ -270,11 +271,12 @@ p {
 .presale-content {
     width: 100%; /* Ocupa a largura total para garantir centralização */
     text-align: center; /* Centraliza o texto do conteúdo */
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bttom:50px;
 }
 
 .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
-    margin-bottom: 30px; /* Espaçamento entre os elementos */
+    margin-bottom: 20px; /* Espaçamento entre os elementos */
     text-align: center;
     font-size: 40px; /* Tamanho de fonte para visibilidade */
     font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
@@ -288,9 +290,7 @@ p {
     color: #007BFF; /* Cor azul para links, ajustável conforme o estilo do site */
     font-weight: bold; /* Texto em negrito para destaque */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-    margin-bottom: 20px;
 }
-
 
 #remainingTime {
     font-style: Bangers; /* Estilo itálico para o timer de término */
