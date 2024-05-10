@@ -320,6 +320,7 @@ header {
     padding: 20px; /* Padding para a seção */
     font-family: 'Bangers', sans-serif; /* Fonte consistente com o site */
     margin-top: 150px;
+    margin-bottom: 150px;
     width: 100%; /* Garante que a seção ocupe a largura total */
     display: flex;
     flex-direction: column;
