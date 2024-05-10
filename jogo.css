@@ -372,7 +372,7 @@ p {
     padding: 50px 0; /* Adiciona padding vertical para espaço interno */
     max-width: 1200px; /* Define uma largura máxima para o container */
     margin: auto; /* Centraliza o container na página */
-    margin-top: 280px; /* Adiciona uma margem superior para distanciar da seção acima */
+    margin-top: 290px; /* Adiciona uma margem superior para distanciar da seção acima */
 }
 
 /* Estilos para a imagem à esquerda */
@@ -389,7 +389,7 @@ p {
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
-    padding-left: 120px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
+    padding-left: 100px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
