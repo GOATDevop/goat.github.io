@@ -1,9 +1,3 @@
-:root {
-    --small-device: 600px;
-    --medium-device: 768px;
-    --large-device: 992px;
-}
-
 body, html {
     margin: 0;
     padding: 0;
