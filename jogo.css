@@ -151,57 +151,60 @@ header {
 
 /* Media Queries para Smartphones */
 @media (max-width: 480px) {
-    header {
-        padding: 10px 0; /* Adiciona padding para evitar que o conteúdo toque as bordas */
-        height: auto; /* Altera a altura para auto para acomodar conteúdo variável */
-        min-height: 300px; /* Mantém uma altura mínima para visibilidade */
-    }
-
-    .header-content {
-        padding-top: 20px; /* Reduz o padding superior */
-    }
-
-    .logo {
-        position: relative; /* Muda para position relative para melhor ajuste */
-        left: 50%; /* Centraliza o logo */
-        transform: translateX(-50%); /* Ajusta precisamente ao centro */
-        top: 0; /* Remove o ajuste vertical */
-        margin-top: 10px; /* Adiciona uma pequena margem superior */
-        width: 60%; /* Aumenta a largura para visibilidade */
-    }
-
     .navbar {
-        flex-direction: column; /* Organiza os itens da barra de navegação em coluna */
-        padding: 0 10px; /* Ajusta o padding para melhor espaço */
-        margin-top: 10px; /* Reduz a margem superior */
+        flex-direction: column; /* Muda a direção para coluna para empilhar os links */
+        padding: 0;
+        margin-top: 0; /* Remove a margem superior para economizar espaço */
     }
 
     .navbar .menu-items {
-        flex-direction: column; /* Organiza os links em coluna */
-        align-items: center; /* Centraliza os links */
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Garante que a barra de navegação use toda a largura */
     }
 
     .navbar .menu-items a {
-        margin: 5px 0; /* Ajusta as margens para melhorar o espaçamento */
-        padding: 8px 12px; /* Ajusta o padding */
+        width: 100%; /* Faz cada link ocupar a largura total */
+        text-align: center; /* Centraliza o texto dos links */
+        padding: 10px; /* Aumenta o padding para uma melhor área de toque */
+        box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+        border-top: 1px solid #ccc; /* Adiciona uma linha entre os links */
+    }
+
+    .navbar #connectBtn {
+        width: 100%; /* Ajusta o botão para ocupar a largura total */
+        margin-top: 10px; /* Adiciona uma margem superior */
     }
 }
+
 
 @media (max-width: 480px) {
-    img {
-        width: 100%; /* Assegura que todas as imagens se ajustem à largura do container */
-        height: auto; /* Mantém a proporção das imagens */
-        max-width: none; /* Remove qualquer limitação de max-width prévia */
+    .roadmap, .about-section, .presale, .how-to-buy-section {
+        flex-direction: column; /* Empilha os elementos verticalmente */
     }
 
-    .about-image, .step img {
-        width: auto; /* Permite que a largura seja automática e baseada na proporção */
-        max-width: 100%; /* Assegura que a imagem não ultrapasse a largura do container */
-        margin: 0 auto; /* Centraliza a imagem */
+    .roadmap-img, .about-image img, .carousel-images img {
+        max-width: 100%; /* Limita a largura da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .roadmap div, .about-content, .presale-content, .how-to-buy-section {
+        width: 100%; /* Ajusta a largura do conteúdo textual para 100% */
+        padding: 20px; /* Adiciona padding para evitar que o texto toque as bordas */
+        box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+    }
+
+    .step {
+        width: 100%; /* Ajusta a largura de cada etapa para ocupar a largura total */
+        align-items: center; /* Centraliza os elementos da etapa */
+        text-align: center; /* Centraliza o texto dentro da etapa */
+    }
+
+    .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
+        font-size: 20px; /* Reduz o tamanho da fonte para melhor ajuste */
+        text-align: center; /* Garante que o texto esteja centralizado */
     }
 }
-
-
 
 /* Estilos globais para melhorar a acessibilidade e visibilidade em dispositivos menores */
 body {
