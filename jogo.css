@@ -116,60 +116,110 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
-/* Estilos para dispositivos pequenos (smartphones) */
-@media (max-width: var(--small-device)) {
+@media only screen and (max-width: 480px) {
     header {
-        height: auto; /* Ajusta a altura para auto */
-        min-height: 300px; /* Mantém uma altura mínima */
+        height: 200px;
+    }
+
+    .header-content, .logo {
+        padding-top: 20px;
+        position: static;
+        text-align: center;
+        width: 100%;
     }
 
     .logo {
-        width: 60%; /* Ajusta a largura do logo */
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 10px;
+        margin-top: 0;
+        max-width: 100px;
     }
 
-    .navbar:after {
-        display: block; /* Mostra o ícone de menu */
+    .navbar {
+        margin-top: 10px;
+        flex-direction: column;
     }
 
-    .menu-items {
-        display: none;
-        position: absolute;
-        background-color: #fff;
+    .navbar a {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .intro-section h1 {
+        font-size: 40px;
+    }
+
+    .about-section, .about-image, .about-content {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    .roadmap-img, #roadmap div {
         width: 100%;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        z-index: 1;
-        top: 40px;
-    }
-
-    .menu-items.active {
-        display: flex;
     }
 }
 
-/* Estilos para tablets (dispositivos médios) */
-@media (max-width: var(--medium-device)) {
-    .intro-section h1, .about-section h2, .roadmap h2 {
-        font-size: 48px; /* Fonte um pouco maior para tablets */
+/* Tablets (até 768px) */
+@media only screen and (max-width: 768px) {
+    header {
+        height: 300px;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    .navbar a {
+        font-size: 22px;
+    }
+
+    .intro-section h1 {
+        font-size: 60px;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        max-width: 90%;
+    }
+
+    .roadmap-img, #roadmap div {
+        width: 100%;
     }
 }
 
-/* Estilos para desktops (dispositivos grandes) */
-@media (min-width: var(--large-device)) {
-    .navbar .menu-items a {
-        padding: 20px;
-        font-size: 24px;
+/* Desktops de baixa resolução (até 1024px) */
+@media only screen and (max-width: 1024px) {
+    .logo {
+        max-width: 240px;
     }
-    
-    .intro-section h1, .about-section h2, .roadmap h2 {
-        font-size: 60px; /* Fonte maior para desktops */
+
+    .navbar a {
+        font-size: 26px;
+    }
+
+    .intro-section h1 {
+        font-size: 80px;
     }
 }
 
+/* Desktops de alta resolução (mais de 1024px) */
+@media only screen and (min-width: 1025px) {
+    .logo {
+        max-width: 320px;
+    }
 
+    .navbar a {
+        font-size: 30px;
+    }
+
+    .intro-section h1 {
+        font-size: 180px;
+    }
+}
 
 .intro-section {
     text-align: center; /* Centraliza o conteúdo */
