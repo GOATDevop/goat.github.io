@@ -367,50 +367,48 @@ header {
     transform-style: preserve-3d;
 }
 
-.roadmap-section {
-    display: flex; /* Utiliza flexbox para alinhar os elementos lado a lado */
-    align-items: center; /* Alinha verticalmente os itens ao centro */
-    justify-content: space-between; /* Centraliza os itens horizontalmente */
-    padding: 50px 0; /* Adiciona padding vertical para espaço interno */
-    width: 100%; /* Define uma largura máxima para o container */
-    margin: auto; /* Centraliza o container na página */
-    margin-top: 300px; /* Adiciona uma margem superior para distanciar da seção acima */
+/* Estilos base para a seção roadmap */
+#roadmap {
+    display: flex; /* Configura o layout flexível */
+    align-items: center; /* Centraliza verticalmente os itens dentro do container */
+    justify-content: space-between; /* Espaço entre a imagem e o conteúdo de texto */
+    width: 100%; /* Usa a largura total disponível */
+    padding: 20px; /* Espaço interno para evitar colar nos cantos */
+    box-sizing: border-box; /* Inclui padding na largura total */
 }
 
+/* Estilos para a imagem na seção roadmap */
 .roadmap-img {
-    flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
-    max-width: 60%; /* Limita a largura máxima da imagem */
+    width: 50%; /* Limita a largura da imagem para metade do container */
+    max-width: 600px; /* Evita que a imagem se torne muito grande */
     height: auto; /* Mantém a proporção da imagem */
-    margin-right: 120px; /* Aumenta o espaço entre a imagem e o texto */
-    margin-left: -120px; /* Move a imagem um pouco mais para a esquerda */
-    order: -1; /* Posiciona a imagem à esquerda do texto */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    order: -1; /* Posiciona a imagem à esquerda */
 }
 
-.roadmap-content {
-    flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
-    padding: 20px; /* Adiciona padding para espaçamento interno */
-    padding-left: 120px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
-    display: flex; /* Adiciona display flex para alinhar itens verticalmente */
-    flex-direction: column; /* Organiza os filhos em coluna */
-    align-items: center; /* Centraliza os itens verticalmente */
-}
-
-.roadmap-section h2 {
-    font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
-    width: 100%; /* Define a largura total para permitir centralização */
+/* Estilos para o container de texto na seção roadmap */
+#roadmap div {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente os elementos dentro do div */
+    justify-content: center; /* Centraliza verticalmente os elementos */
     text-align: center; /* Alinha o texto ao centro */
-    font-size: 80px; /* Define o tamanho da fonte para o título */
-    color: #FE8029; /* Define a cor do texto */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona sombra ao texto */
+    flex: 1; /* Permite que o container de texto cresça para preencher o espaço */
+    max-width: 50%; /* Limita a largura do texto para metade do container */
 }
 
-.roadmap-section p {
-    font-size: 25px; /* Define o tamanho da fonte para a descrição */
-    width:100%;
-    color: #000; /* Define a cor do texto */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* Adiciona sombra ao texto */
+/* Estilos para o título na seção roadmap */
+#roadmap h2 {
+    font-size: 80px; /* Tamanho da fonte para o título */
+    margin-bottom: 20px; /* Espaço entre o título e o parágrafo */
 }
+
+/* Estilos para o parágrafo na seção roadmap */
+#roadmap p {
+    font-size: 24px; /* Tamanho da fonte para o parágrafo */
+    max-width: 80%; /* Limita a largura do texto para manter a legibilidade */
+}
+
 
 
 
