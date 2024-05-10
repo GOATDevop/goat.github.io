@@ -367,14 +367,14 @@ header {
     transform-style: preserve-3d;
 }
 
-.roadmap {
+.roadmap-section {
     display: flex; /* Utiliza flexbox para alinhar os elementos lado a lado */
     align-items: center; /* Alinha verticalmente os itens ao centro */
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    justify-content: space-between; /* Centraliza os itens horizontalmente */
     padding: 50px 0; /* Adiciona padding vertical para espaço interno */
-    max-width: 1200px; /* Define uma largura máxima para o container */
+    width: 100%; /* Define uma largura máxima para o container */
     margin: auto; /* Centraliza o container na página */
-    margin-top: 290px; /* Adiciona uma margem superior para distanciar da seção acima */
+    margin-top: 300px; /* Adiciona uma margem superior para distanciar da seção acima */
 }
 
 .roadmap-img {
@@ -386,7 +386,7 @@ header {
     order: -1; /* Posiciona a imagem à esquerda do texto */
 }
 
-.roadmap .content {
+.roadmap-content {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
     padding-left: 120px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
@@ -395,7 +395,8 @@ header {
     align-items: center; /* Centraliza os itens verticalmente */
 }
 
-.roadmap .content h2 {
+.roadmap-section h2 {
+    font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
     width: 100%; /* Define a largura total para permitir centralização */
     text-align: center; /* Alinha o texto ao centro */
     font-size: 80px; /* Define o tamanho da fonte para o título */
@@ -403,8 +404,9 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona sombra ao texto */
 }
 
-.roadmap .content p {
+.roadmap-section p {
     font-size: 25px; /* Define o tamanho da fonte para a descrição */
+    width:100%;
     color: #000; /* Define a cor do texto */
     line-height: 1.6; /* Espaçamento entre linhas */
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* Adiciona sombra ao texto */
