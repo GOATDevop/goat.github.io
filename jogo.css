@@ -162,7 +162,7 @@ header {
 
 .about-image img {
     width: auto; /* Adapta a largura automaticamente */
-    max-width: 100%; /* Garante que a imagem não ultrapasse a área de seu contêiner */
+    max-width: 50%; /* Garante que a imagem não ultrapasse a área de seu contêiner */
     height: auto;
     margin-left: 30px;
 }
