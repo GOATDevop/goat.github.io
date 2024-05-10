@@ -172,6 +172,7 @@ h2 {
 }
 
 p {
+    max-width: 50%;
     font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
     font-size: 25px;
     color: #000;
