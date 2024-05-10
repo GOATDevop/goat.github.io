@@ -130,10 +130,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 1000);
 
-    const navBar = document.querySelector('.navbar:after');
+   const navToggle = document.querySelector('.navbar:after');
     const menuItems = document.querySelector('.menu-items');
 
-    navBar.addEventListener('click', function() {
+    navToggle.addEventListener('click', function() {
         menuItems.classList.toggle('active');
     });
     
