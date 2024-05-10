@@ -9,11 +9,6 @@ body, html {
     overflow-x: hidden;
 }
 
-section {
-    scroll-margin-top: 130px; /* Ajuste este valor conforme a altura do seu cabeçalho ou outro conteúdo fixo */
-}
-
-
 header {
     background-image: url('goats.png');
     background-size: cover;
@@ -115,73 +110,94 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
-/* Responsividade para Tablets */
+/* Regras para tablets (dispositivos com largura até 768px) */
 @media (max-width: 768px) {
     header {
-        height: 400px;
+        height: 400px; /* Reduz a altura do cabeçalho */
     }
 
     .logo {
-        left: 10%;
+        max-width: 200px; /* Reduz o tamanho do logo */
         top: 10%;
-        max-width: 200px;
+        left: 10%;
     }
 
-    .navbar {
-        flex-direction: column;
-        margin-top: 250px;
+    .navbar .menu-items a {
+        font-size: 20px; /* Reduz o tamanho da fonte para os links */
+        padding: 12px 16px; /* Reduz o padding dos links */
     }
 
-    .navbar .menu-items {
-        flex-direction: column;
+    .intro-section h1 {
+        font-size: 120px; /* Reduz o tamanho do título */
     }
 
-    .navbar a {
-        font-size: 20px;
-        padding: 12px 16px;
+    .intro-section .subtitle {
+        font-size: 30px; /* Reduz o tamanho do subtítulo */
     }
 
-    #infoDisplay {
-        top: 250px;
-        right: 10px;
+    .about-image img {
+        max-width: 100%; /* Ajusta a largura da imagem para ser totalmente responsiva */
+    }
+
+    .about-section, .presale, .how-to-buy-section {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+    }
+
+    .step {
+        width: 50%; /* Ajusta a largura de cada passo para maior visibilidade */
+        margin: 10px; /* Reduz a margem entre os passos */
     }
 }
 
-/* Responsividade para Smartphones */
+/* Regras para smartphones (dispositivos com largura até 480px) */
 @media (max-width: 480px) {
     header {
-        height: 300px;
+        height: 300px; /* Reduz ainda mais a altura do cabeçalho */
     }
 
     .logo {
-        left: 5%;
+        max-width: 150px; /* Reduz ainda mais o tamanho do logo */
         top: 5%;
-        max-width: 150px;
+        left: 5%;
     }
 
     .navbar {
-        margin-top: 200px;
+        margin-top: 200px; /* Ajusta a margem superior da barra de navegação */
     }
 
-    .navbar a {
-        font-size: 15px;
-        padding: 8px 12px;
+    .navbar .menu-items a {
+        font-size: 15px; /* Reduz ainda mais o tamanho da fonte para os links */
+        padding: 8px 12px; /* Reduz ainda mais o padding dos links */
     }
 
-    #infoDisplay {
-        top: 200px;
-        right: 5px;
+    .intro-section h1 {
+        font-size: 80px; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .intro-section .subtitle {
+        font-size: 20px; /* Reduz ainda mais o tamanho do subtítulo */
+    }
+
+    .step {
+        width: 80%; /* Ajusta a largura de cada passo para ocupar mais espaço */
+        margin: 5px; /* Reduz ainda mais a margem entre os passos */
+    }
+
+    .about-image img {
+        margin-left: 0; /* Remove a margem esquerda adicional */
     }
 }
 
-/* Efeitos globais para imagens */
-img {
-    transition: transform 0.3s ease;
+/* Estilos globais para melhorar a acessibilidade e visibilidade em dispositivos menores */
+body {
+    font-size: 16px; /* Ajusta o tamanho base da fonte para melhor legibilidade */
 }
 
-img:hover {
-    transform: scale(1.05);
+a, button {
+    min-width: 44px; /* Aumenta o tamanho mínimo dos botões e links para facilitar a interação */
+    min-height: 44px; /* Aumenta a altura mínima para acessibilidade */
 }
+
 
 .intro-section {
     text-align: center; /* Centraliza o conteúdo */
