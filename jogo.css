@@ -498,48 +498,6 @@ img:hover {
 }
 
 
-@media (max-width: 768px) {
-    body, html {
-        font-size: 14px; /* Reduz o tamanho base da fonte */
-        padding: 5px; /* Reduz o padding geral para evitar overflow */
-    }
-
-    .navbar, .footer, .header-content, .about-section, .intro-section, .how-to-buy-section, #socials {
-        padding: 10px; /* Ajusta o padding para todas as principais seções */
-    }
-
-    .navbar a {
-        font-size: 16px; /* Reduz o tamanho da fonte nos links da navbar */
-        padding: 8px 10px; /* Reduz o padding nos links */
-    }
-
-    .header-content, .intro-section h1, .about-section h2, #socials h2 {
-        font-size: 24px; /* Ajusta o tamanho da fonte para cabeçalhos */
-    }
-
-    .footer-content, #socials p {
-        font-size: 14px; /* Ajusta o tamanho da fonte para o conteúdo textual */
-    }
-
-    .socials-links img {
-        width: 40px; /* Reduz o tamanho das imagens nas redes sociais */
-        height: 40px;
-    }
-}
-
-.navbar .menu-items {
-    flex-direction: column; /* Empilha os links da navbar verticalmente em telas pequenas */
-    align-items: center; /* Centraliza os links */
-}
-
-.about-section, .how-to-buy-section, #roadmap {
-    flex-direction: column; /* Empilha os elementos verticalmente em seções complexas */
-}
-
-img {
-    max-width: 100%; /* Garante que todas as imagens se ajustem à largura do contêiner */
-    height: auto; /* Mantém a proporção das imagens */
-}
 
 
 
