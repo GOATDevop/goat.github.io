@@ -152,6 +152,9 @@ header {
     flex: 1;
     padding-right: 10px;
     min-width: 0; /* Impede que o conteúdo cresça além do tamanho flexível permitido */
+    display: flex; /* Adiciona flexbox para alinhamento interno */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
 }
 
 .about-image {
@@ -172,7 +175,7 @@ h2 {
     font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
     font-size: 80px;
     color: #FE8029;
-    margin-left: 0; /* Remove margem extra que pode empurrar conteúdo para fora */
+    margin: 0 auto; /* Centraliza horizontalmente o título no contêiner */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
