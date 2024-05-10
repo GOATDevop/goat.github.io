@@ -395,7 +395,7 @@ header {
     align-items: center; /* Centraliza os itens verticalmente */
 }
 
-.roadmap .content h2, .roadmap .content p {
+.roadmap .content h2 {
     width: 100%; /* Define a largura total para permitir centralização */
     text-align: center; /* Alinha o texto ao centro */
     font-size: 80px; /* Define o tamanho da fonte para o título */
