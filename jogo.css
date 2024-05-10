@@ -163,7 +163,7 @@ header {
 
 .about-image img {
     width: auto; /* Adapta a largura automaticamente */
-    max-width: 50%; /* Garante que a imagem não ultrapasse a área de seu contêiner */
+    max-width: 80%; /* Garante que a imagem não ultrapasse a área de seu contêiner */
     height: auto;
     margin-left: 30px;
 }
@@ -209,7 +209,7 @@ p {
 }
 
 #whyGoat img {
-    max-width: 30%;
+    max-width: 40%;
     height: auto;
     margin-bottom: 50px;
     display: block;
