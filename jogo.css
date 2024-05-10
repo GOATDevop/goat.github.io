@@ -372,6 +372,7 @@ p {
     padding: 50px 0; /* Adiciona padding vertical para espaço interno */
     max-width: 1200px; /* Define uma largura máxima para o container */
     margin: auto; /* Centraliza o container na página */
+    margin-top: 100px; /* Adiciona uma margem superior para distanciar da seção acima */
 }
 
 /* Estilos para a imagem à esquerda */
@@ -379,7 +380,8 @@ p {
     flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
     max-width: 50%; /* Limita a largura máxima da imagem para 50% do container */
     height: auto; /* Mantém a proporção da imagem */
-    margin-right: 20px; /* Adiciona espaço entre a imagem e o texto */
+    margin-right: 30px; /* Aumenta o espaço entre a imagem e o texto */
+    margin-left: -30px; /* Move a imagem um pouco mais para a esquerda */
     order: -1; /* Posiciona a imagem à esquerda do texto */
 }
 
@@ -387,6 +389,7 @@ p {
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
+    padding-left: 40px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
@@ -403,6 +406,7 @@ p {
     color: #666; /* Define a cor do texto */
     line-height: 1.6; /* Espaçamento entre linhas */
 }
+
 
 
 
