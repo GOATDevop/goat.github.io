@@ -479,13 +479,14 @@ img:hover {
 }
 
 .footer {
-    background-color: #000; /* Fundo escuro para destaque */
-    color: #fff; /* Texto claro para contraste */
-    padding: 20px; /* Espaçamento interno para não tocar nas bordas */
-    font-size: 20px; /* Tamanho da fonte para legibilidade */
-    line-height: 1.6; /* Espaçamento entre linhas para melhorar a leitura */
-    box-sizing: border-box; /* Inclui padding no cálculo da largura/altura */
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+    box-sizing: border-box;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    min-height: 100px; /* Assegura que o rodapé tenha altura suficiente */
 }
 
 .footer-content {
