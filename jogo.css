@@ -6,7 +6,6 @@ body, html {
     font-family: 'Bangers', cursive;
     background-color: #BFFBD9;
     scroll-behavior: smooth;
-    /*overflow-x: hidden; Esconde qualquer conteúdo que exceda a largura da viewport */
 }
 
 header {
