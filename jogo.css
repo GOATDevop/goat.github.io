@@ -10,7 +10,7 @@ body, html {
 }
 
 section {
-    scroll-margin-top: 100px; /* Ajuste este valor conforme a altura do seu cabeçalho ou outro conteúdo fixo */
+    scroll-margin-top: 130px; /* Ajuste este valor conforme a altura do seu cabeçalho ou outro conteúdo fixo */
 }
 
 
@@ -381,7 +381,7 @@ header {
     width: 100%; /* Usa a largura total disponível */
     padding: 20px; /* Espaço interno para evitar colar nos cantos */
     box-sizing: border-box; /* Inclui padding na largura total */
-    margin-top: 220px;
+    margin-top: 240px;
 }
 
 /* Estilos para a imagem na seção roadmap */
@@ -390,7 +390,7 @@ header {
     max-width: 500px; /* Evita que a imagem se torne muito grande */
     height: auto; /* Mantém a proporção da imagem */
     margin-right: 10px; /* Espaço entre a imagem e o texto */
-    margin-left: 70px; /* Aumenta a margem esquerda para empurrar a imagem para a direita */
+    margin-left: 110px; /* Aumenta a margem esquerda para empurrar a imagem para a direita */
     order: -1; /* Posiciona a imagem à esquerda */
 }
 
