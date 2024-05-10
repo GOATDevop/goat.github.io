@@ -204,7 +204,7 @@ p {
 }
 
 #whyGoat img {
-    width: 20%; /* Garante que a imagem não ultrapasse a largura da seção */
+    max-width: 30%; /* Garante que a imagem não ultrapasse a largura da seção */
     height: auto; /* Mantém a proporção da imagem */
     margin-bottom: 50px;
     display: block; /* Torna a imagem um bloco para permitir margens automáticas */
