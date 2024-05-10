@@ -375,7 +375,7 @@ header {
     width: 100%; /* Usa a largura total disponível */
     padding: 20px; /* Espaço interno para evitar colar nos cantos */
     box-sizing: border-box; /* Inclui padding na largura total */
-    margin-top: 70px;
+    margin-top: 170px;
 }
 
 /* Estilos para a imagem na seção roadmap */
@@ -384,7 +384,7 @@ header {
     max-width: 500px; /* Evita que a imagem se torne muito grande */
     height: auto; /* Mantém a proporção da imagem */
     margin-right: 10px; /* Espaço entre a imagem e o texto */
-    margin-left: 30px; /* Aumenta a margem esquerda para empurrar a imagem para a direita */
+    margin-left: 70px; /* Aumenta a margem esquerda para empurrar a imagem para a direita */
     order: -1; /* Posiciona a imagem à esquerda */
 }
 
@@ -397,6 +397,7 @@ header {
     text-align: center; /* Alinha o texto ao centro */
     flex: 1; /* Permite que o container de texto cresça para preencher o espaço */
     max-width: 50%; /* Limita a largura do texto para metade do container */
+    margin-right:30px;
 }
 
 /* Estilos para o título na seção roadmap */
@@ -405,6 +406,7 @@ header {
     color: #FE8029; /* Usando a cor principal do site */
     font-size: 80px; /* Tamanho da fonte para o título */
     margin-bottom: 20px; /* Espaço entre o título e o parágrafo */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
 /* Estilos para o parágrafo na seção roadmap */
