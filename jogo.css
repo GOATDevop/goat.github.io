@@ -186,64 +186,75 @@ p {
 
 
 #whyGoat {
-    padding: 30px 30px; /* Espaçamento ao redor da seção */
-    font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
-    margin-top: 150px; /* Espaçamento da seção anterior */
+    padding: 30px 30px;
+    font-family: 'Bangers', cursive;
+    margin-top: 150px;
 }
 
 #whyGoat h2 {
-    text-align: center; /* Centraliza o título */
-    font-size: 80px; /* Tamanho grande para o título */
-    margin-bottom: 30px; /* Espaçamento entre o título e a descrição */
-    color: #FE8029; /* Cor do título, ajuste conforme necessário */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 30px;
+    color: #FE8029;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #whyGoat p {
-    text-align: justify; /* Justificação do texto para melhor leitura */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin: 0 20px; /* Margens laterais para não tocar as bordas */
-    color: #000000; /* Cor do texto, ajustável */
+    text-align: center;  /* Alterado para centralizar */
+    line-height: 1.6;
+    margin: 0 20px;
+    color: #000000;
     font-size: 25px;
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; /* Adiciona um rebordo branco ao texto */
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
 #whyGoat img {
-    max-width: 30%; /* Garante que a imagem não ultrapasse a largura da seção */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 30%;
+    height: auto;
     margin-bottom: 50px;
-    display: block; /* Torna a imagem um bloco para permitir margens automáticas */
-    margin: 20px auto; /* Aplica margem automática horizontal para centralizar, e 20px vertical */
+    display: block;
+    margin: 20px auto;
 }
 
 #gallery h2 {
     text-align: center;
-    margin-bottom: 35px; /* Espaçamento adequado abaixo do título */
-    margin-top:120px;
-    font-size: 80px; /* Tamanho da fonte para o título */
-    font-family: 'Bangers', cursive; /* Mantendo a consistência da fonte */
-    color: #FE8029; /* Cor laranja usada no site */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    margin-bottom: 35px;
+    margin-top: 120px;
+    font-size: 80px;
+    font-family: 'Bangers', cursive;
+    color: #FE8029;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .carousel {
     position: relative;
-    width: 50%; /* Tamanho adequado para o carrossel no layout do site */
-    height: 730px; /* Altura ajustada para acomodar conteúdo variado */
-    margin: auto; /* Centraliza o carrossel na página */
-    overflow: hidden; /* Oculta qualquer conteúdo que exceda o tamanho do carrossel */
+    width: 50%;
+    height: 730px;
+    margin: auto;
+    overflow: hidden;
 }
 
 .carousel-images {
     display: flex;
-    transition: transform 0.5s ease; /* Transição suave para animações de deslizamento */
+    transition: transform 0.5s ease;
 }
 
 .carousel-images img, .carousel-images video {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+
+.presale {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100%; /* Garante que o conteúdo preencha a largura do carrossel */
-    height: 120%; /* Faz com que a altura seja ajustada à do container */
-    object-fit: cover; /* Mantém a proporção sem distorcer o conteúdo */
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 90px;
+    margin-bottom: 150px;
+    width: 100%;
 }
 
 .presale {
