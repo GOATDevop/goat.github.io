@@ -172,7 +172,8 @@ h2 {
     font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
     font-size: 80px;
     color: #FE8029;
-    margin-left: 400px; /* Remove margem extra que pode empurrar conteúdo para fora */
+    margin-left: 0; /* Remove margem extra que pode empurrar conteúdo para fora */
+    padding-left:250px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -389,7 +390,7 @@ p {
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
-    padding-left: 100px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
+    padding-left: 120px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
