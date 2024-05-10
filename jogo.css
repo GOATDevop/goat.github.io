@@ -142,7 +142,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 25px;
-    max-width: 100%;
+    width: 100%;
     margin: auto;
 }
 
@@ -204,7 +204,7 @@ p {
 }
 
 #whyGoat img {
-    max-width: 40%; /* Garante que a imagem não ultrapasse a largura da seção */
+    width: 40%; /* Garante que a imagem não ultrapasse a largura da seção */
     height: auto; /* Mantém a proporção da imagem */
     margin-bottom: 50px;
     display: block; /* Torna a imagem um bloco para permitir margens automáticas */
