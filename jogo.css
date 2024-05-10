@@ -478,13 +478,19 @@ img:hover {
     transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
 }
 
-footer {
-    margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-    width: 100%;
+.footer {
+    background-color: #000; /* Fundo escuro para destaque */
+    color: #fff; /* Texto claro para contraste */
+    padding: 20px; /* Espaçamento interno para não tocar nas bordas */
+    font-size: 14px; /* Tamanho da fonte para legibilidade */
+    line-height: 1.6; /* Espaçamento entre linhas para melhorar a leitura */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura/altura */
+}
+
+.footer-content {
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    text-align: center; /* Centraliza o texto horizontalmente */
 }
 
 
