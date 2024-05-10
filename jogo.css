@@ -380,9 +380,9 @@ header {
 /* Estilos para a imagem na seção roadmap */
 .roadmap-img {
     width: 50%; /* Limita a largura da imagem para metade do container */
-    max-width: 600px; /* Evita que a imagem se torne muito grande */
+    max-width: 500px; /* Evita que a imagem se torne muito grande */
     height: auto; /* Mantém a proporção da imagem */
-    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
     order: -1; /* Posiciona a imagem à esquerda */
 }
 
@@ -399,14 +399,19 @@ header {
 
 /* Estilos para o título na seção roadmap */
 #roadmap h2 {
+    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
+    color: #FE8029; /* Usando a cor principal do site */
     font-size: 80px; /* Tamanho da fonte para o título */
     margin-bottom: 20px; /* Espaço entre o título e o parágrafo */
 }
 
 /* Estilos para o parágrafo na seção roadmap */
 #roadmap p {
-    font-size: 24px; /* Tamanho da fonte para o parágrafo */
+    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
+    color: #000;
+    font-size: 25px; /* Tamanho da fonte para o parágrafo */
     max-width: 80%; /* Limita a largura do texto para manter a legibilidade */
+    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
 }
 
 
