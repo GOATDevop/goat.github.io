@@ -172,7 +172,7 @@ h2 {
     font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
     font-size: 80px;
     color: #FE8029;
-    margin-left: 0; /* Remove margem extra que pode empurrar conteúdo para fora */
+    margin-left: 400px; /* Remove margem extra que pode empurrar conteúdo para fora */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -372,7 +372,7 @@ p {
     padding: 50px 0; /* Adiciona padding vertical para espaço interno */
     max-width: 1200px; /* Define uma largura máxima para o container */
     margin: auto; /* Centraliza o container na página */
-    margin-top: 200px; /* Adiciona uma margem superior para distanciar da seção acima */
+    margin-top: 280px; /* Adiciona uma margem superior para distanciar da seção acima */
 }
 
 /* Estilos para a imagem à esquerda */
@@ -380,8 +380,8 @@ p {
     flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
     max-width: 60%; /* Limita a largura máxima da imagem para 50% do container */
     height: auto; /* Mantém a proporção da imagem */
-    margin-right: 100px; /* Aumenta o espaço entre a imagem e o texto */
-    margin-left: -100px; /* Move a imagem um pouco mais para a esquerda */
+    margin-right: 120px; /* Aumenta o espaço entre a imagem e o texto */
+    margin-left: -120px; /* Move a imagem um pouco mais para a esquerda */
     order: -1; /* Posiciona a imagem à esquerda do texto */
 }
 
@@ -389,7 +389,7 @@ p {
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
-    padding-left: 100px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
+    padding-left: 120px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
@@ -398,7 +398,7 @@ p {
     font-size: 80px; /* Define o tamanho da fonte para o título */
     color: #FE8029; /* Define a cor do texto */
     margin-bottom: 20px; /* Espaço entre o título e a descrição */
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 /* Estilos para a descrição */
