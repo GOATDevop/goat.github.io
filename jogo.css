@@ -424,46 +424,46 @@ header {
     text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.contact h2 {
-    margin-bottom: 40px; /* Espaço abaixo do título */
-    padding-left: 20px;
-    font-size: 44px; /* Ajusta o tamanho da fonte do título */
+/* Estilos para a seção geral */
+#social {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 40px 20px; /* Espaço interno para não tocar nas bordas da seção */
+    box-sizing: border-box; /* Inclui o padding na largura e altura totais */
 }
 
-#contact .social-links {
-    display: flex;
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;      /* Centraliza verticalmente, se necessário */
-    gap: 20px;                /* Espaçamento entre os ícones */
+/* Estilos para o título */
+#social h2 {
+    margin-top: 0; /* Remove a margem superior padrão */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 32px; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto do título */
 }
 
-#contact .social-links a {
-    display: block;  /* Garante que o link se comporte como bloco para melhor controle */
+/* Estilos para o parágrafo */
+#social p {
+    margin-top: 0; /* Remove a margem superior padrão */
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    color: #666; /* Cor do texto do parágrafo */
 }
 
-.img.social {
-    max-width: 80px;
-    height: auto;
+/* Estilos para os links das redes sociais */
+.social-links {
+    display: flex; /* Usa flexbox para alinhar os elementos lado a lado */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+/* Estilos para as imagens dentro dos links */
+.social-links img {
+    width: 48px; /* Largura fixa para as imagens */
+    height: 48px; /* Altura fixa para as imagens */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Efeito de hover para as imagens */
+.social-links img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem ao passar o mouse */
 }
 
 /* Aplica efeitos a todas as imagens no site */
@@ -474,12 +474,6 @@ img {
 img:hover {
     transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
 }
-
-
-
-
-
-
 
 footer {
     margin-top: auto; /* Empurra automaticamente o rodapé para a parte inferior */
