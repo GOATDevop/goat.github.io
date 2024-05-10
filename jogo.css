@@ -9,8 +9,8 @@ body, html {
     overflow-x: hidden;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+/**, *:before, *:after {
+    box-sizing: inherit;*/
 
 header {
     background-image: url('goats.png');
@@ -113,103 +113,82 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
-@media screen and (max-width: 991px) {
-    .w-container {
-        max-width: 728px;
+@media only screen and (max-width: 768px) {
+    .header-content,
+    .logo,
+    .navbar,
+    .intro-section h1,
+    .about-image img,
+    .presale-title,
+    .how-to-buy-section h2,
+    .step img {
+        width: 100%; /* Adapta a largura ao dispositivo */
     }
 
-    .w-hidden-main {
-        display: inherit !important;
+    .navbar {
+        flex-direction: column; /* Empilha os itens da navbar verticalmente */
+        margin-top: 20px;
     }
 
-    .w-hidden-medium {
-        display: none !important;
+    .navbar a {
+        font-size: 20px; /* Reduz o tamanho da fonte para melhor ajuste */
+        padding: 12px 16px; /* Ajusta o padding para menor espaço */
     }
 
-    .w-col-medium-1 { width: 8.33333%; }
-    .w-col-medium-2 { width: 16.6667%; }
-    .w-col-medium-3 { width: 25%; }
-    .w-col-medium-4 { width: 33.3333%; }
-    .w-col-medium-5 { width: 41.6667%; }
-    .w-col-medium-6 { width: 50%; }
-    .w-col-medium-7 { width: 58.3333%; }
-    .w-col-medium-8 { width: 66.6667%; }
-    .w-col-medium-9 { width: 75%; }
-    .w-col-medium-10 { width: 83.3333%; }
-    .w-col-medium-11 { width: 91.6667%; }
-    .w-col-medium-12 { width: 100%; }
-
-    .w-col-stack {
-        width: 100%;
-        left: auto;
-        right: auto;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .w-hidden-main, .w-hidden-medium {
-        display: inherit !important;
+    .intro-section h1 {
+        font-size: 120px; /* Reduz o tamanho da fonte para o título */
     }
 
-    .w-hidden-small {
-        display: none !important;
+    .about-section,
+    #roadmap {
+        flex-direction: column; /* Empilha as seções verticalmente */
     }
 
-    .w-row, .w-container .w-row {
+    .about-image,
+    .roadmap-img {
+        max-width: 100%;
         margin-left: 0;
-        margin-right: 0;
+        order: 0; /* Coloca a imagem acima do texto */
     }
 
-    .w-col {
-        width: 100%;
-        left: auto;
-        right: auto;
+    .step {
+        width: 90%; /* Aumenta a largura para melhor visualização em telas menores */
     }
-
-    .w-col-small-1 { width: 8.33333%; }
-    .w-col-small-2 { width: 16.6667%; }
-    .w-col-small-3 { width: 25%; }
-    .w-col-small-4 { width: 33.3333%; }
-    .w-col-small-5 { width: 41.6667%; }
-    .w-col-small-6 { width: 50%; }
-    .w-col-small-7 { width: 58.3333%; }
-    .w-col-small-8 { width: 66.6667%; }
-    .w-col-small-9 { width: 75%; }
-    .w-col-small-10 { width: 83.3333%; }
-    .w-col-small-11 { width: 91.6667%; }
-    .w-col-small-12 { width: 100%; }
 }
 
-@media screen and (max-width: 479px) {
-    .w-container {
-        max-width: none;
+#### Tamanho Máximo de 480px (Smartphones)
+@media only screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
     }
 
-    .w-hidden-main, .w-hidden-medium, .w-hidden-small {
-        display: inherit !important;
+    .navbar a {
+        font-size: 18px;
+        padding: 10px 14px;
     }
 
-    .w-hidden-tiny {
-        display: none !important;
+    .intro-section h1 {
+        font-size: 90px; /* Ainda menor para smartphones */
     }
 
-    .w-col {
-        width: 100%;
+    .about-section h2,
+    .presale-title,
+    .how-to-buy-section h2,
+    #roadmap h2 {
+        font-size: 50px; /* Fontes menores para cabeçalhos em seções */
     }
 
-    .w-col-tiny-1 { width: 8.33333%; }
-    .w-col-tiny-2 { width: 16.6667%; }
-    .w-col-tiny-3 { width: 25%; }
-    .w-col-tiny-4 { width: 33.3333%; }
-    .w-col-tiny-5 { width: 41.6667%; }
-    .w-col-tiny-6 { width: 50%; }
-    .w-col-tiny-7 { width: 58.3333%; }
-    .w-col-tiny-8 { width: 66.6667%; }
-    .w-col-tiny-9 { width: 75%; }
-    .w-col-tiny-10 { width: 83.3333%; }
-    .w-col-tiny-11 { width: 91.6667%; }
-    .w-col-tiny-12 { width: 100%; }
+    .about-section p,
+    #roadmap p,
+    #socials p {
+        font-size: 18px; /* Fonte menor para texto normal */
+    }
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
 
