@@ -171,7 +171,7 @@ header {
     margin-left: 30px;
 }
 
-h2 {
+.about-section h2 {
     font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
     font-size: 80px;
     color: #FE8029;
@@ -179,7 +179,7 @@ h2 {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-p {
+.about-section p {
     max-width: 100%; /* Ajuste para garantir que o parágrafo não ultrapasse sua área flexível */
     font-family: 'Bangers', cursive;
     font-size: 25px;
