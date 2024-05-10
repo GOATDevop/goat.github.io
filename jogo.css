@@ -494,5 +494,46 @@ img:hover {
     text-align: center; /* Centraliza o texto horizontalmente */
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Pequenos dispositivos (telefones, 600px e abaixo) */
+@media only screen and (max-width: 600px) {
+    .header-content, .navbar, .footer-content, .intro-section, .about-section, .how-to-buy-section, #socials {
+        padding: 10px;
+        text-align: center;
+    }
+    .navbar a {
+        font-size: 18px; /* Tamanho menor para facilitar a navegação */
+        padding: 8px 12px;
+    }
+    .logo {
+        max-width: 200px; /* Logo menor em dispositivos móveis */
+    }
+}
+
+/* Tablets (601px a 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .navbar a {
+        font-size: 24px; /* Tamanho intermediário para tablets */
+    }
+    .logo {
+        max-width: 240px;
+    }
+}
+
+/* Laptops e desktops (acima de 769px) */
+@media only screen and (min-width: 769px) {
+    .navbar a {
+        font-size: 30px; /* Tamanho adequado para navegadores de desktop */
+    }
+    .logo {
+        max-width: 320px;
+    }
+}
 
 
