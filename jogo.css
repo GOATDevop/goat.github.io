@@ -372,7 +372,7 @@ p {
     padding: 50px 0; /* Adiciona padding vertical para espaço interno */
     max-width: 1200px; /* Define uma largura máxima para o container */
     margin: auto; /* Centraliza o container na página */
-    margin-top: 150px; /* Adiciona uma margem superior para distanciar da seção acima */
+    margin-top: 200px; /* Adiciona uma margem superior para distanciar da seção acima */
 }
 
 /* Estilos para a imagem à esquerda */
@@ -380,8 +380,8 @@ p {
     flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
     max-width: 70%; /* Limita a largura máxima da imagem para 50% do container */
     height: auto; /* Mantém a proporção da imagem */
-    margin-right: 50px; /* Aumenta o espaço entre a imagem e o texto */
-    margin-left: -50px; /* Move a imagem um pouco mais para a esquerda */
+    margin-right: 80px; /* Aumenta o espaço entre a imagem e o texto */
+    margin-left: -80px; /* Move a imagem um pouco mais para a esquerda */
     order: -1; /* Posiciona a imagem à esquerda do texto */
 }
 
@@ -389,15 +389,16 @@ p {
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
-    padding-left: 60px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
+    padding-left: 90px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
 /* Estilos para o título */
 .roadmap h2 {
     font-size: 80px; /* Define o tamanho da fonte para o título */
-    color: #333; /* Define a cor do texto */
+    color: #FE8029; /* Define a cor do texto */
     margin-bottom: 20px; /* Espaço entre o título e a descrição */
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 /* Estilos para a descrição */
@@ -405,6 +406,7 @@ p {
     font-size: 25px; /* Define o tamanho da fonte para a descrição */
     color: #000; /* Define a cor do texto */
     line-height: 1.6; /* Espaçamento entre linhas */
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 
