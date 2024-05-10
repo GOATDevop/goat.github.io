@@ -149,44 +149,59 @@ header {
     }
 }
 
-/* Regras para smartphones (dispositivos com largura até 480px) */
+/* Media Queries para Smartphones */
 @media (max-width: 480px) {
     header {
-        height: 300px; /* Reduz ainda mais a altura do cabeçalho */
+        padding: 10px 0; /* Adiciona padding para evitar que o conteúdo toque as bordas */
+        height: auto; /* Altera a altura para auto para acomodar conteúdo variável */
+        min-height: 300px; /* Mantém uma altura mínima para visibilidade */
+    }
+
+    .header-content {
+        padding-top: 20px; /* Reduz o padding superior */
     }
 
     .logo {
-        max-width: 150px; /* Reduz ainda mais o tamanho do logo */
-        top: 5%;
-        left: 5%;
+        position: relative; /* Muda para position relative para melhor ajuste */
+        left: 50%; /* Centraliza o logo */
+        transform: translateX(-50%); /* Ajusta precisamente ao centro */
+        top: 0; /* Remove o ajuste vertical */
+        margin-top: 10px; /* Adiciona uma pequena margem superior */
+        width: 60%; /* Aumenta a largura para visibilidade */
     }
 
     .navbar {
-        margin-top: 200px; /* Ajusta a margem superior da barra de navegação */
+        flex-direction: column; /* Organiza os itens da barra de navegação em coluna */
+        padding: 0 10px; /* Ajusta o padding para melhor espaço */
+        margin-top: 10px; /* Reduz a margem superior */
+    }
+
+    .navbar .menu-items {
+        flex-direction: column; /* Organiza os links em coluna */
+        align-items: center; /* Centraliza os links */
     }
 
     .navbar .menu-items a {
-        font-size: 15px; /* Reduz ainda mais o tamanho da fonte para os links */
-        padding: 8px 12px; /* Reduz ainda mais o padding dos links */
-    }
-
-    .intro-section h1 {
-        font-size: 80px; /* Reduz ainda mais o tamanho do título */
-    }
-
-    .intro-section .subtitle {
-        font-size: 20px; /* Reduz ainda mais o tamanho do subtítulo */
-    }
-
-    .step {
-        width: 80%; /* Ajusta a largura de cada passo para ocupar mais espaço */
-        margin: 5px; /* Reduz ainda mais a margem entre os passos */
-    }
-
-    .about-image img {
-        margin-left: 0; /* Remove a margem esquerda adicional */
+        margin: 5px 0; /* Ajusta as margens para melhorar o espaçamento */
+        padding: 8px 12px; /* Ajusta o padding */
     }
 }
+
+@media (max-width: 480px) {
+    img {
+        width: 100%; /* Assegura que todas as imagens se ajustem à largura do container */
+        height: auto; /* Mantém a proporção das imagens */
+        max-width: none; /* Remove qualquer limitação de max-width prévia */
+    }
+
+    .about-image, .step img {
+        width: auto; /* Permite que a largura seja automática e baseada na proporção */
+        max-width: 100%; /* Assegura que a imagem não ultrapasse a largura do container */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+}
+
+
 
 /* Estilos globais para melhorar a acessibilidade e visibilidade em dispositivos menores */
 body {
