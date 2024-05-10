@@ -15,6 +15,9 @@ body, html {
     overflow-x: hidden;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+
 header {
     background-image: url('goats.png');
     background-size: cover;
