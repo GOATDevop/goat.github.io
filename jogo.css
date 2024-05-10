@@ -6,6 +6,7 @@ body, html {
     font-family: 'Bangers', cursive;
     background-color: #BFFBD9;
     scroll-behavior: smooth;
+    /*overflow-x: hidden; Esconde qualquer conteúdo que exceda a largura da viewport */
 }
 
 header {
@@ -144,7 +145,7 @@ header {
     padding: 25px;
     width: 100%;
     margin: auto;
-    overflow-x: hidden; /* Esconde qualquer conteúdo que exceda a largura da viewport */
+    box-sizing: border-box; /* Inclui padding na largura total */
 }
 
 .about-content {
@@ -183,7 +184,6 @@ p {
     line-height: 1.6;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
-
 
 #whyGoat {
     padding: 30px 30px;
