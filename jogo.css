@@ -173,7 +173,6 @@ h2 {
     font-size: 80px;
     color: #FE8029;
     margin-left: 0; /* Remove margem extra que pode empurrar conteúdo para fora */
-    padding-left:250px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
