@@ -459,8 +459,8 @@ header {
 
 /* Estilos para as imagens dentro dos links */
 .socials-links img {
-    width: 50px; /* Largura fixa para as imagens */
-    height: 50px; /* Altura fixa para as imagens */
+    width: 30px; /* Largura fixa para as imagens */
+    height: 30px; /* Altura fixa para as imagens */
     flex-shrink: 0;
     flex-grow: 0;
     transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
@@ -481,6 +481,7 @@ img:hover {
 }
 
 .footer {
+    font-family: 'Arial', cursive;
     background-color: #000; /* Fundo escuro para destaque */
     color: #fff; /* Texto claro para contraste */
     padding: 10px 20px; /* Reduz o espaçamento interno */
@@ -497,46 +498,48 @@ img:hover {
 }
 
 
+@media (max-width: 768px) {
+    body, html {
+        font-size: 14px; /* Reduz o tamanho base da fonte */
+        padding: 5px; /* Reduz o padding geral para evitar overflow */
+    }
+
+    .navbar, .footer, .header-content, .about-section, .intro-section, .how-to-buy-section, #socials {
+        padding: 10px; /* Ajusta o padding para todas as principais seções */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Reduz o tamanho da fonte nos links da navbar */
+        padding: 8px 10px; /* Reduz o padding nos links */
+    }
+
+    .header-content, .intro-section h1, .about-section h2, #socials h2 {
+        font-size: 24px; /* Ajusta o tamanho da fonte para cabeçalhos */
+    }
+
+    .footer-content, #socials p {
+        font-size: 14px; /* Ajusta o tamanho da fonte para o conteúdo textual */
+    }
+
+    .socials-links img {
+        width: 40px; /* Reduz o tamanho das imagens nas redes sociais */
+        height: 40px;
+    }
+}
+
+.navbar .menu-items {
+    flex-direction: column; /* Empilha os links da navbar verticalmente em telas pequenas */
+    align-items: center; /* Centraliza os links */
+}
+
+.about-section, .how-to-buy-section, #roadmap {
+    flex-direction: column; /* Empilha os elementos verticalmente em seções complexas */
+}
+
 img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Garante que todas as imagens se ajustem à largura do contêiner */
+    height: auto; /* Mantém a proporção das imagens */
 }
 
-
-
-/* Pequenos dispositivos (telefones, 600px e abaixo) */
-@media only screen and (max-width: 600px) {
-    .header-content, .navbar, .footer-content, .intro-section, .about-section, .how-to-buy-section, #socials {
-        padding: 10px;
-        text-align: center;
-    }
-    .navbar a {
-        font-size: 18px; /* Tamanho menor para facilitar a navegação */
-        padding: 8px 12px;
-    }
-    .logo {
-        max-width: 200px; /* Logo menor em dispositivos móveis */
-    }
-}
-
-/* Tablets (601px a 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    .navbar a {
-        font-size: 24px; /* Tamanho intermediário para tablets */
-    }
-    .logo {
-        max-width: 240px;
-    }
-}
-
-/* Laptops e desktops (acima de 769px) */
-@media only screen and (min-width: 769px) {
-    .navbar a {
-        font-size: 30px; /* Tamanho adequado para navegadores de desktop */
-    }
-    .logo {
-        max-width: 320px;
-    }
-}
 
 
