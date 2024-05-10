@@ -425,7 +425,7 @@ header {
 }
 
 /* Estilos para a seção geral */
-#social {
+#socials {
     margin-top: 100px;
     text-align: center; /* Centraliza o texto horizontalmente */
     padding: 40px 20px; /* Espaço interno para não tocar nas bordas da seção */
@@ -433,7 +433,7 @@ header {
 }
 
 /* Estilos para o título */
-#social h2 {
+#socials h2 {
     margin-top: 0; /* Remove a margem superior padrão */
     margin-bottom: 20px; /* Espaço abaixo do título */
     font-size: 80px; /* Tamanho da fonte do título */
@@ -442,7 +442,7 @@ header {
 }
 
 /* Estilos para o parágrafo */
-#social p {
+#socials p {
     margin-top: 0; /* Remove a margem superior padrão */
     margin-bottom: 30px; /* Espaço abaixo do parágrafo */
     font-size: 25px; /* Tamanho da fonte do parágrafo */
@@ -451,21 +451,21 @@ header {
 }
 
 /* Estilos para os links das redes sociais */
-.social-links {
+.socials-links {
     display: flex; /* Usa flexbox para alinhar os elementos lado a lado */
     justify-content: center; /* Centraliza os itens horizontalmente */
     gap: 20px; /* Espaço entre os itens */
 }
 
 /* Estilos para as imagens dentro dos links */
-.social-links img {
+.socials-links img {
     width: 120px; /* Largura fixa para as imagens */
     height: 120px; /* Altura fixa para as imagens */
     transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
 }
 
 /* Efeito de hover para as imagens */
-.social-links img:hover {
+.socials-links img:hover {
     transform: scale(1.1); /* Aumenta ligeiramente a imagem ao passar o mouse */
 }
 
