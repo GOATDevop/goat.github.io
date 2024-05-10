@@ -378,10 +378,10 @@ p {
 /* Estilos para a imagem à esquerda */
 .roadmap-img {
     flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
-    max-width: 70%; /* Limita a largura máxima da imagem para 50% do container */
+    max-width: 60%; /* Limita a largura máxima da imagem para 50% do container */
     height: auto; /* Mantém a proporção da imagem */
-    margin-right: 80px; /* Aumenta o espaço entre a imagem e o texto */
-    margin-left: -80px; /* Move a imagem um pouco mais para a esquerda */
+    margin-right: 100px; /* Aumenta o espaço entre a imagem e o texto */
+    margin-left: -100px; /* Move a imagem um pouco mais para a esquerda */
     order: -1; /* Posiciona a imagem à esquerda do texto */
 }
 
@@ -389,7 +389,7 @@ p {
 .roadmap div {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
-    padding-left: 90px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
+    padding-left: 100px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
     text-align: left; /* Alinha o texto à esquerda */
 }
 
@@ -403,6 +403,7 @@ p {
 
 /* Estilos para a descrição */
 .roadmap p {
+    max-width: 100%;
     font-size: 25px; /* Define o tamanho da fonte para a descrição */
     color: #000; /* Define a cor do texto */
     line-height: 1.6; /* Espaçamento entre linhas */
