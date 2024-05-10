@@ -459,8 +459,8 @@ header {
 
 /* Estilos para as imagens dentro dos links */
 .social-links img {
-    width: 90px; /* Largura fixa para as imagens */
-    height: 90px; /* Altura fixa para as imagens */
+    width: 120px; /* Largura fixa para as imagens */
+    height: 120px; /* Altura fixa para as imagens */
     transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
 }
 
