@@ -372,7 +372,7 @@ p {
     padding: 50px 0; /* Adiciona padding vertical para espaço interno */
     max-width: 1200px; /* Define uma largura máxima para o container */
     margin: auto; /* Centraliza o container na página */
-    margin-top: 100px; /* Adiciona uma margem superior para distanciar da seção acima */
+    margin-top: 150px; /* Adiciona uma margem superior para distanciar da seção acima */
 }
 
 /* Estilos para a imagem à esquerda */
