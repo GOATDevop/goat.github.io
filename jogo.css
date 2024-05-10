@@ -115,6 +115,74 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
+/* Responsividade para Tablets */
+@media (max-width: 768px) {
+    header {
+        height: 400px;
+    }
+
+    .logo {
+        left: 10%;
+        top: 10%;
+        max-width: 200px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        margin-top: 250px;
+    }
+
+    .navbar .menu-items {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        padding: 12px 16px;
+    }
+
+    #infoDisplay {
+        top: 250px;
+        right: 10px;
+    }
+}
+
+/* Responsividade para Smartphones */
+@media (max-width: 480px) {
+    header {
+        height: 300px;
+    }
+
+    .logo {
+        left: 5%;
+        top: 5%;
+        max-width: 150px;
+    }
+
+    .navbar {
+        margin-top: 200px;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    #infoDisplay {
+        top: 200px;
+        right: 5px;
+    }
+}
+
+/* Efeitos globais para imagens */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
 .intro-section {
     text-align: center; /* Centraliza o conteúdo */
     margin: 70px 50px; /* Adiciona espaço acima e abaixo da seção */
