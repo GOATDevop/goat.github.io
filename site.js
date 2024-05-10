@@ -139,6 +139,34 @@ function formatTime(distance) {
     return days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 }
 
+function adjustStylesBasedOnScreenSize() {
+    const width = window.innerWidth;
+
+    if (width <= 768) {
+        document.body.style.fontSize = '14px';
+        // Adicione outros estilos móveis aqui
+    } else {
+        document.body.style.fontSize = ''; // Limpa o estilo quando não é mais necessário
+        // Limpe outros estilos aqui
+    }
+
+    // Exemplo para ajustar o padding da navbar
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        navbar.style.padding = width <= 768 ? '10px' : '0 15px';
+    }
+
+    // Ajustar tamanho de fonte de outros elementos
+    const headers = document.querySelectorAll('.navbar a');
+    headers.forEach(header => {
+        header.style.fontSize = width <= 768 ? '16px' : '30px';
+    });
+}
+
+// Inicializa ao carregar e ajusta ao redimensionar
+window.addEventListener('load', adjustStylesBasedOnScreenSize);
+window.addEventListener('resize', adjustStylesBasedOnScreenSize);
+
 
 
 
