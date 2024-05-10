@@ -116,66 +116,85 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
-@media screen and (max-width: 767px) {
-    header, .navbar, .intro-section, .about-section, .presale, .how-to-buy-section, #roadmap, #socials {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+@media (max-width: 991px) {
+    header {
+        height: 500px; /* Altura ajustada para telas menores */
     }
 
-    .logo, .navbar a, #connectBtn, .about-image img, .carousel-images img, .step img {
-        width: 100%;
-        left: auto;
-        right: auto;
-        max-width: 100%; /* Garante que a largura máxima seja de 100% */
+    .logo {
+        left: 10%; /* Centraliza o logo mais efetivamente em telas menores */
+        max-width: 240px; /* Reduz o tamanho do logo */
     }
 
     .navbar {
-        flex-direction: column; /* Alinha os itens da navbar verticalmente */
+        flex-direction: column; /* Empilha os links da navbar verticalmente */
+        margin-top: 20px; /* Reduz a margem superior para melhor ajuste */
     }
 
-    .about-section, .presale, .how-to-buy-section, #roadmap {
-        flex-direction: column; /* Empilha os elementos verticalmente */
+    .navbar a {
+        font-size: 24px; /* Reduz o tamanho da fonte para melhor ajuste nos links */
+        padding: 12px 18px; /* Ajusta o padding para links menores */
     }
 
-    .header-content, .about-content, .step, .roadmap-img, #roadmap div {
-        width: 100%; /* Ajusta a largura para 100% */
+    .intro-section h1 {
+        font-size: 120px; /* Tamanho de fonte reduzido para o título principal */
     }
 
-    .intro-section h1, .about-section h2, .presale-title, .how-to-buy-section h2, #roadmap h2, #socials h2 {
-        font-size: 40px; /* Reduz o tamanho da fonte para cabeçalhos em dispositivos menores */
-    }
-
-    .navbar a, #connectBtn, .about-section p, #whyGoat p, .step h3, #roadmap p, #socials p {
-        font-size: 18px; /* Reduz o tamanho da fonte para textos em dispositivos menores */
-    }
-
-    .carousel, .w-background-video, .w-slider {
-        width: 100%; /* Ajusta a largura do carrossel e elementos de vídeo */
+    .intro-section .subtitle {
+        font-size: 40px; /* Tamanho de fonte reduzido para o subtítulo */
     }
 }
 
-@media screen and (max-width: 479px) {
-    /* Estilos adicionais para dispositivos muito pequenos */
-    header, .navbar, .intro-section, .about-section, .presale, .how-to-buy-section, #roadmap, #socials {
-        padding: 0 10px; /* Adiciona padding para evitar que conteúdo toque as bordas */
+@media (max-width: 767px) {
+    header {
+        padding-bottom: 5px; /* Menos espaço no final do cabeçalho */
+        height: 400px; /* Mais redução na altura do cabeçalho */
     }
 
-    .intro-section h1, .about-section h2, .presale-title, .how-to-buy-section h2, #roadmap h2, #socials h2 {
-        font-size: 30px; /* Torna o texto ainda menor para telas muito pequenas */
+    .logo {
+        left: 5%; /* Mais ajustes para centralização do logo */
+        max-width: 200px; /* Logo ainda menor para economizar espaço */
+    }
+
+    .navbar a {
+        font-size: 20px; /* Mais redução no tamanho da fonte para os links */
+    }
+
+    .about-section, .steps-container, .how-to-buy-section {
+        flex-direction: column; /* Empilha os elementos verticalmente para melhor visualização */
+    }
+
+    .about-image img, .step img {
+        max-width: 100%; /* Assegura que as imagens não ultrapassem a largura da tela */
     }
 }
 
-/* Widgets e Componentes Específicos */
+@media (max-width: 480px) {
+    header {
+        height: 300px; /* Altura do cabeçalho significativamente reduzida para telas muito pequenas */
+    }
 
-.w-widget-map {
-    width: 100%;
-    height: 200px; /* Ajusta a altura para dispositivos móveis */
+    .logo {
+        top: 10%; /* Ajusta a posição vertical do logo */
+        left: 0;
+        right: 0;
+        margin: auto; /* Centraliza o logo horizontalmente */
+        max-width: 180px; /* Torna o logo ainda menor */
+    }
+
+    .navbar {
+        margin-top: 10px; /* Reduz ainda mais a margem superior da navbar */
+    }
+
+    .intro-section h1 {
+        font-size: 80px; /* Redução significativa do tamanho do título para telas pequenas */
+    }
+
+    .intro-section .subtitle {
+        font-size: 30px; /* Adequação do tamanho do subtítulo para telas pequenas */
+    }
 }
 
-.w-widget-twitter, .w-background-video, .w-slider {
-    width: 100%; /* Garante que widgets e componentes visuais ocupem a largura total */
-}
 
 .intro-section {
     text-align: center; /* Centraliza o conteúdo */
