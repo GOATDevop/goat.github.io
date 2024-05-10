@@ -6,7 +6,6 @@ body, html {
     font-family: 'Bangers', cursive;
     background-color: #BFFBD9;
     scroll-behavior: smooth;
-    /*overflow-x: hidden;*/
 }
 
 header {
@@ -131,6 +130,7 @@ header {
 }
 
 .intro-section .subtitle {
+    text-align: center;
     font-size: 65px; /* Tamanho menor para o subtítulo */
     font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
     color: #333; /* Cor mais suave para o subtítulo */
@@ -144,37 +144,41 @@ header {
     padding: 25px;
     width: 100%;
     margin: auto;
+    overflow-x: hidden; /* Esconde qualquer conteúdo que exceda a largura da viewport */
 }
 
 .about-content {
     flex: 1;
     padding-right: 10px;
+    min-width: 0; /* Impede que o conteúdo cresça além do tamanho flexível permitido */
 }
 
 .about-image {
-    flex: 0;
+    flex: 0 0 auto; /* Ajuste para não permitir que a imagem cresça e defina um tamanho base automático */
     display: flex;
     justify-content: center;
+    max-width: 50%; /* Limita a largura máxima da área da imagem para evitar overflow */
 }
 
 .about-image img {
-    width: 500px;
+    width: auto; /* Adapta a largura automaticamente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a área de seu contêiner */
     height: auto;
     margin-left: 30px;
 }
 
 h2 {
-    font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
+    font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
     font-size: 80px;
     color: #FE8029;
-    margin-left:150px;
+    margin-left: 0; /* Remove margem extra que pode empurrar conteúdo para fora */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 p {
-    max-width: 50%;
-    font-family: 'Bangers', cursive; /* A mesma fonte que você mencionou para o site */
-    font-size: 20px;
+    max-width: 100%; /* Ajuste para garantir que o parágrafo não ultrapasse sua área flexível */
+    font-family: 'Bangers', cursive;
+    font-size: 25px;
     color: #000;
     line-height: 1.6;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
