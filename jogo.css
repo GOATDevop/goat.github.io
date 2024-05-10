@@ -367,7 +367,6 @@ header {
     transform-style: preserve-3d;
 }
 
-/* Estilos básicos para a seção Roadmap */
 .roadmap {
     display: flex; /* Utiliza flexbox para alinhar os elementos lado a lado */
     align-items: center; /* Alinha verticalmente os itens ao centro */
@@ -378,40 +377,39 @@ header {
     margin-top: 290px; /* Adiciona uma margem superior para distanciar da seção acima */
 }
 
-/* Estilos para a imagem à esquerda */
 .roadmap-img {
     flex: 1; /* Permite que a imagem cresça para ocupar metade do espaço disponível */
-    max-width: 60%; /* Limita a largura máxima da imagem para 50% do container */
+    max-width: 60%; /* Limita a largura máxima da imagem */
     height: auto; /* Mantém a proporção da imagem */
     margin-right: 120px; /* Aumenta o espaço entre a imagem e o texto */
     margin-left: -120px; /* Move a imagem um pouco mais para a esquerda */
     order: -1; /* Posiciona a imagem à esquerda do texto */
 }
 
-/* Estilos para a divisão que contém o título e a descrição à direita */
-.roadmap div {
+.roadmap .content {
     flex: 1; /* Permite que a divisão cresça para ocupar metade do espaço disponível */
     padding: 20px; /* Adiciona padding para espaçamento interno */
     padding-left: 120px; /* Aumenta o padding esquerdo para mover o texto mais para a direita */
-    text-align: left; /* Alinha o texto à esquerda */
+    display: flex; /* Adiciona display flex para alinhar itens verticalmente */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    align-items: center; /* Centraliza os itens verticalmente */
 }
 
-/* Estilos para o título */
-.roadmap h2 {
+.roadmap .content h2, .roadmap .content p {
+    width: 100%; /* Define a largura total para permitir centralização */
+    text-align: center; /* Alinha o texto ao centro */
     font-size: 80px; /* Define o tamanho da fonte para o título */
     color: #FE8029; /* Define a cor do texto */
-    margin-bottom: 20px; /* Espaço entre o título e a descrição */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona sombra ao texto */
 }
 
-/* Estilos para a descrição */
-.roadmap p {
-    max-width: 100%;
+.roadmap .content p {
     font-size: 25px; /* Define o tamanho da fonte para a descrição */
     color: #000; /* Define a cor do texto */
     line-height: 1.6; /* Espaçamento entre linhas */
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* Adiciona sombra ao texto */
 }
+
 
 
 
