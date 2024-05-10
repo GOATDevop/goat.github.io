@@ -1,3 +1,9 @@
+:root {
+    --small-device: 600px;
+    --medium-device: 768px;
+    --large-device: 992px;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -110,49 +116,23 @@ header {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
 }
 
-/* Regras para tablets (dispositivos com largura até 768px) */
-@media (max-width: 768px) {
+/* Estilos para dispositivos pequenos (smartphones) */
+@media (max-width: var(--small-device)) {
     header {
-        height: 400px; /* Reduz a altura do cabeçalho */
+        height: auto; /* Ajusta a altura para auto */
+        min-height: 300px; /* Mantém uma altura mínima */
     }
 
     .logo {
-        max-width: 200px; /* Reduz o tamanho do logo */
-        top: 10%;
-        left: 10%;
-    }
-
-    .navbar .menu-items a {
-        font-size: 20px; /* Reduz o tamanho da fonte para os links */
-        padding: 12px 16px; /* Reduz o padding dos links */
-    }
-
-    .intro-section h1 {
-        font-size: 120px; /* Reduz o tamanho do título */
-    }
-
-    .intro-section .subtitle {
-        font-size: 30px; /* Reduz o tamanho do subtítulo */
-    }
-
-    .about-image img {
-        max-width: 100%; /* Ajusta a largura da imagem para ser totalmente responsiva */
-    }
-
-    .about-section, .presale, .how-to-buy-section {
-        flex-direction: column; /* Empilha os elementos verticalmente */
-    }
-
-    .step {
-        width: 50%; /* Ajusta a largura de cada passo para maior visibilidade */
-        margin: 10px; /* Reduz a margem entre os passos */
-    }
-}
-
-/* Media Queries para Smartphones */
-@media (max-width: 480px) {
-    .navbar {
+        width: 60%; /* Ajusta a largura do logo */
         position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+    }
+
+    .navbar:after {
+        display: block; /* Mostra o ícone de menu */
     }
 
     .menu-items {
@@ -162,86 +142,33 @@ header {
         width: 100%;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         z-index: 1;
+        top: 40px;
     }
 
     .menu-items.active {
         display: flex;
-        flex-direction: column;
-    }
-
-    .navbar #connectBtn {
-        order: -1; /* Coloca o botão no topo para acesso fácil */
-        width: 100%;
-    }
-
-    .navbar:after {
-        content: '\2630'; /* Ícone do menu (hamburger) */
-        font-size: 30px;
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        z-index: 2;
-    }
-
-    .navbar:after:hover {
-        cursor: pointer;
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        background-size: cover; /* Ajusta a imagem para cobrir disponível */
-        background-position: center; /* Centraliza a imagem para melhores partes visíveis */
+/* Estilos para tablets (dispositivos médios) */
+@media (max-width: var(--medium-device)) {
+    .intro-section h1, .about-section h2, .roadmap h2 {
+        font-size: 48px; /* Fonte um pouco maior para tablets */
     }
 }
 
-@media (max-width: 480px) {
-    .roadmap {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+/* Estilos para desktops (dispositivos grandes) */
+@media (min-width: var(--large-device)) {
+    .navbar .menu-items a {
+        padding: 20px;
+        font-size: 24px;
     }
-
-    .roadmap-img {
-        order: -1; /* Coloca a imagem acima do texto */
-        width: 90%; /* Ajusta a largura da imagem */
-    }
-
-    #roadmap div {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    #roadmap h2, #roadmap p {
-        visibility: visible; /* Garante que o texto seja visível */
-        font-size: 24px; /* Ajusta o tamanho da fonte se necessário */
+    
+    .intro-section h1, .about-section h2, .roadmap h2 {
+        font-size: 60px; /* Fonte maior para desktops */
     }
 }
 
-
-
-@media (max-width: 480px) {
-    .step {
-        width: 100%; /* Ajusta a largura de cada etapa para ocupar a largura total */
-        align-items: center; /* Centraliza os elementos da etapa */
-        text-align: center; /* Centraliza o texto dentro da etapa */
-    }
-
-    .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
-        font-size: 20px; /* Reduz o tamanho da fonte para melhor ajuste */
-        text-align: center; /* Garante que o texto esteja centralizado */
-    }
-}
-
-/* Estilos globais para melhorar a acessibilidade e visibilidade em dispositivos menores */
-body {
-    font-size: 16px; /* Ajusta o tamanho base da fonte para melhor legibilidade */
-}
-
-a, button {
-    min-width: 44px; /* Aumenta o tamanho mínimo dos botões e links para facilitar a interação */
-    min-height: 44px; /* Aumenta a altura mínima para acessibilidade */
-}
 
 
 .intro-section {
