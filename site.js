@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isConnected) {
         statusElement.textContent = 'Status: Connected';
         addressElement.textContent = 'Address: ' + address;
-        infoDisplay.classList.remove('d-none'); // Mostra usando Bootstrap
+        infoDisplay.style.display = 'block'; // Mostra o infoDisplay quando conectado
     } else {
-        infoDisplay.classList.add('d-none'); // Oculta usando Bootstrap
+        infoDisplay.style.display = 'none'; // Oculta quando não conectado
     }
 }
 
