@@ -7,6 +7,7 @@ body, html {
     background-color: #BFFBD9;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-size: calc(1vw + 1vh + 0.5vmin);
 }
 
 header {
@@ -15,26 +16,35 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1%; /* Convertido de 10px */
-    height: 100%; /* Convertido de 670px */
+    padding-bottom: 1rem;
+    height: 70vh;
     position: relative;
-    box-shadow: 0 0.8% 0.6% -0.6% black; /* Ajuste os valores conforme necessário */
+    box-shadow: 0 0.5rem 0.3rem -0.3rem black;
 }
 
 .header-content {
     position: relative;
     width: 100%;
-    padding-top: 6%; /* Convertido de 60px */
+    padding-top: 5vh;
 }
 
 .logo {
-    margin-top: 3%; /* Convertido de 30px */
+    margin-top: 3rem;
     position: absolute;
-    left: 20%; /* Mantido */
-    top: 30%; /* Mantido */
-    max-width: 32%; /* Convertido de 320px */
+    left: 10vw;
+    top: 15vh;
+    max-width: 25vw;
     animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 .navbar {
@@ -42,9 +52,10 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 1.5%; /* Convertido de 15px */
-    margin-top: 35%; /* Convertido de 350px */
+    padding: 0 1.5vw;
+    margin-top: 10vh;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .navbar .menu-items {
@@ -57,12 +68,12 @@ header {
     text-decoration: none;
     color: #FE8029;
     font-family: 'Bangers';
-    padding: 1.6% 2.4%; /* Convertido de 16px 24px */
-    margin: 0.5%; /* Convertido de 5px */
-    border-radius: 0.2px;
-    font-size: 30px; /* Mantido em pixels para consistência */
+    padding: 1rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 1.5rem;
     transition: background-color 0.3s;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Mantido em pixels */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .navbar a:hover {
@@ -71,12 +82,12 @@ header {
 
 #connectBtn {
     font-family: 'Bangers';
-    font-size: 30px; /* Mantido em pixels */
+    font-size: 1.5rem;
     color: #FE8029;
     background-color: transparent;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    padding: 1.2% 1.8%; /* Convertido de 12px 18px */
-    border-radius: 0.2px;
+    padding: 1rem 1.2rem;
+    border-radius: 0.2rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -87,134 +98,131 @@ header {
 
 #infoDisplay {
     text-align: center;
-    padding: 1% 2%; /* Convertido de 10px 20px */
+    padding: 1rem 2rem;
     background-color: rgba(202, 253, 222, 0.5);
     color: #FE8029;
-    border-radius: 0.8%; /* Convertido de 8px */
+    border-radius: 0.8rem;
     position: absolute;
-    top: 32%; /* Convertido de 320px */
-    right: 2%; /* Convertido de 20px */
+    top: 30vh;
+    right: 2vw;
     display: none;
-    box-shadow: 0 0.4% 0.8% rgba(0,0,0,0.5);
+    box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.5);
     z-index: 10;
-    font-size: 18px; /* Mantido em pixels para consistência */
+    font-size: 1.8rem;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .intro-section {
-    text-align: center; /* Centraliza o conteúdo */
-    margin: 7% 5%; /* Convertido de 70px 50px */
-    padding: 2%; /* Convertido de 20px */
+    text-align: center;
+    margin: 7rem 5vw;
+    padding: 2rem;
 }
 
 .intro-section h1 {
-    font-size: 180px; /* Tamanho grande para o título, mantido em pixels para consistência */
-    font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
-    color: #FE8029; /* Usando a cor principal do site */
-    margin-bottom: 0.5%; /* Espaço entre o título e o subtítulo, convertido de 5px */
-    text-shadow: 
-        1px 1px 0 #000,   /* sombra múltipla para efeito 3D */
-        2px 2px 0 #000,
-        3px 3px 0 #000,
-        4px 4px 0 #000,
-        5px 5px 0 #000;
-    transform: translateZ(0); /* Habilita a aceleração de hardware para suavizar as sombras */
+    font-size: 12rem;
+    font-family: 'Bangers', cursive;
+    color: #FE8029;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000;
+    transform: translateZ(0);
 }
 
 .intro-section .subtitle {
     text-align: center;
-    font-size: 65px; /* Tamanho menor para o subtítulo, mantido em pixels */
-    font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
-    color: #333; /* Cor mais suave para o subtítulo */
-    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff; /* Adiciona um rebordo preto ao texto */
+    font-size: 6.5rem;
+    font-family: 'Bangers', cursive;
+    color: #333;
+    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
 }
 
 .about-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5%; /* Convertido de 25px */
+    padding: 2.5rem;
     width: 100%;
     margin: auto;
-    box-sizing: border-box; /* Inclui padding na largura total */
+    box-sizing: border-box;
 }
 
 .about-content {
     flex: 1;
-    padding-right: 1%; /* Convertido de 10px */
-    min-width: 0; /* Impede que o conteúdo cresça além do tamanho flexível permitido */
-    display: flex; /* Adiciona flexbox para alinhamento interno */
-    flex-direction: column; /* Organiza os filhos em coluna */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    padding-right: 1rem;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-image {
-    flex: 0 0 auto; /* Ajuste para não permitir que a imagem cresça e defina um tamanho base automático */
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
-    max-width: 50%; /* Limita a largura máxima da área da imagem para evitar overflow */
+    max-width: 50%;
 }
 
 .about-image img {
-    width: auto; /* Adapta a largura automaticamente */
-    max-width: 80%; /* Garante que a imagem não ultrapasse a área de seu contêiner */
+    width: auto;
+    max-width: 100%;
     height: auto;
-    margin-left: 3%; /* Convertido de 30px */
+    margin-left: 3rem;
+    srcset: "about-small.jpg 500w, about-medium.jpg 1000w, about-large.jpg 1500w";
+    sizes: "(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw";
 }
 
 .about-section h2 {
-    font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
-    font-size: 80px;
+    font-family: 'Bangers', cursive;
+    font-size: 8rem;
     color: #FE8029;
-    margin: 0 auto; /* Centraliza horizontalmente o título no contêiner */
+    margin: 0 auto;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .about-section p {
-    max-width: 100%; /* Ajuste para garantir que o parágrafo não ultrapasse sua área flexível */
+    max-width: 100%;
     font-family: 'Bangers', cursive;
-    font-size: 25px;
+    font-size: 2.5rem;
     color: #000;
     line-height: 1.6;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 #whyGoat {
-    padding: 3% 3%; /* Convertido de 30px 30px */
+    padding: 3rem 3rem;
     font-family: 'Bangers', cursive;
-    margin-top: 15%; /* Convertido de 150px */
+    margin-top: 15rem;
 }
 
 #whyGoat h2 {
     text-align: center;
-    font-size: 80px;
-    margin-bottom: 3%; /* Convertido de 30px */
+    font-size: 8rem;
+    margin-bottom: 3rem;
     color: #F40139;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #whyGoat p {
-    text-align: center;  /* Alterado para centralizar */
+    text-align: center;
     line-height: 1.6;
-    margin: 0 2%; /* Convertido de 0 20px */
+    margin: 0 2rem;
     color: #000000;
-    font-size: 25px;
+    font-size: 2.5rem;
     text_shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
 #whyGoat img {
     max-width: 40%;
     height: auto;
-    margin-bottom: 5%; /* Convertido de 50px */
+    margin-bottom: 5rem;
     display: block;
-    margin: 2% auto; /* Convertido de 20px auto */
+    margin: 2rem auto;
 }
 
 #gallery h2 {
     text-align: center;
-    margin-bottom: 3.5%; /* Convertido de 35px */
-    margin-top: 12%; /* Convertido de 120px */
-    font-size: 80px;
+    margin-bottom: 3.5rem;
+    margin-top: 12rem;
+    font-size: 8rem;
     font-family: 'Bangers', cursive;
     color: #FFC700;
     text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -223,7 +231,7 @@ header {
 .carousel {
     position: relative;
     width: 50%;
-    height: 730px; /* Valor grande, mantido como px para manter proporção */
+    height: 73vh;
     margin: auto;
     overflow: hidden;
 }
@@ -235,240 +243,226 @@ header {
 
 .carousel-images img, .carousel-images video {
     width: 100%;
-    height: 150%; /* Valor proporcional, mantido como % */
+    height: 150%;
     object-fit: cover;
 }
 
 .presale {
     display: flex;
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: center; /* Centraliza horizontalmente os itens */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    justify-content: center; /* Centraliza verticalmente os itens */
-    padding: 2%; /* Convertido de 20px */
-    margin-top: 9%; /* Convertido de 90px */
-    margin-bottom: 15%; /* Convertido de 150px */
-    width: 100%; /* Ocupa a largura total para garantir centralização */
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 9rem;
+    margin-bottom: 15rem;
+    width: 100%;
 }
 
 .presale-title {
-    margin-top: 9%; /* Convertido de 90px */
-    width: 100%; /* Ocupa a largura total para garantir centralização */
-    text-align: center; /* Centraliza o texto do título */
-    font-size: 80px; /* Tamanho do texto, mantido em pixels */
-    text_shadow: 2px 2px 2px rgba(0,0,0,0.5); /* Sombra de texto para consistência com o estilo do site */
-    color: #0293CC; /* Cor do texto */
-    font-family: 'Bangers', cursive; /* Consistência da fonte com o site */
-    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    margin-top: 9rem;
+    width: 100%;
+    text-align: center;
+    font-size: 8rem;
+    text_shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    color: #0293CC;
+    font-family: 'Bangers', cursive;
+    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .presale-content {
-    width: 100%; /* Ocupa a largura total para garantir centralização */
+    width: 100%;
     align-items: center;
-    margin-top: 0.5%; /* Convertido de 5px */
-    margin-bottom: 5%; /* Convertido de 50px */
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
 }
 
 .presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
-    margin-bottom: 2%; /* Convertido de 20px */
+    margin-bottom: 2rem;
     align-items: center;
-    font-size: 40px; /* Tamanho de fonte para visibilidade, mantido em pixels */
-    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
-    color: #0000; /* Cor do texto mais escuro para melhor leitura */
+    font-size: 4rem;
+    font-family: 'Bangers', Arial;
+    color: #0000;
     text_shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 #presaleLink {
     text-align: center;
-    text-decoration: none; /* Remove o sublinhado */
-    color: #007BFF; /* Cor azul para links, ajustável conforme o estilo do site */
-    font-weight: bold; /* Texto em negrito para destaque */
-    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #remainingTime {
-    font-style: italic; /* Estilo itálico para o timer de término, mantido para estilização */
+    font-style: italic;
 }
 
 #howtobuy {
-    margin-top: 15%; /* Aumente este valor conforme necessário para criar mais espaço, convertido de 150px */
+    margin-top: 15rem;
 }
 
 .how-to-buy-section {
-    text-align: center; /* Centraliza o texto do título */
-    padding: 2%; /* Padding para a seção, convertido de 20px */
-    font-family: 'Bangers', sans-serif; /* Fonte consistente com o site */
-    margin-top: 15%; /* Convertido de 150px */
-    margin-bottom: 15%; /* Convertido de 150px */
-    width: 100%; /* Garante que a seção ocupe a largura total */
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Bangers', sans-serif;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza todos os elementos verticalmente */
+    align-items: center;
 }
 
 .how-to-buy-section h2 {
     text-align: center;
-    font-size: 80px;
-    color: #FE8029; /* Cor vibrante para o título */
-    font-family: 'Bangers', cursive; /* Fonte característica para títulos */
-    margin-bottom: 3%; /* Espaço abaixo do título, convertido de 30px */
-    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
+    font-size: 8rem;
+    color: #FE8029;
+    font-family: 'Bangers', cursive;
+    margin-bottom: 3rem;
+    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .steps-container {
-    display: flex; /* Disposição em flex para alinhamento horizontal */
-    flex-wrap: wrap; /* Permite que os elementos se ajustem à largura disponível */
-    justify-content: center; /* Centraliza horizontalmente no caso de menos elementos */
-    align-items: center; /* Alinhamento vertical dos itens */
-    width: 100%; /* Garante que o container ocupe a largura total */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .step {
     display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza os itens */
-    width: 30%; /* Largura para cada etapa */
-    min-width: 25%; /* Define uma largura mínima para cada etapa, ajustada para percentual */
-    margin: 2%; /* Espaço entre os passos, convertido de 20px */
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    min-width: 25rem;
+    margin: 2rem;
 }
 
 .step h3 {
-    margin-bottom: 1%; /* Espaço entre o subtítulo e a imagem, convertido de 10px */
-    font-size: 30px; /* Tamanho da fonte para os subtítulos, mantido em pixels */
-    color: #000; /* Cor do texto para melhor legibilidade */
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #000;
     text_shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
 }
 
 .step img {
-    width: 100%; /* Largura total dentro de seu contêiner */
-    height: auto; /* Altura automática para manter proporção */
-    max-width: 20%; /* Máximo de largura da imagem para manter a estética, convertido de 200px */
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
     animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
 }
 
-/* Estilos base para a seção roadmap */
 #roadmap {
-    display: flex; /* Configura o layout flexível */
-    align-items: center; /* Centraliza verticalmente os itens dentro do container */
-    justify-content: space-between; /* Espaço entre a imagem e o conteúdo de texto */
-    width: 100%; /* Usa a largura total disponível */
-    padding: 2%; /* Espaço interno para evitar colar nos cantos, convertido de 20px */
-    box-sizing: border-box; /* Inclui padding na largura total */
-    margin-top: 24%; /* Convertido de 240px */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 24rem;
 }
 
-/* Estilos para a imagem na seção roadmap */
 .roadmap-img {
-    width: 50%; /* Limita a largura da imagem para metade do container */
-    max-width: 65%; /* Evita que a imagem se torne muito grande, convertido de 650px */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 1%; /* Espaço entre a imagem e o texto, convertido de 10px */
-    margin-left: 13%; /* Aumenta a margem esquerda para empurrar a imagem para a direita, convertido de 130px */
-    order: -1; /* Posiciona a imagem à esquerda */
+    width: 50%;
+    max-width: 65rem;
+    height: auto;
+    margin-right: 1rem;
+    margin-left: 13rem;
+    order: -1;
 }
 
-/* Estilos para o container de texto na seção roadmap */
 #roadmap div {
     display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente os elementos dentro do div */
-    justify-content: center; /* Centraliza verticalmente os elementos */
-    text-align: center; /* Alinha o texto ao centro */
-    flex: 1; /* Permite que o container de texto cresça para preencher o espaço */
-    max-width: 50%; /* Limita a largura do texto para metade do container */
-    margin-right: 3%; /* Convertido de 30px */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    max-width: 50%;
+    margin-right: 3rem;
 }
 
-/* Estilos para o título na seção roadmap */
 #roadmap h2 {
-    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
-    color: #FE8029; /* Usando a cor principal do site */
-    font-size: 80px; /* Tamanho da fonte para o título, mantido em pixels */
-    margin-bottom: 2%; /* Espaço entre o título e o parágrafo, convertido de 20px */
-    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-/* Estilos para o parágrafo na seção roadmap */
-#roadmap p {
-    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
-    color: #000;
-    font-size: 25px; /* Tamanho da fonte para o parágrafo, mantido em pixels */
-    max-width: 80%; /* Limita a largura do texto para manter a legibilidade */
-    text_shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
-}
-
-/* Estilos para a seção geral */
-#socials {
-    margin-top: 10%; /* Convertido de 100px */
-    text-align: center; /* Centraliza o texto horizontalmente */
-    padding: 4% 2%; /* Espaço interno para não tocar nas bordas da seção, convertido de 40px 20px */
-    box-sizing: border-box; /* Inclui o padding na largura e altura totais */
-}
-
-/* Estilos para o título */
-#socials h2 {
-    margin-top: 0; /* Remove a margem superior padrão */
-    margin-bottom: 2%; /* Espaço abaixo do título, convertido de 20px */
-    font-size: 80px; /* Tamanho da fonte do título, mantido em pixels */
-    color: #FE8029; /* Cor do texto do título */
+    font-family: 'Bangers', Arial;
+    color: #FE8029;
+    font-size: 8rem;
+    margin-bottom: 2rem;
     text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-/* Estilos para o parágrafo */
-#socials p {
-    margin-top: 0; /* Remove a margem superior padrão */
-    margin-bottom: 3%; /* Espaço abaixo do parágrafo, convertido de 30px */
-    font-size: 25px; /* Tamanho da fonte do parágrafo, mantido em pixels */
-    color: #000; /* Cor do texto do parágrafo */
+#roadmap p {
+    font-family: 'Bangers', Arial;
+    color: #000;
+    font-size: 2.5rem;
+    max-width: 80%;
     text_shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
 }
 
-/* Estilos para os links das redes sociais */
+#socials {
+    margin-top: 10rem;
+    text-align: center;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+}
+
+#socials h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 8rem;
+    color: #FE8029;
+    text_shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#socials p {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #000;
+    text_shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
+}
+
 .socials-links {
-    display: flex; /* Usa flexbox para alinhar os elementos lado a lado */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 2%; /* Espaço entre os itens, convertido de 20px */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-/* Estilos para as imagens dentro dos links */
 .socials-links img {
-    width: 10%; /* Largura fixa para as imagens */
-    height: 10%; /* Altura fixa para as imagens */
-    /*flex-shrink: 0;*/
-    /*flex-grow: 0;*/
-    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+    width: 10%;
+    height: 10%;
+    transition: transform 0.3s ease;
 }
 
-/* Efeito de hover para as imagens */
 .socials-links img:hover {
-    transform: scale(1.1); /* Aumenta ligeiramente a imagem ao passar o mouse */
+    transform: scale(1.1);
 }
 
-/* Aplica efeitos a todas as imagens no site */
 img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de transformação e sombra */   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;   
 }
 
 img:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .footer {
     font-family: 'Arial', cursive;
-    background-color: #000; /* Fundo escuro para destaque */
-    color: #fff; /* Texto claro para contraste */
-    padding: 1% 2%; /* Reduz o espaçamento interno, convertido de 10px 20px */
-    font-size: 18px; /* Tamanho da fonte para legibilidade */
-    line-height: 1.6; /* Espaçamento entre linhas para melhorar a leitura */
-    box-sizing: border-box; /* Inclui padding no cálculo da largura/altura */
-    text-align: center; /* Garante que o texto esteja centralizado */
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .footer-content {
-    max-width: 1200px; /* Largura máxima para o conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-    text-align: center; /* Centraliza o texto horizontalmente */
+    max-width: 1200px;
+    margin: 0 auto;
+    text_align: center;
 }
 
 
