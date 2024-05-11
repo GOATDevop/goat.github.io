@@ -1,84 +1,109 @@
 body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     font-family: 'Bangers', cursive;
     background-color: #BFFBD9;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 header {
+    background-image: url('goats.png');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    align-items: center;
+    padding-bottom: 10px;
+    height: 670px;
+    position: relative;
     box-shadow: 0 8px 6px -6px black;
 }
 
+.header-content, .logo, .navbar {
+    width: 100%;
+}
+
 .logo {
+    margin-top: 30px;
+    max-width: 320px;
     animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
 }
 
 @keyframes rotate {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(360deg);
-    }
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0 15px;
+    margin-top: 350px;
+    box-sizing: border-box;
 }
 
 .navbar a, #connectBtn {
+    text-decoration: none;
     color: #FE8029;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 16px 24px;
+    margin: 5px;
+    border-radius: 0.2px;
+    font-size: 30px;
     transition: background-color 0.3s;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .navbar a:hover, #connectBtn:hover {
     background-color: #4CCD0F;
 }
 
-#infoDisplay {
-    background-color: rgba(202, 253, 222, 0.5);
-    color: #FE8029;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    font-size: 18px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.intro-section h1 {
-    font-size: 180px; /* Adapte para telas menores se necessário */
-    color: #FE8029;
-    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000;
-}
-
-.intro-section .subtitle {
-    font-size: 65px;
-    color: #333;
-    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
-}
-
-/* Estilos específicos para as seções, caso haja necessidade de ajustes estéticos além do layout */
-.about-section h2, #whyGoat h2, #gallery h2, #presale h2, #howtobuy h2, #roadmap h2, #socials h2 {
-    font-size: 80px;
-    color: #FE8029;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.steps-container .step h3, #roadmap p, #socials p {
-    font-size: 30px; /* Ajuste de tamanho conforme necessário */
-    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
-}
-
-img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-}
-
-.footer {
-    background-color: #000;
-    color: #fff;
+.intro-section, .about-section, .how-to-buy-section, #socials, .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
+.intro-section h1, .about-section h2, .how-to-buy-section h2, #socials h2 {
+    font-size: 80px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
 }
+
+.carousel, .presale, #roadmap, #gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
+.carousel-images img, .carousel-images video, .about-image img, .step img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.socials-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 20px;
+}
+
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
 
 
 
