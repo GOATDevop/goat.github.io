@@ -22,25 +22,34 @@ header {
     box-shadow: 0 8px 6px -6px black;
 }
 
-.header-content, .logo, .navbar {
-    width: 100%;
+.header-content {
+    position: relative;
+    padding-top: 60px;
 }
 
 .logo {
     margin-top: 30px;
+    position: absolute;
+    left: 20%;
+    top: 30%;
     max-width: 320px;
     animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
 }
 
 @keyframes rotate {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 .navbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
     align-items: center;
     padding: 0 15px;
     margin-top: 350px;
@@ -50,6 +59,7 @@ header {
 .navbar a, #connectBtn {
     text-decoration: none;
     color: #FE8029;
+    font-family: 'Bangers';
     padding: 16px 24px;
     margin: 5px;
     border-radius: 0.2px;
@@ -69,12 +79,8 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.intro-section h1, .about-section h2, .how-to-buy-section h2, #socials h2 {
-    font-size: 80px;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
+    margin: 70px 50px;
+    padding: 20px;
 }
 
 .carousel, .presale, #roadmap, #gallery {
@@ -103,6 +109,22 @@ img {
 img:hover {
     transform: scale(1.05);
 }
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 
 
