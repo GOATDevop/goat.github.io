@@ -1,499 +1,85 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
     font-family: 'Bangers', cursive;
     background-color: #BFFBD9;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
-
-*, *:before, *:after {
-    box-sizing: inherit;
 
 header {
-    background-image: url('goats.png');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px; /* Espaço extra no final do cabeçalho */
-    height: 670px; /* Aumenta a altura do cabeçalho */
-    position: relative;
-    box-shadow: 0 8px 6px -6px black; /* Ajuste os valores conforme necessário */
-}
-
-.header-content {
-    position: relative;
-    width: 100%;
-    padding-top: 60px; /* Ajuste conforme necessário para posicionar o logo corretamente */
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .logo {
-    margin-top: 30px;
-    position: absolute;
-    left: 20%; /* Ajuste para posicionar o logo um pouco à esquerda */
-    top: 30%; /* Ajuste para posicionar o logo por cima da barra de navegação */
-    max-width: 320px; /* Aumenta o tamanho do logo */
     animation: rotate 10s infinite linear;
     transform-style: preserve-3d;
-  }
+}
 
-  @keyframes rotate {
+@keyframes rotate {
     from {
       transform: rotateY(0deg);
     }
     to {
       transform: rotateY(360deg);
     }
-  }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 15px; /* Padding lateral */
-    margin-top: 350px; /* Aumenta a margem superior para empurrar a barra de navegação para baixo */
-    box-sizing: border-box;
 }
 
-.navbar .menu-items {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-}
-
-.navbar a {
-    text-decoration: none;
+.navbar a, #connectBtn {
     color: #FE8029;
-    font-family: 'Bangers';
-    padding: 16px 24px; /* Aumenta o padding para maior tamanho dos botões */
-    margin: 5px; /* Ajusta a margem para evitar que os botões fiquem muito separados */
-    border-radius: 0.2px;
-    font-size: 30px; /* Tamanho da fonte dos botões */
-    transition: background-color 0.3s;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-.navbar a:hover {
-    background-color: #4CCD0F; /* Cor de fundo ao passar o mouse */
-}
-
-#connectBtn {
-    font-family: 'Bangers';
-    font-size: 30px;
-    color: #FE8029;
-    background-color: transparent;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-    padding: 12px 18px;
-    border-radius: 0.2px;
-    cursor: pointer;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     transition: background-color 0.3s;
 }
 
-#connectBtn:hover {
+.navbar a:hover, #connectBtn:hover {
     background-color: #4CCD0F;
 }
 
 #infoDisplay {
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgba(202, 253, 222, 0.5); /* Fundo semi-transparente para um efeito moderno */
+    background-color: rgba(202, 253, 222, 0.5);
     color: #FE8029;
     border-radius: 8px;
-    position: absolute; /* Posicionamento absoluto para colocar precisamente */
-    top: 320px; /* Ajuste conforme necessário para alinhar verticalmente */
-    right: 20px; /* Ajuste conforme necessário para alinhar horizontalmente */
-    display: none; /* Inicialmente oculto */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra para um efeito 3D */
-    z-index: 10; /* Garante que fique sobre outros elementos */
-    font-size: 18px; /* Ajuste conforme necessário */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-.intro-section {
-    text-align: center; /* Centraliza o conteúdo */
-    margin: 70px 50px; /* Adiciona espaço acima e abaixo da seção */
-    padding: 20px; /* Espaço interno para não tocar as bordas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    font-size: 18px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .intro-section h1 {
-    font-size: 180px; /* Tamanho grande para o título */
-    font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
-    color: #FE8029; /* Usando a cor principal do site */
-    margin-bottom: 5px; /* Espaço entre o título e o subtítulo */
-    text-shadow: 
-        1px 1px 0 #000,   /* sombra múltipla para efeito 3D */
-        2px 2px 0 #000,
-        3px 3px 0 #000,
-        4px 4px 0 #000,
-        5px 5px 0 #000;
-    transform: translateZ(0); /* Habilita a aceleração de hardware para suavizar as sombras */
+    font-size: 180px; /* Adapte para telas menores se necessário */
+    color: #FE8029;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000;
 }
 
 .intro-section .subtitle {
-    text-align: center;
-    font-size: 65px; /* Tamanho menor para o subtítulo */
-    font-family: 'Bangers', cursive; /* Mantendo a consistência com a fonte do site */
-    color: #333; /* Cor mais suave para o subtítulo */
-    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff; /* Adiciona um rebordo preto ao texto */
+    font-size: 65px;
+    color: #333;
+    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
 }
 
-.about-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
-    width: 100%;
-    margin: auto;
-    box-sizing: border-box; /* Inclui padding na largura total */
-}
-
-.about-content {
-    flex: 1;
-    padding-right: 10px;
-    min-width: 0; /* Impede que o conteúdo cresça além do tamanho flexível permitido */
-    display: flex; /* Adiciona flexbox para alinhamento interno */
-    flex-direction: column; /* Organiza os filhos em coluna */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-}
-
-.about-image {
-    flex: 0 0 auto; /* Ajuste para não permitir que a imagem cresça e defina um tamanho base automático */
-    display: flex;
-    justify-content: center;
-    max-width: 50%; /* Limita a largura máxima da área da imagem para evitar overflow */
-}
-
-.about-image img {
-    width: auto; /* Adapta a largura automaticamente */
-    max-width: 80%; /* Garante que a imagem não ultrapasse a área de seu contêiner */
-    height: auto;
-    margin-left: 30px;
-}
-
-.about-section h2 {
-    font-family: 'Bangers', cursive; /* Mantém a fonte consistente com o site */
+/* Estilos específicos para as seções, caso haja necessidade de ajustes estéticos além do layout */
+.about-section h2, #whyGoat h2, #gallery h2, #presale h2, #howtobuy h2, #roadmap h2, #socials h2 {
     font-size: 80px;
     color: #FE8029;
-    margin: 0 auto; /* Centraliza horizontalmente o título no contêiner */
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.about-section p {
-    max-width: 100%; /* Ajuste para garantir que o parágrafo não ultrapasse sua área flexível */
-    font-family: 'Bangers', cursive;
-    font-size: 25px;
-    color: #000;
-    line-height: 1.6;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-}
-
-#whyGoat {
-    padding: 30px 30px;
-    font-family: 'Bangers', cursive;
-    margin-top: 150px;
-}
-
-#whyGoat h2 {
-    text-align: center;
-    font-size: 80px;
-    margin-bottom: 30px;
-    color: #F40139;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-#whyGoat p {
-    text-align: center;  /* Alterado para centralizar */
-    line-height: 1.6;
-    margin: 0 20px;
-    color: #000000;
-    font-size: 25px;
-    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-}
-
-#whyGoat img {
-    max-width: 40%;
-    height: auto;
-    margin-bottom: 50px;
-    display: block;
-    margin: 20px auto;
-}
-
-#gallery h2 {
-    text-align: center;
-    margin-bottom: 35px;
-    margin-top: 120px;
-    font-size: 80px;
-    font-family: 'Bangers', cursive;
-    color: #FFC700;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-.carousel {
-    position: relative;
-    width: 50%;
-    height: 730px;
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-images img, .carousel-images video {
-    width: 100%;
-    height: 150%;
-    object-fit: cover;
-}
-
-.presale {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 20px;
-    margin-top: 90px;
-    margin-bottom: 150px;
-    width: 100%;
-}
-
-.presale {
-    display: flex;
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: center; /* Centraliza horizontalmente os itens */
-    text-align: center;
-    justify-content: center; /* Centraliza verticalmente os itens */
-    padding: 20px;
-    margin-top: 90px; /* Ajuste conforme necessário */
-    margin-bottom:150px;
-    width: 100%; /* Ocupa a largura total para garantir centralização */
-}
-
-.presale-title {
-    margin-top: 90px;
-    width: 100%; /* Ocupa a largura total para garantir centralização */
-    text-align: center; /* Centraliza o texto do título */
-    font-size: 80px; /* Tamanho do texto */
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5); /* Sombra de texto para consistência com o estilo do site */
-    color: #0293CC; /* Cor do texto */
-    font-family: 'Bangers', cursive; /* Consistência da fonte com o site */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-.presale-content {
-    width: 100%; /* Ocupa a largura total para garantir centralização */
-    align-items: center;
-    margin-top: 5px;
-    margin-bttom:50px;
-}
-
-.presale-timer, .presale-live, #presaleLink, #remainingTime, #startsInMessage {
-    margin-bottom: 20px; /* Espaçamento entre os elementos */
-    align-items: center;
-    font-size: 40px; /* Tamanho de fonte para visibilidade */
-    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
-    color-text: #0000; /* Cor do texto mais escuro para melhor leitura */
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-}
-
-#presaleLink {
-    text-align: center;
-    text-decoration: none; /* Remove o sublinhado */
-    color: #007BFF; /* Cor azul para links, ajustável conforme o estilo do site */
-    font-weight: bold; /* Texto em negrito para destaque */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-#remainingTime {
-    font-style: Bangers; /* Estilo itálico para o timer de término */
-}
-
-#howtobuy {
-    margin-top: 150px; /* Aumente este valor conforme necessário para criar mais espaço */
-}
-
-.how-to-buy-section {
-    text-align: center; /* Centraliza o texto do título */
-    padding: 20px; /* Padding para a seção */
-    font-family: 'Bangers', sans-serif; /* Fonte consistente com o site */
-    margin-top: 150px;
-    margin-bottom: 150px;
-    width: 100%; /* Garante que a seção ocupe a largura total */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza todos os elementos verticalmente */
-}
-
-.how-to-buy-section h2 {
-    text-align: center;
-    font-size: 80px;
-    color: #FE8029; /* Cor vibrante para o título */
-    font-family: 'Bangers', cursive; /* Fonte característica para títulos */
-    margin-bottom: 30px; /* Espaço abaixo do título */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-.steps-container {
-    display: flex; /* Disposição em flex para alinhamento horizontal */
-    flex-wrap: wrap; /* Permite que os elementos se ajustem à largura disponível */
-    justify-content: center; /* Centraliza horizontalmente no caso de menos elementos */
-    align-items: center; /* Alinhamento vertical dos itens */
-    width: 100%; /* Garante que o container ocupe a largura total */
-}
-
-.step {
-    display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza os itens */
-    width: 30%; /* Largura para cada etapa */
-    min-width: 250px; /* Define uma largura mínima para cada etapa */
-    margin: 20px; /* Espaço entre os passos */
-}
-
-.step h3 {
-    margin-bottom: 10px; /* Espaço entre o subtítulo e a imagem */
-    font-size: 30px; /* Tamanho da fonte para os subtítulos */
-    color: #000; /* Cor do texto para melhor legibilidade */
+.steps-container .step h3, #roadmap p, #socials p {
+    font-size: 30px; /* Ajuste de tamanho conforme necessário */
     text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
-}
-
-.step img {
-    width: 100%; /* Largura total dentro de seu contêiner */
-    height: auto; /* Altura automática para manter proporção */
-    max-width: 200px; /* Máximo de largura da imagem para manter a estética */
-    animation: rotate 10s infinite linear;
-    transform-style: preserve-3d;
-}
-
-/* Estilos base para a seção roadmap */
-#roadmap {
-    display: flex; /* Configura o layout flexível */
-    align-items: center; /* Centraliza verticalmente os itens dentro do container */
-    justify-content: space-between; /* Espaço entre a imagem e o conteúdo de texto */
-    width: 100%; /* Usa a largura total disponível */
-    padding: 20px; /* Espaço interno para evitar colar nos cantos */
-    box-sizing: border-box; /* Inclui padding na largura total */
-    margin-top: 240px;
-}
-
-/* Estilos para a imagem na seção roadmap */
-.roadmap-img {
-    width: 50%; /* Limita a largura da imagem para metade do container */
-    max-width: 650px; /* Evita que a imagem se torne muito grande */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 10px; /* Espaço entre a imagem e o texto */
-    margin-left: 130px; /* Aumenta a margem esquerda para empurrar a imagem para a direita */
-    order: -1; /* Posiciona a imagem à esquerda */
-}
-
-/* Estilos para o container de texto na seção roadmap */
-#roadmap div {
-    display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente os elementos dentro do div */
-    justify-content: center; /* Centraliza verticalmente os elementos */
-    text-align: center; /* Alinha o texto ao centro */
-    flex: 1; /* Permite que o container de texto cresça para preencher o espaço */
-    max-width: 50%; /* Limita a largura do texto para metade do container */
-    margin-right:30px;
-}
-
-/* Estilos para o título na seção roadmap */
-#roadmap h2 {
-    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
-    color: #FE8029; /* Usando a cor principal do site */
-    font-size: 80px; /* Tamanho da fonte para o título */
-    margin-bottom: 20px; /* Espaço entre o título e o parágrafo */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona um rebordo preto ao texto */
-}
-
-/* Estilos para o parágrafo na seção roadmap */
-#roadmap p {
-    font-family: 'Bangers', Arial; /* Fonte mais legível para detalhes */
-    color: #000;
-    font-size: 25px; /* Tamanho da fonte para o parágrafo */
-    max-width: 80%; /* Limita a largura do texto para manter a legibilidade */
-    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
-}
-
-/* Estilos para a seção geral */
-#socials {
-    margin-top: 100px;
-    text-align: center; /* Centraliza o texto horizontalmente */
-    padding: 40px 20px; /* Espaço interno para não tocar nas bordas da seção */
-    box-sizing: border-box; /* Inclui o padding na largura e altura totais */
-}
-
-/* Estilos para o título */
-#socials h2 {
-    margin-top: 0; /* Remove a margem superior padrão */
-    margin-bottom: 20px; /* Espaço abaixo do título */
-    font-size: 80px; /* Tamanho da fonte do título */
-    color: #FE8029; /* Cor do texto do título */
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-/* Estilos para o parágrafo */
-#socials p {
-    margin-top: 0; /* Remove a margem superior padrão */
-    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
-    font-size: 25px; /* Tamanho da fonte do parágrafo */
-    color: #000; /* Cor do texto do parágrafo */
-    text-shadow: -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff, 1px 1px 0 #ffff;
-}
-
-/* Estilos para os links das redes sociais */
-.socials-links {
-    display: flex; /* Usa flexbox para alinhar os elementos lado a lado */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 20px; /* Espaço entre os itens */
-}
-
-/* Estilos para as imagens dentro dos links */
-.socials-links img {
-    width: 30px; /* Largura fixa para as imagens */
-    height: 30px; /* Altura fixa para as imagens */
-    flex-shrink: 0;
-    flex-grow: 0;
-    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
-}
-
-/* Efeito de hover para as imagens */
-.socials-links img:hover {
-    transform: scale(1.1); /* Aumenta ligeiramente a imagem ao passar o mouse */
-}
-
-/* Aplica efeitos a todas as imagens no site */
-img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição de transformação e sombra */   
 }
 
 img:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 .footer {
-    font-family: 'Arial', cursive;
-    background-color: #000; /* Fundo escuro para destaque */
-    color: #fff; /* Texto claro para contraste */
-    padding: 10px 20px; /* Reduz o espaçamento interno */
-    font-size: 18px; /* Tamanho da fonte para legibilidade */
-    line-height: 1.6; /* Espaçamento entre linhas para melhorar a leitura */
-    box-sizing: border-box; /* Inclui padding no cálculo da largura/altura */
-    text-align: center; /* Garante que o texto esteja centralizado */
+    background-color: #000;
+    color: #fff;
+    text-align: center;
 }
 
 .footer-content {
-    max-width: 1200px; /* Largura máxima para o conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-    text-align: center; /* Centraliza o texto horizontalmente */
+    max-width: 1200px;
+    margin: auto;
 }
+
 
 
 
