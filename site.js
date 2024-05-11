@@ -57,11 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isConnected) {
         statusElement.textContent = 'Status: Connected';
         addressElement.textContent = 'Address: ' + address;
-        infoDisplay.style.display = 'block'; // Mostra o infoDisplay quando conectado
+        infoDisplay.classList.remove('d-none'); // Mostra usando Bootstrap
     } else {
-        infoDisplay.style.display = 'none'; // Oculta quando não conectado
+        infoDisplay.classList.add('d-none'); // Oculta usando Bootstrap
     }
 }
+
 
     // Listener para o botão
     button.addEventListener('click', async () => {
