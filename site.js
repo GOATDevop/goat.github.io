@@ -1,152 +1,164 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('connectBtn');
-    // Inicializa a interface com base nos dados do localStorage
-    updateUIFromStorage();
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const grid = 30;
+const cols = canvas.width / grid;
+const rows = canvas.height / grid;
 
-    function updateUIFromStorage() {
-        const connected = localStorage.getItem('isConnected') === 'true';
-        const address = localStorage.getItem('walletAddress');
-        updateUI(connected, address);
-        button.textContent = connected ? 'Disconnect from Phantom': 'Connect Wallet';
-    }
+const tetrominoes = [
+    // I
+    [[1, 1, 1, 1]],
+    // J
+    [[1, 0, 0], [1, 1, 1]],
+    // L
+    [[0, 0, 1], [1, 1, 1]],
+    // O
+    [[1, 1], [1, 1]],
+    // S
+    [[0, 1, 1], [1, 1, 0]],
+    // T
+    [[0, 1, 0], [1, 1, 1]],
+    // Z
+    [[1, 1, 0], [0, 1, 1]]
+];
 
-    function isPhantomInstalled() {
-        return window.solana && window.solana.isPhantom;
-    }
+let board = Array.from({ length: rows }, () => Array(cols).fill(0));
+let tetromino;
+let tetrominoRow;
+let tetrominoCol;
+let score = 0;
+let level = 1;
+let walletId = null;
 
-    // Função para conectar à carteira Phantom
-    async function connectWallet() {
-        if (!isPhantomInstalled()) {
-            console.error('Phantom wallet is not installed.');
-            alert('Please install Phantom wallet.');
-            return;
-        }
-
+async function connectWallet() {
+    if (window.solana && window.solana.isPhantom) {
         try {
-            const response = await window.solana.connect({ onlyIfTrusted: false });
-            console.log('Connected to Phantom Wallet:', response.publicKey.toString());
-            button.textContent = 'Disconnect from Phantom';
-            localStorage.setItem('isConnected', 'true');
-            localStorage.setItem('walletAddress', response.publicKey.toString());
-            updateUI(true, response.publicKey.toString());
-        } catch (error) {
-            if (error.message.includes("User rejected the request")) {
-                alert("Connection request was rejected. Please allow the connection in your Phantom wallet.");
-            } else {
-                console.error('Failed to connect:', error);
-            }
+            const resp = await window.solana.connect();
+            walletId = resp.publicKey.toString();
+            document.getElementById('walletId').innerText = walletId;
+        } catch (err) {
+            console.error('Failed to connect to wallet:', err);
+            document.getElementById('walletId').innerText = 'Falha ao conectar';
         }
-    }
-    
-    // Função para desconectar da carteira Phantom
-    async function disconnectWallet() {
-        await window.solana.disconnect();
-        console.log('Disconnected from Phantom Wallet');
-        button.textContent = 'Connect Wallet';
-        localStorage.removeItem('isConnected');
-        localStorage.removeItem('walletAddress');
-        updateUI(false);
-    }
-
-    // Atualiza o status da carteira e o endereço na página
-    function updateUI(isConnected, address = null) {
-    const statusElement = document.getElementById('status');
-    const addressElement = document.getElementById('walletAddress');    
-    const infoDisplay = document.getElementById('infoDisplay');
-
-    if (isConnected) {
-        statusElement.textContent = 'Status: Connected';
-        addressElement.textContent = 'Address: ' + address;
-        infoDisplay.style.display = 'block'; // Mostra o infoDisplay quando conectado
     } else {
-        infoDisplay.style.display = 'none'; // Oculta quando não conectado
+        alert('Solana wallet not found. Please install Phantom wallet.');
     }
 }
 
+function drawCell(x, y, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x * grid, y * grid, grid - 1, grid - 1);
+    ctx.strokeRect(x * grid, y * grid, grid, grid);
+}
 
-    // Listener para o botão
-    button.addEventListener('click', async () => {
-        if (button.textContent === 'Connect Wallet') {
-            await connectWallet();
-        } else {
-            await disconnectWallet();
+function drawBoard() {
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            drawCell(col, row, board[row][col] ? 'blue' : 'white');
         }
-    });
-
-    const mediaFiles = ['goat.gif', 'goat1.gif'];
-    const carouselContainer = document.querySelector('.carousel-images');
-    let currentIndex = 0;
-
-    function updateCarousel() {
-        carouselContainer.innerHTML = ''; // Limpa o conteúdo anterior
-        const fileElement = document.createElement(mediaFiles[currentIndex].endsWith('.mp4') ? 'video' : 'img');
-        fileElement.src = mediaFiles[currentIndex];
-        if (fileElement.nodeName === 'VIDEO') {
-            fileElement.autoplay = true;
-            fileElement.loop = true;
-        }
-        carouselContainer.appendChild(fileElement);
     }
+}
 
-    updateCarousel(); // Carrega o primeiro item
-
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % mediaFiles.length; // Incrementa ou volta ao início
-        updateCarousel();
-    }, 5000); // Altera a imagem/vídeo a cada 5 segundos
-
-    const startTime = new Date("may 07, 2024 23:46:00").getTime();
-    const endTime = new Date("jun 3, 2024 15:00:00").getTime();
-    const timerElement = document.getElementById('timer');
-    const presaleLiveElement = document.getElementById('presaleLive');
-    const linkElement = document.getElementById('presaleLink');
-    const remainingTimeElement = document.getElementById('remainingTime');
-    const startsInMessageElement = document.getElementById('startsInMessage');
-
-    const interval = setInterval(function() {
-        const now = new Date().getTime();
-        let distance = startTime - now;
-
-        if (distance > 0) {
-            // Before presale starts
-            timerElement.textContent = formatTime(distance);
-            startsInMessageElement.style.display = "block";
-        } else {
-            // After presale starts
-            distance = endTime - now;
-            if (distance > 0) {
-                startsInMessageElement.style.display = "none";
-                presaleLiveElement.style.display = "block";
-                linkElement.style.display = "block";
-                remainingTimeElement.style.display = "block";
-                remainingTimeElement.textContent = "Ends in: " + formatTime(distance);
-                timerElement.style.display = "none"; // Ensure the initial timer is hidden
-            } else {
-                clearInterval(interval);
-                presaleLiveElement.textContent = "The presale is now offline.";
-                linkElement.style.display = "none";
-                remainingTimeElement.textContent = "Presale has ended.";
-                remainingTimeElement.style.display = "none";
+function drawTetromino() {
+    for (let row = 0; row < tetromino.length; row++) {
+        for (let col = 0; col < tetromino[row].length; col++) {
+            if (tetromino[row][col]) {
+                drawCell(tetrominoCol + col, tetrominoRow + row, 'blue');
             }
         }
-    }, 1000);
+    }
+}
 
-   const navToggle = document.querySelector('.navbar:after');
-    const menuItems = document.querySelector('.menu-items');
+function collision(x, y, shape) {
+    for (let row = 0; row < shape.length; row++) {
+        for (let col = 0; col < shape[row].length; col++) {
+            if (shape[row][col] && (
+                board[row + y] && board[row + y][col + x]) !== 0) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
-    navToggle.addEventListener('click', function() {
-        menuItems.classList.toggle('active');
-    });
-    
+function merge() {
+    for (let row = 0; row < tetromino.length; row++) {
+        for (let col = 0; col < tetromino[row].length; col++) {
+            if (tetromino[row][col]) {
+                board[tetrominoRow + row][tetrominoCol + col] = 1;
+            }
+        }
+    }
+}
+
+function resetTetromino() {
+    tetromino = tetrominoes[Math.floor(Math.random() * tetrominoes.length)];
+    tetrominoRow = 0;
+    tetrominoCol = Math.floor(cols / 2) - Math.floor(tetromino[0].length / 2);
+    if (collision(tetrominoCol, tetrominoRow, tetromino)) {
+        board = Array.from({ length: rows }, () => Array(cols).fill(0));
+        alert('Game Over');
+        score = 0;
+        level = 1;
+        document.getElementById('score').innerText = score;
+        document.getElementById('level').innerText = level;
+    }
+}
+
+function clearLines() {
+    for (let row = rows - 1; row >= 0; row--) {
+        if (board[row].every(cell => cell !== 0)) {
+            board.splice(row, 1);
+            board.unshift(Array(cols).fill(0));
+            score += 10;
+            document.getElementById('score').innerText = score;
+            if (score % 100 === 0) {
+                level++;
+                document.getElementById('level').innerText = level;
+            }
+        }
+    }
+}
+
+function moveTetromino() {
+    tetrominoRow++;
+    if (collision(tetrominoCol, tetrominoRow, tetromino)) {
+        tetrominoRow--;
+        merge();
+        resetTetromino();
+        clearLines();
+    }
+}
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' && !collision(tetrominoCol - 1, tetrominoRow, tetromino)) {
+        tetrominoCol--;
+    } else if (event.key === 'ArrowRight' && !collision(tetrominoCol + 1, tetrominoRow, tetromino)) {
+        tetrominoCol++;
+    } else if (event.key === 'ArrowDown' && !collision(tetrominoCol, tetrominoRow + 1, tetromino)) {
+        moveTetromino();
+    } else if (event.key === 'ArrowUp') {
+        const rotated = rotate(tetromino);
+        if (!collision(tetrominoCol, tetrominoRow, rotated)) {
+            tetromino = rotated;
+        }
+    }
 });
 
-function formatTime(distance) {
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    return days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+function rotate(shape) {
+    return shape[0].map((_, index) => shape.map(row => row[index]).reverse());
 }
+
+function update() {
+    moveTetromino();
+    drawBoard();
+    drawTetromino();
+    setTimeout(update, 500 / level);
+}
+
+connectWallet();
+resetTetromino();
+update();
+
 
 
 
