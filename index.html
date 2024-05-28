@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Encaixe de Moedas</title>
-    <link rel="stylesheet" href="jogo.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Jogo de Encaixe de Moedas</h1>
@@ -12,12 +12,26 @@
         <div>Score: <span id="score">0</span></div>
         <div>Level: <span id="level">1</span></div>
         <div>Wallet ID: <span id="walletId">Conectando...</span></div>
+        <button id="playButton">Play</button>
+        <button id="pauseButton" disabled>Pausa</button>
     </div>
     <canvas id="gameCanvas" width="300" height="600"></canvas>
+    <h2>Melhores Pontuações</h2>
+    <table id="scoreTable">
+        <thead>
+            <tr>
+                <th>Wallet ID</th>
+                <th>Pontuação</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
-    <script src="site.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
