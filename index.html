@@ -3,129 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOAT Coin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="jogo.css">
-    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <title>Jogo de Encaixe de Moedas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="logo.png" alt="GOAT Coin Logo" class="logo">
-        </div>
-        <div id="infoDisplay">
-            <div id="status">Status: Disconnected</div>
-            <div id="walletAddress">Address: N/A</div>
-        </div>
-        <nav class="navbar">
-            <div class="menu-items">
-                <a href="#about">About</a>
-                <a href="#whyGoat">Why GOAT?</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#presale">Presale</a>
-                <a href="#howtobuy">How to Buy</a>
-                <a href="#roadmap">Roadmap</a>
-                <a href="#socials">Socials</a>
-            </div>
-            <button id="connectBtn" aria-label="Connect to your wallet">Connect Wallet</button>
-        </nav>
-    </header>
-
-    <section class="intro-section">
-        <h1>G O A T</h1>
-        <p class="subtitle">Greatest Of All Tokens</p>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>Introducing $GOAT, the newest craze in the meme coin realm on the SOLANA blockchain! Just as Shiba Inu captured hearts on Ethereum, $GOAT introduces its own enchanting spin with an irresistible goat-themed charm. 
-            Step into the playful world of $GOAT, where cryptocurrency meets lighthearted fun, and set off on a thrilling quest for the next major meme coin breakthrough on SOLANA. Join the $GOAT community today and be part of the emergence of a new icon in the meme coin galaxy on SOLANA. Embrace the charm, the laughter, and the future of crypto with $GOAT!
-            Thus, if you're prepared to become part of the herd and engage in something genuinely remarkable, get ready and join us as we create history together! By investing in $GOAT Coin, you're not merely buying a token but investing in the future, excellence, and the powerful journey to become the best. To be the GOAT, you need to acquire some $GOAT Coin!</p>
-        </div>
-        <div class="about-image">
-            <picture>
-                <source srcset="goat-small.png 500w, goat-medium.png 1000w, goat-large.png 1500w" sizes="(max-width: 600px) 480px, (max-width: 900px) 800px, 100vw">
-                <img src="goat.png" alt="Our Team">
-            </picture>
-        </div>
-    </section>
-
-    <section id="whyGoat">
-        <h2>Why GOAT?</h2>
-        <p>Why choose GOAT Coin? As the name suggests, GOAT Coin is not just any meme coin—it's the Greatest Of All Tokens in the world of digital humor and investment fun. Designed for those who appreciate a good laugh and enjoy being part of a light-hearted community, GOAT Coin offers a unique blend of humor and potential financial opportunity. It's a way to engage with like-minded enthusiasts who see the value in combining fun with the emerging technology of cryptocurrency. Whether you're here to share memes, invest in a fun project, or just be part of something playful and exciting, GOAT Coin embodies the spirit of enjoyment and community in the crypto space.</p>
-        <img src="whygoat.png" alt="GOAT Coin" style="width: 100%; height: auto;">
-    </section>
-
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="carousel">
-            <div class="carousel-images">
-                <!-- Imagens e vídeos serão inseridos aqui pelo JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <section id="presale" class="presale">
-        <h2>Presale</h2>
-        <div class="presale-content">
-            <p id="startsInMessage">The presale starts in:</p>
-            <div class="presale-timer" id="timer"></div>
-            <p class="presale-live" id="presaleLive" style="display:none;">The presale is now online!</p>
-            <a href="YOUR_PRESALE_LINK" target="_blank" rel="noopener noreferrer" id="presaleLink" style="display:none;">BUY Now</a>
-            <div id="remainingTime" style="display:none;">Ends in:</div>
-        </div>
-    </section>
-
-    <section id="howtobuy" class="how-to-buy-section">
-        <h2>How to Buy</h2>
-        <div class="steps-container">
-            <div class="step">
-                <h3>1- Buy SOLANA from a CEX</h3>
-                <img src="solana.png" alt="Buy SOLANA">
-            </div>
-            <div class="step">
-                <h3>2- Swap Solana to $GOAT on Raydium</h3>
-                <img src="Ray.png" alt="Swap on Raydium">
-            </div>
-            <div class="step">
-                <h3>3- HODL and let it skyrocket</h3>
-                <img src="chart.png" alt="HODL">
-            </div>
-        </div>
-    </section>
-
-    <section id="roadmap" class="roadmap">
-        <div>
-            <h2>Roadmap</h2>
-            <p>I'm a GOAT, i do my own roadmap.</p>
-        </div>
-        <img src="Roadmap.png" alt="Roadmap GOAT Meme Coin" class="roadmap-img">
-    </section>
-
-    <section id="socials" class="center">
-        <h2>Join GOATamily</h2>
-        <p>Discover the charm, enjoy the humor, and welcome the future of crypto with GOAT.</p>
-        <div class="social-links">
-            <a href="https://twitter.com/GreatOfAllToken" target="_blank" rel="noopener noreferrer">
-                <img src="x.png" alt="Twitter" class="social">
-            </a>
-            <a href="https://t.me/+_aPgvdHg0h82NDlk" target="_blank" rel="noopener noreferrer">
-                <img src="tele.png" alt="Telegram" class="social">
-            </a>
-        </div>    
-    </section>
-    
-    <footer class="footer">
-        <h2>© 2024 GOAT Coin. All rights reserved.</h2>
-        <div class="footer-content">
-            <p>By purchasing GOAT coin, you agree that you are not purchasing a security or investment contract and you agree to hold the team harmless and not liable for any losses or taxes you may incur. Although GOAT is a community-driven DeFi Ecosystem and not a registered digital currency, always make sure that you are in compliance with local laws and regulations before you make any purchase.</p>
-        </div>
-    </footer>
-    
-    <script src="site.js"></script>
+    <h1>Jogo de Encaixe de Moedas</h1>
+    <div class="game-info">
+        <div>Score: <span id="score">0</span></div>
+        <div>Level: <span id="level">1</span></div>
+        <div>Wallet ID: <span id="walletId">Conectando...</span></div>
+    </div>
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
