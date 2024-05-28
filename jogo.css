@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1 {
+h1, h2 {
     color: #333;
 }
 
@@ -24,6 +24,24 @@ canvas {
     margin: 5px 0;
     font-size: 18px;
 }
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 
 
