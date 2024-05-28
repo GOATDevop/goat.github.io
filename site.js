@@ -5,19 +5,12 @@ const cols = canvas.width / grid;
 const rows = canvas.height / grid;
 
 const tetrominoes = [
-    // I
     [[1, 1, 1, 1]],
-    // J
     [[1, 0, 0], [1, 1, 1]],
-    // L
     [[0, 0, 1], [1, 1, 1]],
-    // O
     [[1, 1], [1, 1]],
-    // S
     [[0, 1, 1], [1, 1, 0]],
-    // T
     [[0, 1, 0], [1, 1, 1]],
-    // Z
     [[1, 1, 0], [0, 1, 1]]
 ];
 
@@ -28,6 +21,9 @@ let tetrominoCol;
 let score = 0;
 let level = 1;
 let walletId = null;
+let isPlaying = false;
+let isPaused = false;
+let scoreTable = [];
 
 async function connectWallet() {
     if (window.solana && window.solana.isPhantom) {
@@ -97,10 +93,14 @@ function resetTetromino() {
     if (collision(tetrominoCol, tetrominoRow, tetromino)) {
         board = Array.from({ length: rows }, () => Array(cols).fill(0));
         alert('Game Over');
+        updateScoreTable();
         score = 0;
         level = 1;
         document.getElementById('score').innerText = score;
         document.getElementById('level').innerText = level;
+        isPlaying = false;
+        document.getElementById('playButton').disabled = false;
+        document.getElementById('pauseButton').disabled = true;
     }
 }
 
@@ -120,6 +120,7 @@ function clearLines() {
 }
 
 function moveTetromino() {
+    if (isPaused) return;
     tetrominoRow++;
     if (collision(tetrominoCol, tetrominoRow, tetromino)) {
         tetrominoRow--;
@@ -149,13 +150,55 @@ function rotate(shape) {
 }
 
 function update() {
-    moveTetromino();
-    drawBoard();
-    drawTetromino();
+    if (isPlaying && !isPaused) {
+        moveTetromino();
+        drawBoard();
+        drawTetromino();
+    }
     setTimeout(update, 500 / level);
 }
 
-connectWallet();
+function updateScoreTable() {
+    const existingEntry = scoreTable.find(entry => entry.walletId === walletId);
+    if (existingEntry) {
+        if (score > existingEntry.score) {
+            existingEntry.score = score;
+        }
+    } else {
+        scoreTable.push({ walletId, score });
+    }
+
+    scoreTable.sort((a, b) => b.score - a.score);
+
+    const tbody = document.getElementById('scoreTable').getElementsByTagName('tbody')[0];
+    tbody.innerHTML = '';
+    scoreTable.forEach(entry => {
+        const row = document.createElement('tr');
+        const walletIdCell = document.createElement('td');
+        walletIdCell.innerText = entry.walletId;
+        const scoreCell = document.createElement('td');
+        scoreCell.innerText = entry.score;
+        row.appendChild(walletIdCell);
+        row.appendChild(scoreCell);
+        tbody.appendChild(row);
+    });
+}
+
+document.getElementById('playButton').addEventListener('click', async () => {
+    await connectWallet();
+    if (walletId) {
+        isPlaying = true;
+        isPaused = false;
+        document.getElementById('playButton').disabled = true;
+        document.getElementById('pauseButton').disabled = false;
+    }
+});
+
+document.getElementById('pauseButton').addEventListener('click', () => {
+    isPaused = !isPaused;
+    document.getElementById('pauseButton').innerText = isPaused ? 'Continuar' : 'Pausa';
+});
+
 resetTetromino();
 update();
 
