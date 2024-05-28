@@ -23,7 +23,7 @@ let level = 1;
 let walletId = null;
 let isPlaying = false;
 let isPaused = false;
-let scoreTable = [];
+let scoreTable = JSON.parse(localStorage.getItem('scoreTable')) || [];
 
 async function connectWallet() {
     if (window.solana && window.solana.isPhantom) {
@@ -182,6 +182,8 @@ function updateScoreTable() {
         row.appendChild(scoreCell);
         tbody.appendChild(row);
     });
+
+    localStorage.setItem('scoreTable', JSON.stringify(scoreTable));
 }
 
 document.getElementById('playButton').addEventListener('click', async () => {
@@ -199,8 +201,16 @@ document.getElementById('pauseButton').addEventListener('click', () => {
     document.getElementById('pauseButton').innerText = isPaused ? 'Continuar' : 'Pausa';
 });
 
+function loadScoreTable() {
+    const storedScoreTable = JSON.parse(localStorage.getItem('scoreTable')) || [];
+    scoreTable = storedScoreTable;
+    updateScoreTable();
+}
+
 resetTetromino();
+loadScoreTable();
 update();
+
 
 
 
